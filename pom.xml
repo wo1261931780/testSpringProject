@@ -18,6 +18,7 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
+		<!--<spring-native.version>0.12.1</spring-native.version>-->
 	</properties>
 	<!--跟着父项目走，直接去找上面的依赖-->
 	<!--最后找到的是spring-boot-dependencies-->
@@ -90,7 +91,8 @@
 		<dependency>
 			<groupId>org.springframework.experimental</groupId>
 			<artifactId>spring-native</artifactId>
-			<version>${spring-native.version}</version>
+			<!--<version>${spring-native.version}</version>-->
+			<version>0.12.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -481,7 +483,7 @@
 			<plugin>
 				<groupId>org.springframework.experimental</groupId>
 				<artifactId>spring-aot-maven-plugin</artifactId>
-				<version>${spring-native.version}</version>
+				<!--<version>${spring-native.version}</version>-->
 				<executions>
 					<execution>
 						<id>test-generate</id>
