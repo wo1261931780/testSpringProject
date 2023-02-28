@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.4.5</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>junw</groupId>
+	<artifactId>reggie_takeaway</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<properties>
+		<!--<maven.compiler.source>19</maven.compiler.source>-->
+		<!--<maven.compiler.target>19</maven.compiler.target>-->
+		<maven.compiler.source>8</maven.compiler.source>
+		<maven.compiler.target>8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<dependencies>
+
+		<!--=============================================================================================-->
+		<!--下面两个配置基本的启动，后面的按需修改-->
+		<!--=============================================================================================-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<!--=============================================================================================-->
+		<!--DEVELOPER_TOOLS-->
+		<!--=============================================================================================-->
+
+		<!--=============================================================================================-->
+		<!--WEB-->
+		<!--=============================================================================================-->
+
+
+		<!--=============================================================================================-->
+		<!--MESSAGING-->
+		<!--=============================================================================================-->
+
+		<!--=============================================================================================-->
+		<!--SQL-->
+		<!--=============================================================================================-->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-boot-starter</artifactId>
+			<version>3.4.2</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>1.1.23</version>
+		</dependency>
+		<!--下面是shard的依赖-->
+		<!--可以理解为增强版的jdbc-->
+		<dependency>
+			<groupId>org.apache.shardingsphere</groupId>
+			<artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+			<version>4.0.0-RC1</version>
+		</dependency>
+		<!--redis的包-->
+		<!--用来连接，操作redis-->
+		<!--<dependency>-->
+		<!--	<groupId>redis.clients</groupId>-->
+		<!--	<artifactId>jedis</artifactId>-->
+		<!--	<version>2.8.0</version>-->
+		<!--</dependency>-->
+		<!--spring boot对redis做了整合-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+		<!--=============================================================================================-->
+		<!--TEST-->
+		<!--=============================================================================================-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+		<!--=============================================================================================-->
+		<!--项目特殊依赖-->
+		<!--=============================================================================================-->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.20</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.83</version>
+		</dependency>
+		<!--一开始是在spring boot context里面-->
+		<!--现在是在cache里面-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-cache</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.6</version>
+		</dependency>
+		<!--阿里云短信服务-->
+		<dependency>
+			<groupId>com.aliyun</groupId>
+			<artifactId>aliyun-java-sdk-core</artifactId>
+			<version>4.5.16</version>
+		</dependency>
+		<dependency>
+			<groupId>com.aliyun</groupId>
+			<artifactId>aliyun-java-sdk-dysmsapi</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+		<!--这里需要使用swagger技术，实际上是为了生成接口文档-->
+		<dependency>
+			<groupId>com.github.xiaoymin</groupId>
+			<artifactId>knife4j-spring-boot-starter</artifactId>
+			<version>3.0.2</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>2.4.5</version>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
