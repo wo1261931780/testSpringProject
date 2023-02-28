@@ -462,6 +462,7 @@
 		<!--但是上面两个都是无效的-->
 		<!--我使用idea自带的配置文件创建工具，直接创建对应名称对象，就解决了该问题-->
 		<plugins>
+
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -595,6 +596,11 @@
 			</dependencies>
 			<build>
 				<plugins>
+					<!--=============================================================================================-->
+					<!--DEVELOPER_TOOLS-->
+					<!--=============================================================================================-->
+					<!--GraalVM本地支持 开发者工具-->
+					<!--支持使用GraalVM本地图像编译器将Spring应用程序编译为本地可执行文件。-->
 					<plugin>
 						<groupId>org.graalvm.buildtools</groupId>
 						<artifactId>native-maven-plugin</artifactId>
