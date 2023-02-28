@@ -56,7 +56,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 			<!--<scope>test</scope>-->
-			<!--上面Descope表示作用范围-->
+			<!--上面的scope表示作用范围-->
 			<!--在没有说明的情况下，scope默认就是compile-->
 			<!--如果我把mysql这些数据库驱动jar包设置为runtime-->
 			<!--那么我在日常使用的过程中，是无法访问这些类的-->
@@ -68,8 +68,25 @@
 		<!--所以，在spring boot项目中，部分依赖是不需要指定版本的，只需要说明具体的依赖种类，就可以完成导入-->
 
 		<!--=============================================================================================-->
-		<!--DEVELOPER_TOOLS-->
+		<!--spring-->
 		<!--=============================================================================================-->
+		<!--Spring Beans提供了配置框架和基本功能来实例化、配置和组装java对象。-->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+		</dependency>
+
+		<!--Spring Aspects将Spring与AspectJ整合在一起。-->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+		</dependency>
+		<!--一开始是在spring boot context里面-->
+		<!--现在是在cache里面-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-cache</artifactId>
+		</dependency>
 		<!--Spring Boot DevTools 开发人员工具-->
 		<!--提供快速的应用重启、LiveReload和配置，以增强开发体验。-->
 		<dependency>
@@ -78,13 +95,33 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-		<!--2022年7月30日15:24:38，手动导入这个依赖项-->
+		<!--Spring配置处理器 开发者工具-->
+		<!--为开发人员生成元数据，以便在使用自定义配置键（ex.application.properties/.yml文件）时提供上下文帮助和 "代码完成"。-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+			<!--添加以后，可以避免自动装配报错-->
+		</dependency>
+		<!--使用Spring Boot的Actuator的入门课程，它提供了生产准备的功能，帮助你监控和管理你的应用程序。-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<!--=============================================================================================-->
+		<!--DEVELOPER_TOOLS-->
+		<!--=============================================================================================-->
 		<!--才能去新建一个spring的xml配置-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<!--<version>6.0.3</version>-->
+			<version>6.0.3</version>
 			<!--这里不能修改context版本到6.0，否则aop会找不到class文件-->
+		</dependency>
+		<!--支持类，用于将常见的第三方库集成到Spring应用环境中-->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
 		</dependency>
 		<!--Lombok 开发者工具-->
 		<!--帮助减少模板代码的Java注释库。-->
@@ -102,38 +139,15 @@
 			<artifactId>fastjson</artifactId>
 			<version>2.0.23</version>
 		</dependency>
-		<!--Spring配置处理器 开发者工具-->
-		<!--为开发人员生成元数据，以便在使用自定义配置键（ex.application.properties/.yml文件）时提供上下文帮助和 "代码完成"。-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-configuration-processor</artifactId>
-			<optional>true</optional>
-			<!--添加以后，可以避免自动装配报错-->
-		</dependency>
 
-		<dependency>
-			<groupId>org.aspectj</groupId>
-			<artifactId>aspectjweaver</artifactId>
-			<version>1.9.19</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.experimental</groupId>
-			<artifactId>spring-native</artifactId>
-			<!--<version>${spring-native.version}</version>-->
-			<version>0.12.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-			<version>3.0.1</version>
-		</dependency>
+
 		<!--=============================================================================================-->
 		<!--WEB-->
 		<!--=============================================================================================-->
 		<!--<dependency>-->
 		<!--	<groupId>org.springframework.boot</groupId>-->
 		<!--	<artifactId>spring-boot-starter-web</artifactId>-->
-		<!--这个依赖和上面的重复了，所以暂时不弄-->
+		<!--这个依赖和最上面的重复了，所以暂时注掉-->
 		<!--起步依赖，这里就包含了spring web和spring mvc的依赖-->
 		<!--<exclusions>-->
 		<!--	<exclusion>-->
@@ -148,20 +162,35 @@
 		<!--</exclusions>-->
 		<!--</dependency>-->
 
+		<!--mvc是一个整合包-->
+		<!--除了基础的context包以外，还会有web包作为web开发的整合包-->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<!--<version>6.0.3</version>-->
+		</dependency>
+		<!--Spring Web提供了集成功能，如多部分文件上传功能，以及使用Servlet监听器和面向Web的应用上下文来初始化IoC容器。-->
+		<!--它还包含一个HTTP客户端和Spring远程支持的网络相关部分。-->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+		</dependency>
 		<!--Spring Web Services WEB-->
 		<!--为契约优先的SOAP开发提供了便利。允许使用许多操作XML有效载荷的方法之一来创建灵活的Web服务。-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web-services</artifactId>
 		</dependency>
+		<!--相比来说，jetty更加轻量，而且拓展性更强-->
+		<!--tomcat是apache的，而jetty是eclipse的-->
+		<!--以后可能jetty是开发的主流-->
 		<!--<dependency>-->
 		<!--	<groupId>org.springframework.boot</groupId>-->
 		<!--	<artifactId>spring-boot-starter-jetty</artifactId>-->
 		<!--因为starter-web中是没有jetty存在的，所以这里暂时不修改启动服务器-->
 		<!--</dependency>-->
-		<!--相比来说，jetty更加轻量，而且拓展性更强-->
-		<!--tomcat是apache的，而jetty是eclipse的-->
-		<!--以后可能jetty是开发的主流-->
+
+		<!--Java Servlet是Java企业平台中的基础网络规范。开发人员可以使用Servlet API构建Web应用程序，与请求/响应工作流进行交互。-->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -169,30 +198,11 @@
 			<scope>provided</scope>
 			<!--必须把scope变成provide，否则会和tomcat发生冲突-->
 		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<!--<version>6.0.3</version>-->
-			<!--mvc是一个整合包-->
-			<!--除了基础的context包以外，还会有web包作为web开发的整合包-->
-		</dependency>
+		<!--Jackson的一般数据绑定功能：在核心流媒体API上工作-->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 			<!--<version>2.14.1</version>-->
-		</dependency>
-
-
-		<!--spring安全 SECURITY-->
-		<!--为Spring应用程序提供高度可定制的认证和访问控制框架。-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-test</artifactId>
-			<scope>test</scope>
 		</dependency>
 		<!--spring的反应性网络WEB-->
 		<!--使用Spring WebFlux和Netty构建反应式Web应用。-->
@@ -200,28 +210,27 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
 		</dependency>
+		<!--Spring Session WEB-->
+		<!--为管理用户会话信息提供API和实现。-->
 		<dependency>
-			<groupId>io.projectreactor</groupId>
-			<artifactId>reactor-test</artifactId>
-			<scope>test</scope>
+			<groupId>org.springframework.session</groupId>
+			<artifactId>spring-session-jdbc</artifactId>
 		</dependency>
-
-
 		<!--=============================================================================================-->
 		<!--MESSAGING-->
 		<!--=============================================================================================-->
+		<!--使用Spring AMQP和Rabbit MQ的启动程序-->
+		<!--添加以后会在控制台报错，Rabbit health check failed-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+		</dependency>
 		<!--Spring for RabbitMQ 消息-->
 		<!--为您的应用程序提供一个用于发送和接收消息的通用平台，并为您的消息提供一个安全的地方，直到收到为止。-->
 		<dependency>
 			<groupId>org.springframework.amqp</groupId>
 			<artifactId>spring-rabbit-test</artifactId>
 			<scope>test</scope>
-		</dependency>
-		<!--Spring Session WEB-->
-		<!--为管理用户会话信息提供API和实现。-->
-		<dependency>
-			<groupId>org.springframework.session</groupId>
-			<artifactId>spring-session-jdbc</artifactId>
 		</dependency>
 		<!--Apache Kafka Streams的Spring 讯息交流-->
 		<!--使用Apache Kafka Streams构建流处理应用程序。-->
@@ -235,7 +244,7 @@
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka</artifactId>
 		</dependency>
-		<!--		这个包比较大，暂时不弄-->
+		<!--这个包比较大，暂时不弄-->
 		<!--<dependency>-->
 		<!--	<groupId>org.springframework.kafka</groupId>-->
 		<!--	<artifactId>spring-kafka-test</artifactId>-->
@@ -253,15 +262,21 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-websocket</artifactId>
 		</dependency>
+		<!--JMS支持包，包括用于发送/接收JMS消息的辅助类-->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jms</artifactId>
+		</dependency>
+
 		<!--=============================================================================================-->
 		<!--日志系统-->
 		<!--=============================================================================================-->
-		<!-- 添加logback-classic依赖 -->
+		<!--logback一共有三个依赖，同时还有一个需要放到resource下面的配置文件-->
+		<!-- 添加slf4j日志api -->
 		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>1.4.5</version>
-			<scope>test</scope>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>2.0.6</version>
 		</dependency>
 		<!-- 添加logback-core依赖 -->
 		<dependency>
@@ -269,37 +284,41 @@
 			<artifactId>logback-core</artifactId>
 			<version>1.4.5</version>
 		</dependency>
-		<!--logback一共有三个依赖，同时还有一个需要放到resource下面的配置文件-->
-		<!-- 添加slf4j日志api -->
-
+		<!-- 添加logback-classic依赖 -->
 		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>2.0.6</version>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.4.5</version>
+			<scope>test</scope>
 		</dependency>
-
 		<!--=============================================================================================-->
-		<!--SQL-->
+		<!--数据库-->
 		<!--=============================================================================================-->
 		<!--JDBC API SQL-->
 		<!--数据库连接API，定义了客户端如何连接和查询数据库。-->
 		<!--<dependency>-->
 		<!--	<groupId>org.springframework.boot</groupId>-->
-		<!--	&lt;!&ndash;spring操作数据库的包&ndash;&gt;-->
-		<!--	<artifactId>spring-boot-starter-data-jdbc</artifactId>-->
+		<!--spring操作数据库的包-->
+		<!--<artifactId>spring-boot-starter-data-jdbc</artifactId>-->
 		<!--</dependency>-->
+
 		<!--Spring Data JDBC SQL-->
 		<!--使用Spring Data，用普通的JDBC在SQL存储中保存数据。-->
 		<!--<dependency>-->
 		<!--	<groupId>org.springframework.boot</groupId>-->
 		<!--	<artifactId>spring-boot-starter-jdbc</artifactId>-->
 		<!--</dependency>-->
-		<!--MyBatis框架SQL-->
-		<!--持久性框架，支持自定义SQL，存储过程和高级映射。MyBatis使用XML描述符或注解将对象与存储程序或SQL语句结合起来。-->
+		<!--spring整合数据库操作的包-->
 		<!--<dependency>-->
-		<!--	<groupId>org.mybatis.spring.boot</groupId>-->
-		<!--	<artifactId>mybatis-spring-boot-starter</artifactId>-->
-		<!--	<version>3.0.0</version>-->
+		<!--	<groupId>org.springframework</groupId>-->
+		<!--	<artifactId>spring-jdbc</artifactId>-->
+		<!--</dependency>-->
+		<!--下面是shard的依赖-->
+		<!--可以理解为增强版的jdbc-->
+		<!--<dependency>-->
+		<!--	<groupId>org.apache.shardingsphere</groupId>-->
+		<!--	<artifactId>sharding-jdbc-spring-boot-starter</artifactId>-->
+		<!--	<version>4.1.1</version>-->
 		<!--</dependency>-->
 		<!--MySQL JDBC driver.驱动-->
 		<!--mysql的驱动-->
@@ -308,30 +327,38 @@
 		<!--	<artifactId>mysql-connector-java</artifactId>-->
 		<!--	<scope>runtime</scope>-->
 		<!--</dependency>-->
-		<!--spring整合数据库操作的包-->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
-		</dependency>
+
+
+		<!--=============================================================================================-->
+		<!--Mybatis-->
+		<!--=============================================================================================-->
 		<!--底下的是spring整合mybatis的包-->
 		<!--这里，会根据mybatis的版本出现差异-->
 		<!--和上课教程也不太一样，-->
 		<!--这里说的是org.singledog-->
 		<!--上课说的是org.mybatis-->
-		<!-- Mybatis -->
 		<!--mybatis相关的包-->
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
-			<version>3.1.0</version>
+			<version>3.5.6</version>
 			<!--<version>3.5.11</version>-->
+			<!--避免依赖问题-->
 		</dependency>
 		<dependency>
 			<groupId>org.mybatis</groupId>
-			<!--	&lt;!&ndash;我不确定这个是否需要&ndash;&gt;-->
+			<!--我不确定这个是否需要-->
 			<artifactId>mybatis-spring</artifactId>
 			<version>3.0.1</version>
 		</dependency>
+		<!--MyBatis框架SQL-->
+		<!--持久性框架，支持自定义SQL，存储过程和高级映射。MyBatis使用XML描述符或注解将对象与存储程序或SQL语句结合起来。-->
+		<!--<dependency>-->
+		<!--	<groupId>org.mybatis.spring.boot</groupId>-->
+		<!--	<artifactId>mybatis-spring-boot-starter</artifactId>-->
+		<!--	<version>3.0.0</version>-->
+		<!--如果没有配置mybatis，那么启动会出现报错，启动失败-->
+		<!--</dependency>-->
 		<dependency>
 			<groupId>com.github.miemiedev</groupId>
 			<artifactId>mybatis-paginator</artifactId>
@@ -345,82 +372,90 @@
 		</dependency>
 		<!--<dependency>-->
 		<!--	&lt;!&ndash;这里是mybatis按照spring的标准，开发出来的整合包&ndash;&gt;-->
+		<!--如果直接添加这个依赖，没有配置mybatis，也会出现报错，项目启动失败-->
 		<!--	<groupId>org.mybatis.spring.boot</groupId>-->
 		<!--	<artifactId>mybatis-spring-boot-starter</artifactId>-->
 		<!--	<version>3.0.1</version>-->
 		<!--</dependency>-->
+
 		<!--使用mybatis-plus以后，这些东西就不需要了-->
+		<!--同样的，没有配置mybatis导致报错-->
 		<!--<dependency>-->
 		<!--	<groupId>com.baomidou</groupId>-->
 		<!--	<artifactId>mybatis-plus-boot-starter</artifactId>-->
 		<!--	<version>3.5.3.1</version>-->
-		<!--	&lt;!&ndash;依赖中一共两个jar包&ndash;&gt;-->
-		<!--	&lt;!&ndash;一个是mybatis和spring整合包&ndash;&gt;-->
-		<!--	&lt;!&ndash;一个是mybatis包&ndash;&gt;-->
+		<!--依赖中一共两个jar包-->
+		<!--一个是mybatis和spring整合包-->
+		<!--一个是mybatis包-->
 		<!--</dependency>-->
+
 		<!--mybatis-plus的代码生成器-->
-		<!--<dependency>-->
-		<!--	<groupId>com.baomidou</groupId>-->
-		<!--	<artifactId>mybatis-plus-generator</artifactId>-->
-		<!--	<version>3.5.3.1</version>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-generator</artifactId>
+			<version>3.5.3.1</version>
+		</dependency>
+
 		<!--生成器对应的模板技术-->
-		<!--<dependency>-->
-		<!--	<groupId>org.apache.velocity</groupId>-->
-		<!--	<artifactId>velocity-engine-core</artifactId>-->
-		<!--	<version>2.3</version>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity-engine-core</artifactId>
+			<version>2.3</version>
+		</dependency>
+
+		<!--=============================================================================================-->
+		<!--数据库连接池-->
+		<!--=============================================================================================-->
 		<!--c3p0相关包-->
+		<!--没有配置数据库导致启动失败-->
 		<!--<dependency>-->
-		<!--	&lt;!&ndash;c3p0是一个连接池对象&ndash;&gt;-->
+		<!--c3p0是一个连接池对象-->
 		<!--	<groupId>c3p0</groupId>-->
 		<!--	<artifactId>c3p0</artifactId>-->
 		<!--	<version>0.9.1.2</version>-->
 		<!--</dependency>-->
-		<!--<dependency>-->
-		<!--	<groupId>com.alibaba</groupId>-->
-		<!--	<artifactId>druid</artifactId>-->
-		<!--	<version>1.2.15</version>-->
-		<!--</dependency>-->
-		<!--<dependency>-->
-		<!--	<groupId>com.alibaba</groupId>-->
-		<!--	<artifactId>druid-spring-boot-starter</artifactId>-->
-		<!--	<version>1.1.23</version>-->
-		<!--</dependency>-->
-		<!--下面是shard的依赖-->
-		<!--可以理解为增强版的jdbc-->
+
+		<!--阿里巴巴德鲁伊连接池-->
 		<dependency>
-			<groupId>org.apache.shardingsphere</groupId>
-			<artifactId>sharding-jdbc-spring-boot-starter</artifactId>
-			<version>4.1.1</version>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>1.2.15</version>
 		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>1.1.23</version>
+		</dependency>
+
+		<!--=============================================================================================-->
 		<!--redis的包-->
-		<!--用来连接，操作redis-->
-		<!--<dependency>-->
-		<!--	<groupId>redis.clients</groupId>-->
-		<!--	<artifactId>jedis</artifactId>-->
-		<!--	<version>2.8.0</version>-->
-		<!--</dependency>-->
+		<!--=============================================================================================-->
 		<!--spring boot对redis做了整合-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
+		<!--用来连接，操作redis-->
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>2.8.0</version>
+		</dependency>
 		<!--=============================================================================================-->
 		<!--TEST-->
 		<!--=============================================================================================-->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-test</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-amqp</artifactId>
-		</dependency>
+		<!--使用包括JUnit Jupiter、Hamcrest和Mockito在内的库测试Spring Boot应用程序的入门者-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<!--Spring Test支持用JUnit或TestNG对Spring组件进行单元测试和集成测试。-->
+		<!--它提供了一致的Spring ApplicationContexts的加载和缓存，并提供了模拟对象，你可以用它来孤立地测试你的代码。-->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -428,15 +463,20 @@
 			<scope>test</scope>
 			<!--<version>4.13.1</version>-->
 		</dependency>
-
-		<!--=============================================================================================-->
-		<!--项目特殊依赖-->
-		<!--=============================================================================================-->
-		<!--<dependency>-->
-		<!--	<groupId>org.apiguardian</groupId>-->
-		<!--	<artifactId>apiguardian-api</artifactId>-->
-		<!--	<version>1.1.2</version>-->
-		<!--</dependency>-->
+		<!--反应堆测试支持-->
+		<dependency>
+			<groupId>io.projectreactor</groupId>
+			<artifactId>reactor-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.opentest4j/opentest4j -->
+		<!--面向JVM的开放测试联盟-->
+		<dependency>
+			<groupId>org.opentest4j</groupId>
+			<artifactId>opentest4j</artifactId>
+			<version>1.2.0</version>
+		</dependency>
+		<!--jupiter-->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter</artifactId>
@@ -473,127 +513,21 @@
 			<version>1.9.2</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.opentest4j/opentest4j -->
-		<dependency>
-			<groupId>org.opentest4j</groupId>
-			<artifactId>opentest4j</artifactId>
-			<version>1.2.0</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.dom4j/dom4j -->
-		<dependency>
-			<groupId>org.dom4j</groupId>
-			<artifactId>dom4j</artifactId>
-			<version>2.1.4</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/xom/xom -->
-		<!--<dependency>-->
-		<!--	<groupId>xom</groupId>-->
-		<!--	<artifactId>xom</artifactId>-->
-		<!--	<version>1.3.8</version>-->
-		<!--</dependency>-->
-		<dependency>
-			<groupId>xalan</groupId>
-			<artifactId>xalan</artifactId>
-			<version>2.7.2</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>2.11.0</version>
-		</dependency>
-		<dependency>
-			<groupId>xml-apis</groupId>
-			<artifactId>xml-apis</artifactId>
-			<version>1.3.04</version>
-			<!--<version>1.4.01</version>-->
-			<!--解决依赖冲突问题-->
-		</dependency>
-		<!-- 文件上传组件 -->
-		<!--<dependency>-->
-		<!--注掉，和Commons-io有冲突-->
-		<!--但是比Commons-io范围大-->
-		<!--	<groupId>commons-fileupload</groupId>-->
-		<!--	<artifactId>commons-fileupload</artifactId>-->
-		<!--	<version>1.4</version>-->
-		<!--</dependency>-->
-		<dependency>
-			<groupId>org.quartz-scheduler</groupId>
-			<artifactId>quartz</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.quartz-scheduler</groupId>
-			<artifactId>quartz-jobs</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.sun.jersey</groupId>
-			<artifactId>jersey-client</artifactId>
-			<version>1.18.1</version>
-		</dependency>
-		<!--存储服务-->
-		<dependency>
-			<groupId>com.qiniu</groupId>
-			<artifactId>qiniu-java-sdk</artifactId>
-			<version>7.2.0</version>
-		</dependency>
-		<!--POI报表-->
-		<!--Apache POI - 访问微软格式文件的Java API-->
-		<!--<dependency>-->
-		<!--	<groupId>org.apache.poi</groupId>-->
-		<!--	<artifactId>poi</artifactId>-->
-		<!--	<version>5.2.3</version>-->
-		<!--</dependency>-->
-		<!--<dependency>-->
-		<!--	<groupId>org.apache.poi</groupId>-->
-		<!--	<artifactId>poi-ooxml</artifactId>-->
-		<!--	<version>5.2.3</version>-->
-		<!--</dependency>-->
-		<!-- dubbo相关 -->
-		<!--<dependency>-->
-		<!--	<groupId>com.alibaba</groupId>-->
-		<!--	<artifactId>dubbo</artifactId>-->
-		<!--	<version>2.6.12</version>-->
-		<!--</dependency>-->
-		<!--上面的工件被移动到Apache中孵化-->
-		<!--dubbo一体式项目-->
-		<dependency>
-			<groupId>org.apache.dubbo</groupId>
-			<artifactId>dubbo</artifactId>
-			<version>3.1.7</version>
-			<!--<version>3.2.0-beta.5</version>-->
-			<!--这个太新的版本和上面的javassite冲突-->
-		</dependency>
 
+		<!--=============================================================================================-->
+		<!--安全框架-->
+		<!--=============================================================================================-->
+		<!--spring安全 SECURITY-->
+		<!--为Spring应用程序提供高度可定制的认证和访问控制框架。-->
 		<dependency>
-			<groupId>org.apache.zookeeper</groupId>
-			<artifactId>zookeeper</artifactId>
-			<version>3.8.1</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
-		<!--一个zookeeper客户端，使生活变得更容易一些-->
-		<!--出现依赖冲突，注掉-->
-		<!--<dependency>-->
-		<!--	<groupId>com.github.sgroschupf</groupId>-->
-		<!--	<artifactId>zkclient</artifactId>-->
-		<!--	<version>0.1</version>-->
-		<!--</dependency>-->
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.13.1</version>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
 		</dependency>
-		<!--Javassist (JAVA programming ASSISTant)使Java字节码操作变得简单。它是一个用于编辑Java字节码的类库。-->
-		<dependency>
-			<groupId>org.javassist</groupId>
-			<artifactId>javassist</artifactId>
-			<version>3.29.2-GA</version>
-		</dependency>
-		<!--Apache Commons编解码包包含了各种格式的简单编码和解码器，如Base64和十六进制。除了这些广泛使用的编码器和解码器之外，编解码包还维护了一个语音编码实用程序的集合。-->
-		<dependency>
-			<groupId>commons-codec</groupId>
-			<artifactId>commons-codec</artifactId>
-			<version>1.15</version>
-		</dependency>
-		<!-- 安全框架 -->
 		<!--设置权限-->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
@@ -619,36 +553,141 @@
 			</exclusions>
 		</dependency>
 
-		<!-- Spring -->
-		<!--Spring Beans提供了配置框架和基本功能来实例化、配置和组装java对象。-->
+		<!--=============================================================================================-->
+		<!--dubbo相关-->
+		<!--=============================================================================================-->
+		<!--<dependency>-->
+		<!--	<groupId>com.alibaba</groupId>-->
+		<!--	<artifactId>dubbo</artifactId>-->
+		<!--	<version>2.6.12</version>-->
+		<!--</dependency>-->
+		<!--上面的工件被移动到Apache中孵化-->
+		<!--dubbo一体式项目-->
+		<!--Dubbo是一款高性能、轻量级的开源Java RPC框架，它提供了三大核心能力：-->
+		<!--面向接口的远程方法调用，智能容错和负载均衡，以及服务自动注册和发现。-->
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-beans</artifactId>
+			<groupId>org.apache.dubbo</groupId>
+			<artifactId>dubbo</artifactId>
+			<version>3.1.7</version>
+			<!--<version>3.2.0-beta.5</version>-->
+			<!--这个太新的版本和上面的javassite冲突-->
+		</dependency>
+		<!--zookeeper是一个为分布式应用提供一致性服务的软件，提供的功能包括：配置维护、域名服务、分布式同步、组服务等。-->
+		<!--没有配置启动，项目报错，启动失败-->
+		<!--<dependency>-->
+		<!--	<groupId>org.apache.zookeeper</groupId>-->
+		<!--	<artifactId>zookeeper</artifactId>-->
+		<!--	<version>3.8.1</version>-->
+		<!--</dependency>-->
+		<!--一个zookeeper客户端，使生活变得更容易一些-->
+		<!--出现依赖冲突，注掉-->
+		<!--<dependency>-->
+		<!--	<groupId>com.github.sgroschupf</groupId>-->
+		<!--	<artifactId>zkclient</artifactId>-->
+		<!--	<version>0.1</version>-->
+		<!--</dependency>-->
+
+		<!--Javassist (JAVA programming ASSISTant)使Java字节码操作变得简单。它是一个用于编辑Java字节码的类库。-->
+		<dependency>
+			<groupId>org.javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.29.2-GA</version>
+		</dependency>
+		<!--Apache Commons编解码包包含了各种格式的简单编码和解码器，如Base64和十六进制。除了这些广泛使用的编码器和解码器之外，编解码包还维护了一个语音编码实用程序的集合。-->
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.15</version>
+		</dependency>
+		<!--=============================================================================================-->
+		<!--文件IO-->
+		<!--=============================================================================================-->
+
+		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+		<!--Apache Commons IO库包含实用类、流实现、文件过滤器、文件比较器、endian转换类等等。-->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.11.0</version>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
+			<groupId>xml-apis</groupId>
+			<artifactId>xml-apis</artifactId>
+			<version>1.3.04</version>
+			<!--<version>1.4.01</version>-->
+			<!--解决依赖冲突问题-->
 		</dependency>
-		<!--Spring Aspects将Spring与AspectJ整合在一起。-->
+		<!-- 文件上传组件 -->
+		<!--<dependency>-->
+		<!--注掉，和Commons-io有冲突-->
+		<!--但是比Commons-io范围大-->
+		<!--	<groupId>commons-fileupload</groupId>-->
+		<!--	<artifactId>commons-fileupload</artifactId>-->
+		<!--	<version>1.4</version>-->
+		<!--</dependency>-->
+		<!--Quartz是一个工作调度库，可以嵌入到java应用程序中，支持事务、持久性、集群和插件。-->
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-aspects</artifactId>
-		</dependency>
-		<!--JMS支持包，包括用于发送/接收JMS消息的辅助类-->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jms</artifactId>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context-support</artifactId>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz-jobs</artifactId>
 		</dependency>
-		<!--一开始是在spring boot context里面-->
-		<!--现在是在cache里面-->
+		<!--存储服务-->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-cache</artifactId>
+			<groupId>com.qiniu</groupId>
+			<artifactId>qiniu-java-sdk</artifactId>
+			<version>7.2.0</version>
 		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-client</artifactId>
+			<version>1.18.1</version>
+		</dependency>
+
+		<!--=============================================================================================-->
+		<!--项目特殊依赖-->
+		<!--=============================================================================================-->
+		<dependency>
+			<groupId>org.springframework.experimental</groupId>
+			<artifactId>spring-native</artifactId>
+			<!--<version>${spring-native.version}</version>-->
+			<version>0.12.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apiguardian</groupId>
+			<artifactId>apiguardian-api</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.dom4j/dom4j -->
+		<!--用于Java的灵活的XML框架-->
+		<dependency>
+			<groupId>org.dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>2.1.4</version>
+		</dependency>
+		<!--AspectJ织网器将各个方面应用于Java类。-->
+		<!--它可以作为一个Java代理使用，以便在类的加载过程中应用加载时编织（LTW），还包含AspectJ运行时类。-->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.9.19</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/xom/xom -->
+		<!--用于处理XML的XOM双流/树API-->
+		<dependency>
+			<groupId>xom</groupId>
+			<artifactId>xom</artifactId>
+			<version>1.3.8</version>
+		</dependency>
+		<dependency>
+			<groupId>xalan</groupId>
+			<artifactId>xalan</artifactId>
+			<version>2.7.2</version>
+		</dependency>
+
 		<!--Apache Commons Lang，是一个Java实用类的包，用于java.lang的层次结构中的类，或者被认为是非常标准的，有理由存在于java.lang中。-->
 		<dependency>
 			<groupId>commons-lang</groupId>
@@ -668,10 +707,22 @@
 		</dependency>
 		<!--这里需要使用swagger技术，实际上是为了生成接口文档-->
 		<!--Spring Boot 项目starter,快速使用knife4j增强文档-->
+		<dependency>
+			<groupId>com.github.xiaoymin</groupId>
+			<artifactId>knife4j-spring-boot-starter</artifactId>
+			<version>3.0.3</version>
+		</dependency>
+		<!--POI报表-->
+		<!--Apache POI - 访问微软格式文件的Java API-->
 		<!--<dependency>-->
-		<!--	<groupId>com.github.xiaoymin</groupId>-->
-		<!--	<artifactId>knife4j-spring-boot-starter</artifactId>-->
-		<!--	<version>3.0.3</version>-->
+		<!--	<groupId>org.apache.poi</groupId>-->
+		<!--	<artifactId>poi</artifactId>-->
+		<!--	<version>5.2.3</version>-->
+		<!--</dependency>-->
+		<!--<dependency>-->
+		<!--	<groupId>org.apache.poi</groupId>-->
+		<!--	<artifactId>poi-ooxml</artifactId>-->
+		<!--	<version>5.2.3</version>-->
 		<!--</dependency>-->
 	</dependencies>
 
