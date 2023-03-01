@@ -151,8 +151,16 @@
 		</dependency>
 		<!--Apache Kafka Streams的Spring 讯息交流-->
 		<!--使用Apache Kafka Streams构建流处理应用程序。-->
+		<!--<dependency>-->
+		<!--	<groupId>org.apache.kafka</groupId>-->
+		<!--	<artifactId>kafka-streams</artifactId>-->
+		<!--</dependency>-->
 		<!--Spring for Apache Kafka MESSAGING-->
 		<!--发布、订阅、存储和处理记录流。-->
+		<!--<dependency>-->
+		<!--	<groupId>org.springframework.kafka</groupId>-->
+		<!--	<artifactId>spring-kafka</artifactId>-->
+		<!--</dependency>-->
 		<dependency>
 			<groupId>org.apache.kafka</groupId>
 			<artifactId>kafka-clients</artifactId>
