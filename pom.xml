@@ -392,11 +392,12 @@
 		<!--=============================================================================================-->
 		<!--项目特殊依赖-->
 		<!--=============================================================================================-->
-		<dependency>
-			<groupId>org.springframework.experimental</groupId>
-			<artifactId>spring-native</artifactId>
-			<version>0.12.0</version>
-		</dependency>
+		<!--添加这个依赖以后，阿里云效找不到依赖，以后建议全部注释掉-->
+		<!--<dependency>-->
+		<!--	<groupId>org.springframework.experimental</groupId>-->
+		<!--	<artifactId>spring-native</artifactId>-->
+		<!--	<version>0.12.0</version>-->
+		<!--</dependency>-->
 
 		<!-- https://mvnrepository.com/artifact/org.dom4j/dom4j -->
 		<!--用于Java的灵活的XML框架-->
