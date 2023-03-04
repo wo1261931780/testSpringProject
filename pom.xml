@@ -395,7 +395,7 @@
 		<dependency>
 			<groupId>org.springframework.experimental</groupId>
 			<artifactId>spring-native</artifactId>
-			<version>0.12.1</version>
+			<version>0.12.0</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.dom4j/dom4j -->
