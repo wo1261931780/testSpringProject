@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
@@ -9,18 +9,17 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>wo1261931780</groupId>
-	<artifactId>testSpringProject</artifactId>
+	<artifactId>st-javaWeb</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>testSpringProject</name>
-	<description>junw project</description>
+	<!--<packaging>pom</packaging>-->
+	<name>st-javaWeb</name>
+	<description>Demo project for Spring Boot</description>
+	<!--<modules>-->
+	<!--	<module>webDemoApp</module>-->
+	<!--	<module>webDemoApp2</module>-->
+	<!--</modules>-->
 	<properties>
 		<java.version>17</java.version>
-		<!--<spring-native.version>0.12.1</spring-native.version>-->
-		<!--maven的打包配置-->
-		<!--<maven.compiler.source>8</maven.compiler.source>-->
-		<!--<maven.compiler.target>8</maven.compiler.target>-->
-		<!--编码格式-->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
 		<!--=============================================================================================-->
@@ -32,7 +31,6 @@
 		</dependency>
 		<!--spring网络WEB-->
 		<!--使用Spring MVC构建Web，包括RESTful，应用程序。使用Apache Tomcat作为默认的嵌入式容器。-->
-		<!--里面已经包含了spring MVC的内容-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -48,11 +46,10 @@
 		<!--=============================================================================================-->
 
 		<!--Spring Aspects将Spring与AspectJ整合在一起。-->
-		<!--AOP切面编程的依赖-->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-aspects</artifactId>
-		</dependency>
+		<!--<dependency>-->
+		<!--	<groupId>org.springframework</groupId>-->
+		<!--	<artifactId>spring-aspects</artifactId>-->
+		<!--</dependency>-->
 		<!--一开始是在spring boot context里面-->
 		<!--现在是在cache里面-->
 		<dependency>
@@ -134,49 +131,16 @@
 			<artifactId>spring-session-jdbc</artifactId>
 		</dependency>
 		<!--阿里巴巴的Fastjson是一个用Java编写的JSON处理器（JSON解析器+JSON生成器）。-->
-		<!--用2.0.23,否则和dubbo冲突-->
 		<dependency>
 			<groupId>com.alibaba.fastjson2</groupId>
 			<artifactId>fastjson2</artifactId>
-			<version>2.0.23</version>
+			<version>2.0.24</version>
 		</dependency>
 
 
 		<!--=============================================================================================-->
 		<!--MESSAGING-->
 		<!--=============================================================================================-->
-		<!--使用Spring AMQP和Rabbit MQ的启动程序-->
-		<!--添加以后会在控制台报错，Rabbit health check failed-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-amqp</artifactId>
-		</dependency>
-		<!--Spring for RabbitMQ 消息-->
-		<!--为您的应用程序提供一个用于发送和接收消息的通用平台，并为您的消息提供一个安全的地方，直到收到为止。-->
-		<dependency>
-			<groupId>org.springframework.amqp</groupId>
-			<artifactId>spring-rabbit-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<!--Apache Kafka Streams的Spring 讯息交流-->
-		<!--使用Apache Kafka Streams构建流处理应用程序。-->
-		<!--Spring for Apache Kafka MESSAGING-->
-		<!--发布、订阅、存储和处理记录流。-->
-		<dependency>
-			<groupId>org.apache.kafka</groupId>
-			<artifactId>kafka-clients</artifactId>
-			<version>3.4.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.scala-lang</groupId>
-			<artifactId>scala-library</artifactId>
-			<version>2.13.10</version>
-		</dependency>
-		<!--JMS支持包，包括用于发送/接收JMS消息的辅助类-->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jms</artifactId>
-		</dependency>
 
 
 		<!--=============================================================================================-->
@@ -226,11 +190,11 @@
 		<!--持久性框架，支持自定义SQL，存储过程和高级映射。MyBatis使用XML描述符或注解将对象与存储程序或SQL语句结合起来。-->
 		<!--这里是mybatis按照spring的标准，开发出来的整合包-->
 		<!--没有配置，项目报错，启动失败-->
-		<!--<dependency>-->
-		<!--	<groupId>org.mybatis.spring.boot</groupId>-->
-		<!--	<artifactId>mybatis-spring-boot-starter</artifactId>-->
-		<!--	<version>3.0.1</version>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>3.0.1</version>
+		</dependency>
 
 		<!--使用mybatis-plus以后，这些东西就不需要了-->
 		<!--没有配置，项目报错，启动失败-->
@@ -349,21 +313,6 @@
 		<!--=============================================================================================-->
 		<!--dubbo相关-->
 		<!--=============================================================================================-->
-		<!--dubbo一体式项目-->
-		<!--Dubbo是一款高性能、轻量级的开源Java RPC框架，它提供了三大核心能力：-->
-		<!--面向接口的远程方法调用，智能容错和负载均衡，以及服务自动注册和发现。-->
-		<dependency>
-			<groupId>org.apache.dubbo</groupId>
-			<artifactId>dubbo</artifactId>
-			<version>3.2.0-beta.5</version>
-		</dependency>
-		<!--zookeeper是一个为分布式应用提供一致性服务的软件，提供的功能包括：配置维护、域名服务、分布式同步、组服务等。-->
-		<!--没有配置，项目报错，启动失败-->
-		<!--<dependency>-->
-		<!--	<groupId>org.apache.zookeeper</groupId>-->
-		<!--	<artifactId>zookeeper</artifactId>-->
-		<!--	<version>3.8.1</version>-->
-		<!--</dependency>-->
 
 		<!--=============================================================================================-->
 		<!--文件IO-->
@@ -401,12 +350,6 @@
 		<!--=============================================================================================-->
 		<!--项目特殊依赖-->
 		<!--=============================================================================================-->
-		<!--添加这个依赖以后，阿里云效找不到依赖，以后建议全部注释掉-->
-		<!--<dependency>-->
-		<!--	<groupId>org.springframework.experimental</groupId>-->
-		<!--	<artifactId>spring-native</artifactId>-->
-		<!--	<version>0.12.0</version>-->
-		<!--</dependency>-->
 
 		<!-- https://mvnrepository.com/artifact/org.dom4j/dom4j -->
 		<!--用于Java的灵活的XML框架-->
@@ -439,18 +382,6 @@
 			<artifactId>guava</artifactId>
 			<version>31.1-jre</version>
 		</dependency>
-		<!--POI报表-->
-		<!--Apache POI - 访问微软格式文件的Java API-->
-		<!--<dependency>-->
-		<!--	<groupId>org.apache.poi</groupId>-->
-		<!--	<artifactId>poi</artifactId>-->
-		<!--	<version>5.2.3</version>-->
-		<!--</dependency>-->
-		<!--<dependency>-->
-		<!--	<groupId>org.apache.poi</groupId>-->
-		<!--	<artifactId>poi-ooxml</artifactId>-->
-		<!--	<version>5.2.3</version>-->
-		<!--</dependency>-->
 	</dependencies>
 
 	<build>
@@ -517,6 +448,10 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.2</version>
+				<configuration>
+					<source>8</source>
+					<target>8</target>
+				</configuration>
 				<!--<configuration>-->
 				<!--	<source>1.8</source>-->
 				<!--	<target>1.8</target>-->
@@ -675,4 +610,5 @@
 			</properties>
 		</profile>
 	</profiles>
+
 </project>

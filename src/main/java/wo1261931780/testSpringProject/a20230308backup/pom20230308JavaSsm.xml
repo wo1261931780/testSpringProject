@@ -9,18 +9,12 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>wo1261931780</groupId>
-	<artifactId>testSpringProject</artifactId>
+	<artifactId>st-ssm</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>testSpringProject</name>
-	<description>junw project</description>
+	<name>st-ssm</name>
+	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
-		<!--<spring-native.version>0.12.1</spring-native.version>-->
-		<!--maven的打包配置-->
-		<!--<maven.compiler.source>8</maven.compiler.source>-->
-		<!--<maven.compiler.target>8</maven.compiler.target>-->
-		<!--编码格式-->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
 		<!--=============================================================================================-->
@@ -133,13 +127,6 @@
 			<groupId>org.springframework.session</groupId>
 			<artifactId>spring-session-jdbc</artifactId>
 		</dependency>
-		<!--阿里巴巴的Fastjson是一个用Java编写的JSON处理器（JSON解析器+JSON生成器）。-->
-		<!--用2.0.23,否则和dubbo冲突-->
-		<dependency>
-			<groupId>com.alibaba.fastjson2</groupId>
-			<artifactId>fastjson2</artifactId>
-			<version>2.0.23</version>
-		</dependency>
 
 
 		<!--=============================================================================================-->
@@ -160,12 +147,15 @@
 		</dependency>
 		<!--Apache Kafka Streams的Spring 讯息交流-->
 		<!--使用Apache Kafka Streams构建流处理应用程序。-->
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka-streams</artifactId>
+		</dependency>
 		<!--Spring for Apache Kafka MESSAGING-->
 		<!--发布、订阅、存储和处理记录流。-->
 		<dependency>
-			<groupId>org.apache.kafka</groupId>
-			<artifactId>kafka-clients</artifactId>
-			<version>3.4.0</version>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.scala-lang</groupId>
@@ -190,19 +180,19 @@
 		<!--JDBC API SQL-->
 		<!--数据库连接API，定义了客户端如何连接和查询数据库。-->
 		<!--没有配置，项目报错，启动失败-->
-		<!--<dependency>-->
-		<!--	<groupId>org.springframework.boot</groupId>-->
-		<!--	&lt;!&ndash;spring操作数据库的包&ndash;&gt;-->
-		<!--	<artifactId>spring-boot-starter-data-jdbc</artifactId>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<!--spring操作数据库的包-->
+			<artifactId>spring-boot-starter-data-jdbc</artifactId>
+		</dependency>
 
 		<!--Spring Data JDBC SQL-->
 		<!--使用Spring Data，用普通的JDBC在SQL存储中保存数据。-->
 		<!--没有配置，项目报错，启动失败-->
-		<!--<dependency>-->
-		<!--	<groupId>org.springframework.boot</groupId>-->
-		<!--	<artifactId>spring-boot-starter-jdbc</artifactId>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
 		<!--MySQL JDBC driver.驱动-->
 		<!--mysql的驱动-->
 		<dependency>
@@ -233,15 +223,16 @@
 		<!--</dependency>-->
 
 		<!--使用mybatis-plus以后，这些东西就不需要了-->
+		<!--目前mybatis-plus只支持到2.0.7，直接放开-->
 		<!--没有配置，项目报错，启动失败-->
-		<!--<dependency>-->
-		<!--	<groupId>com.baomidou</groupId>-->
-		<!--	<artifactId>mybatis-plus-boot-starter</artifactId>-->
-		<!--	<version>3.5.3.1</version>-->
-		<!--	&lt;!&ndash;依赖中一共两个jar包&ndash;&gt;-->
-		<!--	&lt;!&ndash;一个是mybatis和spring整合包&ndash;&gt;-->
-		<!--	&lt;!&ndash;一个是mybatis包&ndash;&gt;-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-boot-starter</artifactId>
+			<version>3.5.3.1</version>
+			<!--依赖中一共两个jar包-->
+			<!--一个是mybatis和spring整合包-->
+			<!--一个是mybatis包-->
+		</dependency>
 
 		<!--mybatis-plus的代码生成器-->
 		<dependency>
@@ -263,12 +254,12 @@
 		<!--=============================================================================================-->
 		<!--c3p0相关包-->
 		<!--没有配置，项目报错，启动失败-->
-		<!--<dependency>-->
-		<!--	&lt;!&ndash;c3p0是一个连接池对象&ndash;&gt;-->
-		<!--	<groupId>c3p0</groupId>-->
-		<!--	<artifactId>c3p0</artifactId>-->
-		<!--	<version>0.9.1.2</version>-->
-		<!--</dependency>-->
+		<dependency>
+			<!--c3p0是一个连接池对象-->
+			<groupId>c3p0</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.1.2</version>
+		</dependency>
 
 		<!--阿里巴巴德鲁伊连接池-->
 		<dependency>
@@ -281,17 +272,6 @@
 		<!--=============================================================================================-->
 		<!--redis的包-->
 		<!--=============================================================================================-->
-		<!--spring boot对redis做了整合-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-redis</artifactId>
-		</dependency>
-		<!--用来连接，操作redis-->
-		<dependency>
-			<groupId>redis.clients</groupId>
-			<artifactId>jedis</artifactId>
-			<version>2.10.2</version>
-		</dependency>
 
 
 		<!--=============================================================================================-->
@@ -349,21 +329,7 @@
 		<!--=============================================================================================-->
 		<!--dubbo相关-->
 		<!--=============================================================================================-->
-		<!--dubbo一体式项目-->
-		<!--Dubbo是一款高性能、轻量级的开源Java RPC框架，它提供了三大核心能力：-->
-		<!--面向接口的远程方法调用，智能容错和负载均衡，以及服务自动注册和发现。-->
-		<dependency>
-			<groupId>org.apache.dubbo</groupId>
-			<artifactId>dubbo</artifactId>
-			<version>3.2.0-beta.5</version>
-		</dependency>
-		<!--zookeeper是一个为分布式应用提供一致性服务的软件，提供的功能包括：配置维护、域名服务、分布式同步、组服务等。-->
-		<!--没有配置，项目报错，启动失败-->
-		<!--<dependency>-->
-		<!--	<groupId>org.apache.zookeeper</groupId>-->
-		<!--	<artifactId>zookeeper</artifactId>-->
-		<!--	<version>3.8.1</version>-->
-		<!--</dependency>-->
+
 
 		<!--=============================================================================================-->
 		<!--文件IO-->
@@ -401,12 +367,6 @@
 		<!--=============================================================================================-->
 		<!--项目特殊依赖-->
 		<!--=============================================================================================-->
-		<!--添加这个依赖以后，阿里云效找不到依赖，以后建议全部注释掉-->
-		<!--<dependency>-->
-		<!--	<groupId>org.springframework.experimental</groupId>-->
-		<!--	<artifactId>spring-native</artifactId>-->
-		<!--	<version>0.12.0</version>-->
-		<!--</dependency>-->
 
 		<!-- https://mvnrepository.com/artifact/org.dom4j/dom4j -->
 		<!--用于Java的灵活的XML框架-->
@@ -439,18 +399,6 @@
 			<artifactId>guava</artifactId>
 			<version>31.1-jre</version>
 		</dependency>
-		<!--POI报表-->
-		<!--Apache POI - 访问微软格式文件的Java API-->
-		<!--<dependency>-->
-		<!--	<groupId>org.apache.poi</groupId>-->
-		<!--	<artifactId>poi</artifactId>-->
-		<!--	<version>5.2.3</version>-->
-		<!--</dependency>-->
-		<!--<dependency>-->
-		<!--	<groupId>org.apache.poi</groupId>-->
-		<!--	<artifactId>poi-ooxml</artifactId>-->
-		<!--	<version>5.2.3</version>-->
-		<!--</dependency>-->
 	</dependencies>
 
 	<build>
