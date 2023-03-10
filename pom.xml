@@ -287,6 +287,7 @@
 			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
 		<!--用来连接，操作redis-->
+		<!--Apache Commons对象池库。-->
 		<dependency>
 			<groupId>redis.clients</groupId>
 			<artifactId>jedis</artifactId>
@@ -422,6 +423,7 @@
 		</dependency>
 
 		<!--阿里云短信服务-->
+		<!--阿帕奇HttpComponents客户端-->
 		<dependency>
 			<groupId>com.aliyun</groupId>
 			<artifactId>aliyun-java-sdk-core</artifactId>
@@ -456,6 +458,11 @@
 		<!--	<artifactId>poi-ooxml</artifactId>-->
 		<!--	<version>5.2.3</version>-->
 		<!--</dependency>-->
+		<dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>2.3.3</version>
+		</dependency>
 	</dependencies>
 
 	<build>
