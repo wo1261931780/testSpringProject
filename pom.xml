@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.0.3</version>
+		<version>3.0.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>wo1261931780</groupId>
@@ -139,7 +139,7 @@
 		<dependency>
 			<groupId>com.alibaba.fastjson2</groupId>
 			<artifactId>fastjson2</artifactId>
-			<version>2.0.24</version>
+			<version>2.0.23</version>
 		</dependency>
 
 
@@ -191,19 +191,19 @@
 		<!--JDBC API SQL-->
 		<!--数据库连接API，定义了客户端如何连接和查询数据库。-->
 		<!--没有配置，项目报错，启动失败-->
-		<!--<dependency>-->
-		<!--	<groupId>org.springframework.boot</groupId>-->
-		<!--	&lt;!&ndash;spring操作数据库的包&ndash;&gt;-->
-		<!--	<artifactId>spring-boot-starter-data-jdbc</artifactId>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<!--spring操作数据库的包-->
+			<artifactId>spring-boot-starter-data-jdbc</artifactId>
+		</dependency>
 
 		<!--Spring Data JDBC SQL-->
 		<!--使用Spring Data，用普通的JDBC在SQL存储中保存数据。-->
 		<!--没有配置，项目报错，启动失败-->
-		<!--<dependency>-->
-		<!--	<groupId>org.springframework.boot</groupId>-->
-		<!--	<artifactId>spring-boot-starter-jdbc</artifactId>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
 		<!--MySQL JDBC driver.驱动-->
 		<!--mysql的驱动-->
 		<dependency>
@@ -292,7 +292,7 @@
 		<dependency>
 			<groupId>redis.clients</groupId>
 			<artifactId>jedis</artifactId>
-			<version>2.10.2</version>
+			<version>4.3.1</version>
 		</dependency>
 
 
@@ -436,11 +436,11 @@
 			<version>2.2.1</version>
 		</dependency>
 		<!--这里需要使用swagger技术，实际上是为了生成接口文档-->
-		<dependency>
-			<groupId>com.github.xiaoymin</groupId>
-			<artifactId>knife4j-spring-boot-starter</artifactId>
-			<version>3.0.3</version>
-		</dependency>
+		<!--<dependency>-->
+		<!--	<groupId>com.github.xiaoymin</groupId>-->
+		<!--	<artifactId>knife4j-spring-boot-starter</artifactId>-->
+		<!--	<version>3.0.3</version>-->
+		<!--</dependency>-->
 		<!--Guava是一套核心库和扩展库，包括实用类、Google的集合、I/O类等等。-->
 		<!--<dependency>-->
 		<!--	<groupId>com.google.guava</groupId>-->
@@ -462,7 +462,7 @@
 		<dependency>
 			<groupId>org.modelmapper</groupId>
 			<artifactId>modelmapper</artifactId>
-			<version>2.4.5</version>
+			<version>3.1.1</version>
 		</dependency>
 	</dependencies>
 
