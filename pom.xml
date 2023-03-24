@@ -243,6 +243,13 @@
 		<!--	&lt;!&ndash;一个是mybatis和spring整合包&ndash;&gt;-->
 		<!--	&lt;!&ndash;一个是mybatis包&ndash;&gt;-->
 		<!--</dependency>-->
+		<!-- mybatis-plus 多数据源 -->
+<!--		目前，多数项目会有多数据源的要求，或者是主从部署的要求，所以我们还需要引入 mybatis-plus 关于多数据源的依赖：-->
+<!--		<dependency>-->
+<!--			<groupId>com.baomidou</groupId>-->
+<!--			<artifactId>dynamic-datasource-spring-boot-starter</artifactId>-->
+<!--			<version>3.5.0</version>-->
+<!--		</dependency>-->
 
 		<!--mybatis-plus的代码生成器-->
 		<dependency>
