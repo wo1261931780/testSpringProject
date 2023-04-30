@@ -308,7 +308,7 @@
 		<dependency>
 			<groupId>redis.clients</groupId>
 			<artifactId>jedis</artifactId>
-			<version>4.3.2</version>
+			<version>jedis-3.6.2</version>
 		</dependency>
 
 
