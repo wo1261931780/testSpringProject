@@ -554,16 +554,16 @@
 				</configuration>
 			</plugin>
 			<!-- java编译插件 -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.2</version>
-				<!--<configuration>-->
-				<!--	<source>1.8</source>-->
-				<!--	<target>1.8</target>-->
-				<!--	<encoding>UTF-8</encoding>-->
-				<!--</configuration>-->
-			</plugin>
+<!--			<plugin>-->
+<!--				<groupId>org.apache.maven.plugins</groupId>-->
+<!--				<artifactId>maven-compiler-plugin</artifactId>-->
+<!--				<version>3.2</version>-->
+<!--				&lt;!&ndash;<configuration>&ndash;&gt;-->
+<!--				&lt;!&ndash;	<source>1.8</source>&ndash;&gt;-->
+<!--				&lt;!&ndash;	<target>1.8</target>&ndash;&gt;-->
+<!--				&lt;!&ndash;	<encoding>UTF-8</encoding>&ndash;&gt;-->
+<!--				&lt;!&ndash;</configuration>&ndash;&gt;-->
+<!--			</plugin>-->
 			<!--注掉下面的配置，否则maven：install报错-->
 			<!--<plugin>-->
 			<!--	<groupId>org.springframework.experimental</groupId>-->
