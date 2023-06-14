@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.0.5</version>
+		<version>3.1.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>wo1261931780</groupId>
@@ -30,6 +30,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
+			<version>3.1.0</version>
 		</dependency>
 		<!--spring网络WEB-->
 		<!--使用Spring MVC构建Web，包括RESTful，应用程序。使用Apache Tomcat作为默认的嵌入式容器。-->
@@ -37,6 +38,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<version>3.1.0</version>
 			<!--<scope>test</scope>-->
 			<!--上面的scope表示作用范围-->
 			<!--在没有说明的情况下，scope默认就是compile-->
@@ -53,12 +55,14 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aspects</artifactId>
+			<version>6.0.9</version>
 		</dependency>
 		<!--一开始是在spring boot context里面-->
 		<!--现在是在cache里面-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-cache</artifactId>
+			<version>3.1.0</version>
 		</dependency>
 		<!--Spring Boot DevTools 开发人员工具-->
 		<!--提供快速的应用重启、LiveReload和配置，以增强开发体验。-->
@@ -80,6 +84,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
+			<version>3.1.0</version>
 		</dependency>
 		<!--=============================================================================================-->
 		<!--DEVELOPER_TOOLS-->
@@ -171,12 +176,13 @@
 		<dependency>
 			<groupId>org.scala-lang</groupId>
 			<artifactId>scala-library</artifactId>
-			<version>2.13.10</version>
+			<version>2.13.11-M2</version>
 		</dependency>
 		<!--JMS支持包，包括用于发送/接收JMS消息的辅助类-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jms</artifactId>
+			<version>6.0.9</version>
 		</dependency>
 
 
@@ -308,7 +314,7 @@
 		<dependency>
 			<groupId>redis.clients</groupId>
 			<artifactId>jedis</artifactId>
-			<version>jedis-3.6.2</version>
+			<version>5.0.0-alpha2</version>
 		</dependency>
 
 
@@ -319,6 +325,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<version>3.1.0</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -479,6 +486,11 @@
 			<groupId>org.modelmapper</groupId>
 			<artifactId>modelmapper</artifactId>
 			<version>3.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-autoconfigure</artifactId>
+			<version>3.0.5</version>
 		</dependency>
 	</dependencies>
 
