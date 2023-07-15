@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.0</version>
+        <version>3.1.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>wo1261931780</groupId>
@@ -135,10 +135,11 @@
         </dependency>
         <!--Spring Session WEB-->
         <!--为管理用户会话信息提供API和实现。-->
-        <dependency>
-            <groupId>org.springframework.session</groupId>
-            <artifactId>spring-session-jdbc</artifactId>
-        </dependency>
+        <!--没有配置，项目报错，启动失败-->
+        <!--<dependency>-->
+        <!--    <groupId>org.springframework.session</groupId>-->
+        <!--    <artifactId>spring-session-jdbc</artifactId>-->
+        <!--</dependency>-->
         <!--阿里巴巴的Fastjson是一个用Java编写的JSON处理器（JSON解析器+JSON生成器）。-->
         <!--用2.0.31,否则和dubbo冲突-->
         <dependency>
@@ -197,11 +198,11 @@
         <!--JDBC API SQL-->
         <!--数据库连接API，定义了客户端如何连接和查询数据库。-->
         <!--没有配置，项目报错，启动失败-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <!--spring操作数据库的包-->
-            <artifactId>spring-boot-starter-data-jdbc</artifactId>
-        </dependency>
+        <!--<dependency>-->
+        <!--    <groupId>org.springframework.boot</groupId>-->
+        <!--    &lt;!&ndash;spring操作数据库的包&ndash;&gt;-->
+        <!--    <artifactId>spring-boot-starter-data-jdbc</artifactId>-->
+        <!--</dependency>-->
 
         <!--Spring Data JDBC SQL-->
         <!--使用Spring Data，用普通的JDBC在SQL存储中保存数据。-->
@@ -242,20 +243,20 @@
         <!--使用mybatis-plus以后，这些东西就不需要了-->
         <!--没有配置，项目报错，启动失败-->
         <dependency>
-        	<groupId>com.baomidou</groupId>
-        	<artifactId>mybatis-plus-boot-starter</artifactId>
-        	<version>3.5.3.1</version>
-        	<!--依赖中一共两个jar包-->
-        	<!--一个是mybatis和spring整合包-->
-        	<!--一个是mybatis包-->
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.5.3.1</version>
+            <!--依赖中一共两个jar包-->
+            <!--一个是mybatis和spring整合包-->
+            <!--一个是mybatis包-->
         </dependency>
         <!-- mybatis-plus 多数据源 -->
         <!--		目前，多数项目会有多数据源的要求，或者是主从部署的要求，所以我们还需要引入 mybatis-plus 关于多数据源的依赖：-->
-        		<dependency>
-        			<groupId>com.baomidou</groupId>
-        			<artifactId>dynamic-datasource-spring-boot-starter</artifactId>
-        			<version>3.6.1</version>
-        		</dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+            <version>3.6.1</version>
+        </dependency>
 
         <!--mybatis-plus的代码生成器-->
         <dependency>
