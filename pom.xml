@@ -30,7 +30,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
-            <version>3.1.1</version>
+            <version>3.1.2</version>
         </dependency>
         <!--spring网络WEB-->
         <!--使用Spring MVC构建Web，包括RESTful，应用程序。使用Apache Tomcat作为默认的嵌入式容器。-->
@@ -38,7 +38,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>3.1.1</version>
+            <version>3.1.2</version>
             <!--<scope>test</scope>-->
             <!--上面的scope表示作用范围-->
             <!--在没有说明的情况下，scope默认就是compile-->
@@ -62,7 +62,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-cache</artifactId>
-            <version>3.1.1</version>
+            <version>3.1.2</version>
         </dependency>
         <!--Spring Boot DevTools 开发人员工具-->
         <!--提供快速的应用重启、LiveReload和配置，以增强开发体验。-->
@@ -84,7 +84,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
-            <version>3.1.1</version>
+            <version>3.1.2</version>
         </dependency>
         <!--=============================================================================================-->
         <!--DEVELOPER_TOOLS-->
@@ -491,7 +491,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
-            <version>3.1.1</version>
+            <version>3.1.2</version>
         </dependency>
     </dependencies>
 
