@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
@@ -512,79 +512,79 @@
         <!--但是我用idea自带的创建工具，就在路径下创建了一个完全相同的路径，然后在里面自动创建了一个配置文件-->
         <!--但是上面两个都是无效的-->
         <!--我使用idea自带的配置文件创建工具，直接创建对应名称对象，就解决了该问题-->
-<!--        <plugins>-->
-            <!--=============================================================================================-->
-            <!--DEVELOPER_TOOLS-->
-            <!--=============================================================================================-->
-            <!--GraalVM本地支持 开发者工具-->
-            <!--支持使用GraalVM本地图像编译器将Spring应用程序编译为本地可执行文件。-->
-<!--            <plugin>-->
-<!--                <groupId>org.graalvm.buildtools</groupId>-->
-<!--                <artifactId>native-maven-plugin</artifactId>-->
-<!--            </plugin>-->
-<!--            <plugin>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--                <configuration>-->
-<!--                    &lt;!&ndash;<fork>true</fork>&ndash;&gt;-->
-<!--                    <addResources>true</addResources>-->
-<!--                    <excludes>-->
-<!--                        <exclude>-->
-<!--                            <groupId>org.projectlombok</groupId>-->
-<!--                            <artifactId>lombok</artifactId>-->
-<!--                        </exclude>-->
-<!--                    </excludes>-->
-<!--                    &lt;!&ndash;<classifier>${repackage.classifier}</classifier>&ndash;&gt;-->
-<!--                    <image>-->
-<!--                        <builder>paketobuildpacks/builder:tiny</builder>-->
-<!--                        <env>-->
-<!--                            <BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>-->
-<!--                        </env>-->
-<!--                    </image>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-resources-plugin</artifactId>-->
-<!--                <version>3.3.0</version>-->
-<!--                &lt;!&ndash;添加这个插件以后，我们就可以直接使用pom中的配置文件&ndash;&gt;-->
-<!--                &lt;!&ndash;接着，其它地方就可以解析这里的配置参数&ndash;&gt;-->
-<!--                <configuration>-->
-<!--                    <encoding>UTF-8</encoding>-->
-<!--                    <useDefaultDelimiters>true</useDefaultDelimiters>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-            <!-- java编译插件 -->
-            <!--<plugin>-->
-            <!--    <groupId>org.apache.maven.plugins</groupId>-->
-            <!--    <artifactId>maven-compiler-plugin</artifactId>-->
-            <!--    <version>3.2</version>-->
-            <!--    <configuration>-->
-            <!--        <source>17</source>-->
-            <!--        <target>17</target>-->
-            <!--        <encoding>UTF-8</encoding>-->
-            <!--    </configuration>-->
-            <!--</plugin>-->
-            <!--注掉下面的配置，否则maven：install报错-->
-            <!--<plugin>-->
-            <!--	<groupId>org.springframework.experimental</groupId>-->
-            <!--	<artifactId>spring-aot-maven-plugin</artifactId>-->
-            <!--	<executions>-->
-            <!--		<execution>-->
-            <!--			<id>test-generate</id>-->
-            <!--			<goals>-->
-            <!--				<goal>test-generate</goal>-->
-            <!--			</goals>-->
-            <!--		</execution>-->
-            <!--		<execution>-->
-            <!--			<id>generate</id>-->
-            <!--			<goals>-->
-            <!--				<goal>generate</goal>-->
-            <!--			</goals>-->
-            <!--		</execution>-->
-            <!--	</executions>-->
-            <!--</plugin>-->
-<!--        </plugins>-->
+        <!--        <plugins>-->
+        <!--=============================================================================================-->
+        <!--DEVELOPER_TOOLS-->
+        <!--=============================================================================================-->
+        <!--GraalVM本地支持 开发者工具-->
+        <!--支持使用GraalVM本地图像编译器将Spring应用程序编译为本地可执行文件。-->
+        <!--            <plugin>-->
+        <!--                <groupId>org.graalvm.buildtools</groupId>-->
+        <!--                <artifactId>native-maven-plugin</artifactId>-->
+        <!--            </plugin>-->
+        <!--            <plugin>-->
+        <!--                <groupId>org.springframework.boot</groupId>-->
+        <!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+        <!--                <configuration>-->
+        <!--                    &lt;!&ndash;<fork>true</fork>&ndash;&gt;-->
+        <!--                    <addResources>true</addResources>-->
+        <!--                    <excludes>-->
+        <!--                        <exclude>-->
+        <!--                            <groupId>org.projectlombok</groupId>-->
+        <!--                            <artifactId>lombok</artifactId>-->
+        <!--                        </exclude>-->
+        <!--                    </excludes>-->
+        <!--                    &lt;!&ndash;<classifier>${repackage.classifier}</classifier>&ndash;&gt;-->
+        <!--                    <image>-->
+        <!--                        <builder>paketobuildpacks/builder:tiny</builder>-->
+        <!--                        <env>-->
+        <!--                            <BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>-->
+        <!--                        </env>-->
+        <!--                    </image>-->
+        <!--                </configuration>-->
+        <!--            </plugin>-->
+        <!--            <plugin>-->
+        <!--                <groupId>org.apache.maven.plugins</groupId>-->
+        <!--                <artifactId>maven-resources-plugin</artifactId>-->
+        <!--                <version>3.3.0</version>-->
+        <!--                &lt;!&ndash;添加这个插件以后，我们就可以直接使用pom中的配置文件&ndash;&gt;-->
+        <!--                &lt;!&ndash;接着，其它地方就可以解析这里的配置参数&ndash;&gt;-->
+        <!--                <configuration>-->
+        <!--                    <encoding>UTF-8</encoding>-->
+        <!--                    <useDefaultDelimiters>true</useDefaultDelimiters>-->
+        <!--                </configuration>-->
+        <!--            </plugin>-->
+        <!-- java编译插件 -->
+        <!--<plugin>-->
+        <!--    <groupId>org.apache.maven.plugins</groupId>-->
+        <!--    <artifactId>maven-compiler-plugin</artifactId>-->
+        <!--    <version>3.2</version>-->
+        <!--    <configuration>-->
+        <!--        <source>17</source>-->
+        <!--        <target>17</target>-->
+        <!--        <encoding>UTF-8</encoding>-->
+        <!--    </configuration>-->
+        <!--</plugin>-->
+        <!--注掉下面的配置，否则maven：install报错-->
+        <!--<plugin>-->
+        <!--	<groupId>org.springframework.experimental</groupId>-->
+        <!--	<artifactId>spring-aot-maven-plugin</artifactId>-->
+        <!--	<executions>-->
+        <!--		<execution>-->
+        <!--			<id>test-generate</id>-->
+        <!--			<goals>-->
+        <!--				<goal>test-generate</goal>-->
+        <!--			</goals>-->
+        <!--		</execution>-->
+        <!--		<execution>-->
+        <!--			<id>generate</id>-->
+        <!--			<goals>-->
+        <!--				<goal>generate</goal>-->
+        <!--			</goals>-->
+        <!--		</execution>-->
+        <!--	</executions>-->
+        <!--</plugin>-->
+        <!--        </plugins>-->
     </build>
     <repositories>
         <!--阿里云搭建了一个国内镜像http://maven.aliyun.com，跑起来速度很快，可以进行配置-->
