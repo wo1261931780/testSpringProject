@@ -7,6 +7,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.2.0</version>
+		<!--一个月以后更新到3.2.0-->
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>wo1261931780</groupId>
@@ -145,9 +146,15 @@
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>3.14.0</version>
+			<version>3.13.0</version>
 		</dependency>
-
+		<!--Guava是一种基于开源的Java库，Google Guava源于2007年的"Google Collections Library"。-->
+		<!--这个库是为了方便编码，并减少编码错误。这个库用于提供集合，缓存，支持原语句，并发性，常见注解，字符串处理，I/O和验证的实用方法。-->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>32.1.3-jre</version>
+		</dependency>
 		<!--=============================================================================================-->
 		<!--WEB-->
 		<!--=============================================================================================-->
@@ -189,7 +196,21 @@
 		<!--    <groupId>org.springframework.session</groupId>-->
 		<!--    <artifactId>spring-session-jdbc</artifactId>-->
 		<!--</dependency>-->
-
+		<!--Jersey是一个RESTFUL请求服务JAVA框架，与常规的JAVA编程使用的struts框架类似，它主要用于处理业务逻辑层。-->
+		<!--与springmvc 的区别：-->
+		<!--1. jersey同样提供DI，是由glassfish hk2实现，也就是说，如果想单独使用jersey一套，需要另外学习Bean容器；-->
+		<!--2. MVC出发点即是WEB，但jersey出发点确实RESTFull，体现点在与接口的设计方面，-->
+		<!--如MVC返回复杂结构需要使用ModelAndView,而jersey仅仅需要返回一个流或者文件句柄；-->
+		<!--3. jersey提供一种子资源的概念，这也是RESTFull中提倡所有url都是资源；-->
+		<!--4. jersey直接提供application.wadl资源url说明；-->
+		<!--5. MVC提供Session等状态管理，jersey没有，这个源自RESTFull设计无状态化；-->
+		<!--6. Response方法支持更好返回结果，方便的返回Status，包括200，303，401，403；-->
+		<!--7. 提供超级特别方便的方式访问RESTFull;-->
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-client</artifactId>
+			<version>1.19.4</version>
+		</dependency>
 		<!--=============================================================================================-->
 		<!--MESSAGING-->
 		<!--=============================================================================================-->
@@ -218,7 +239,7 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<version>2.16.0</version>
+			<version>2.15.3</version>
 		</dependency>
 
 		<!--JMS支持包，包括用于发送/接收JMS消息的辅助类-->
@@ -323,14 +344,14 @@
 
 		<!--使用mybatis-plus以后，这些东西就不需要了-->
 		<!--没有配置，项目报错，启动失败-->
-		<dependency>
-			<groupId>com.baomidou</groupId>
-			<artifactId>mybatis-plus-boot-starter</artifactId>
-			<version>3.5.4.1</version>
+		<!--<dependency>-->
+		<!--	<groupId>com.baomidou</groupId>-->
+		<!--	<artifactId>mybatis-plus-boot-starter</artifactId>-->
+		<!--	<version>3.5.4.1</version>-->
 			<!--依赖中一共两个jar包-->
 			<!--一个是mybatis和spring整合包-->
 			<!--一个是mybatis包-->
-		</dependency>
+		<!--</dependency>-->
 		<!-- mybatis-plus 多数据源 -->
 		<!--目前，多数项目会有多数据源的要求，或者是主从部署的要求，所以我们还需要引入 mybatis-plus 关于多数据源的依赖：-->
 		<dependency>
@@ -338,7 +359,6 @@
 			<artifactId>dynamic-datasource-spring-boot-starter</artifactId>
 			<version>4.2.0</version>
 		</dependency>
-
 		<!--mybatis-plus的代码生成器-->
 		<dependency>
 			<groupId>com.baomidou</groupId>
@@ -363,13 +383,31 @@
 		<!--引入maven的相关依赖，注意scope只需要写test就可以了-->
 		<!--在项目的test目录新建一个启动类，代码示例如下：-->
 		<!--运行该启动类，启动一个Generator Server。然后访问http://localhost:8068（端口是可配置的）即可进入到管理界面。-->
-		<dependency>
-			<groupId>com.github.davidfantasy</groupId>
-			<artifactId>mybatis-plus-generator-ui</artifactId>
-			<version>2.0.5</version>
-			<scope>test</scope>
-		</dependency>
+		<!--这个依赖比较尴尬，一方面更新比较慢，导致依赖总是报错，另一个方面，使用的次数不多，这里暂时保留，以防万一-->
+		<!--<dependency>-->
+		<!--	<groupId>com.github.davidfantasy</groupId>-->
+		<!--	<artifactId>mybatis-plus-generator-ui</artifactId>-->
+		<!--	<version>2.0.5</version>-->
+		<!--	<scope>test</scope>-->
+		<!--</dependency>-->
 
+		<!--Mybatis-Flex 是一个优雅的 Mybatis 增强框架，它非常轻量、同时拥有极高的性能与灵活性。-->
+		<!--MyBatis-Flex 的查询单条数据的速度，大概是 MyBatis-Plus 的 5 ~ 10+ 倍。-->
+		<!--MyBatis-Flex 的查询 10 条数据的速度，大概是 MyBatis-Plus 的 5~10 倍左右。-->
+		<!--Mybatis-Flex 的分页查询速度，大概是 Mybatis-Plus 的 5~10 倍左右。-->
+		<!--Mybatis-Flex 的数据更新速度，大概是 Mybatis-Plus 的 5~10+ 倍。-->
+		<dependency>
+			<groupId>com.mybatis-flex</groupId>
+			<artifactId>mybatis-flex-spring-boot-starter</artifactId>
+			<version>1.7.5</version>
+		</dependency>
+		<!--Mybatis-flex的apt依赖-->
+		<dependency>
+			<groupId>com.mybatis-flex</groupId>
+			<artifactId>mybatis-flex-processor</artifactId>
+			<version>1.7.5</version>
+			<scope>provided</scope>
+		</dependency>
 		<!--=============================================================================================-->
 		<!--数据库连接池-->
 		<!--=============================================================================================-->
@@ -398,6 +436,7 @@
 			<artifactId>HikariCP</artifactId>
 			<version>5.0.1</version>
 		</dependency>
+
 		<!--=============================================================================================-->
 		<!--redis的包-->
 		<!--=============================================================================================-->
@@ -408,8 +447,9 @@
 			<version>3.2.0</version>
 		</dependency>
 		<!--用来连接，操作redis-->
-		<!--Apache
-		Commons对象池库。-->
+		<!--Apache Commons对象池库。-->
+		<!--jedis是一个java实现的redis客户端连接工具。-->
+		<!--常用的还有redisson，jedis跟接近于原生的操作，而redisson跟适合用于分布式，提供了分布式锁，以及其他多种数据结构。-->
 		<dependency>
 			<groupId>redis.clients</groupId>
 			<artifactId>jedis</artifactId>
@@ -420,8 +460,12 @@
 		<!--=============================================================================================-->
 		<!--TEST-->
 		<!--=============================================================================================-->
-		<!--使用包括JUnit
-		Jupiter、Hamcrest和Mockito在内的库测试Spring Boot应用程序的入门者-->
+		<!--Spring Test与JUnit等其他测试框架结合起来，提供了便捷高效的测试手段。-->
+		<!--而Spring Boot Test 是在Spring Test之上的再次封装，增加了切片测试，增强了mock能力。-->
+		<!--整体上，Spring Boot Test支持的测试种类，大致可以分为如下三类：-->
+		<!--单元测试：一般面向方法，编写一般业务代码时，测试成本较大。涉及到的注解有@Test。-->
+		<!--切片测试：一般面向难于测试的边界功能，介于单元测试和功能测试之间。涉及到的注解有@RunWith @WebMvcTest等。-->
+		<!--功能测试：一般面向某个完整的业务功能，同时也可以使用切面测试中的mock能力，推荐使用。涉及到的注解有@RunWith @SpringBootTest等。-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -429,10 +473,8 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!--Spring
-		Test支持用JUnit或TestNG对Spring组件进行单元测试和集成测试。-->
-		<!--它提供了一致的Spring
-		ApplicationContexts的加载和缓存，并提供了模拟对象，你可以用它来孤立地测试你的代码。-->
+		<!--Spring Test支持用JUnit或TestNG对Spring组件进行单元测试和集成测试。-->
+		<!--它提供了一致的Spring ApplicationContexts的加载和缓存，并提供了模拟对象，你可以用它来孤立地测试你的代码。-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
@@ -442,8 +484,7 @@
 		<!--=============================================================================================-->
 		<!--安全框架-->
 		<!--=============================================================================================-->
-		<!--spring安全
-		SECURITY-->
+		<!--spring安全SECURITY-->
 		<!--为Spring应用程序提供高度可定制的认证和访问控制框架。-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -456,13 +497,16 @@
 			<version>6.2.0</version>
 			<scope>test</scope>
 		</dependency>
-		<!--设置权限-->
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-taglibs</artifactId>
-			<version>6.2.0</version>
-		</dependency>
+		<!--设置权限，和jsp相关？暂时注掉-->
+		<!--<dependency>-->
+		<!--	<groupId>org.springframework.security</groupId>-->
+		<!--	<artifactId>spring-security-taglibs</artifactId>-->
+		<!--	<version>6.2.0</version>-->
+		<!--</dependency>-->
 		<!--特殊依赖，但是保留会报错，有安全问题，暂时注掉-->
+		<!--kaptcha 是一个很有用的验证码生成工具。有了它，你能够生成各种样式的验证码，由于它是可配置的。-->
+		<!--kaptcha工作的原理是调用com.google.code.kaptcha.servlet.KaptchaServlet，生成一个图片。-->
+		<!--同一时候将生成的验证码字符串放到 HttpSession中。-->
 		<!--<dependency>-->
 		<!--	<groupId>com.github.penggle</groupId>-->
 		<!--	<artifactId>kaptcha</artifactId>-->
@@ -481,8 +525,7 @@
 		<!--dubbo相关-->
 		<!--=============================================================================================-->
 		<!--dubbo一体式项目-->
-		<!--Dubbo是一款高性能、轻量级的开源Java
-		RPC框架，它提供了三大核心能力：-->
+		<!--Dubbo是一款高性能、轻量级的开源Java RPC框架，它提供了三大核心能力：-->
 		<!--面向接口的远程方法调用，智能容错和负载均衡，以及服务自动注册和发现。-->
 		<dependency>
 			<groupId>org.apache.dubbo</groupId>
@@ -525,29 +568,23 @@
 			<artifactId>qiniu-java-sdk</artifactId>
 			<version>7.14.0</version>
 		</dependency>
-		<dependency>
-			<groupId>com.sun.jersey</groupId>
-			<artifactId>jersey-client</artifactId>
-			<version>1.19.4</version>
-		</dependency>
+
 		<!--=============================================================================================-->
 		<!--spring cloud组件-->
 		<!--=============================================================================================-->
-
+		<!-- 网关的服务依赖 -->
+		<!--没有配置，项目报错，启动失败-->
+		<!--<dependency>-->
+		<!--	<groupId>org.springframework.cloud</groupId>-->
+		<!--	<artifactId>spring-cloud-starter-gateway</artifactId>-->
+		<!--	<version>4.0.0</version>-->
+		<!--</dependency>-->
 		<!-- nacos依赖 -->
-		<dependency>
-			<groupId>com.alibaba.cloud</groupId>
-			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-			<version>2022.0.0.0</version>
-		</dependency>
-		<!--其实有了nacos，就不需要eureka了-->
-		<!--所以同时要把子项目中的eureka依赖注释掉-->
+		<!--cloud版本不匹配，项目报错，启动失败-->
 		<!--<dependency>-->
 		<!--	<groupId>com.alibaba.cloud</groupId>-->
-		<!--	<artifactId>spring-cloud-alibaba-dependencies</artifactId>-->
+		<!--	<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
 		<!--	<version>2022.0.0.0</version>-->
-		<!--	<type>pom</type>-->
-		<!--	<scope>import</scope>-->
 		<!--</dependency>-->
 		<!--nacos的管理依赖-->
 		<!--<dependency>-->
@@ -557,30 +594,28 @@
 		<!--	<type>pom</type>-->
 		<!--	<scope>import</scope>-->
 		<!--</dependency>-->
-		<!-- 网关的服务依赖 -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-gateway</artifactId>
-			<version>4.0.0</version>
-		</dependency>
-		<!--注册中心的客户端核心依赖-->
-		<!--		<dependency>-->
-		<!--			<groupId>org.springframework.cloud</groupId>-->
-		<!--			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
-		<!--			<version>4.0.3</version>-->
-		<!--		</dependency>-->
-		<!--注册中心的核心依赖-->
-		<!--<dependency>-->
-		<!--	<groupId>org.springframework.cloud</groupId>-->
-		<!--	<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>-->
-		<!--	<version>4.0.3</version>-->
-		<!--</dependency>-->
 		<!--nacos配置文件管理依赖，读取bootstrap的-->
 		<!--<dependency>-->
 		<!--	<groupId>com.alibaba.cloud</groupId>-->
 		<!--	<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
 		<!--	<version>2022.0.0.0</version>-->
 		<!--</dependency>-->
+
+		<!--其实有了nacos，就不需要eureka了-->
+		<!--所以同时要把子项目中的eureka依赖注释掉-->
+		<!--注册中心的客户端核心依赖-->
+		<!--<dependency>-->
+		<!--	<groupId>org.springframework.cloud</groupId>-->
+		<!--	<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
+		<!--	<version>4.0.3</version>-->
+		<!--</dependency>-->
+		<!--注册中心的核心依赖-->
+		<!--<dependency>-->
+		<!--	<groupId>org.springframework.cloud</groupId>-->
+		<!--	<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>-->
+		<!--	<version>4.0.3</version>-->
+		<!--</dependency>-->
+
 		<!--feign客户端依赖-->
 		<!-- feign内部已经继承了ribbon，不需要额外引入 -->
 		<dependency>
@@ -595,20 +630,24 @@
 			<groupId>io.github.openfeign</groupId>
 			<artifactId>feign-httpclient</artifactId>
 			<!--<version>13.1</version>-->
-			<version>12.4</version>
+			<version>12.1</version>
 			<!--这里是不需要写版本的，因为已经被Spring管理起来了-->
 		</dependency>
+		<!--一方面Netflix Ribbon停止更新，Spring Cloud LoadBalancer是Spring Cloud官方自己提供的客户端负载均衡器,抽象和实现，用来替代Ribbon。-->
+		<!--常见负载均衡器分为服务端负载均衡器(如网关层均衡负载)和客户端层均衡负载。-->
+		<!--网关层如硬件层面的F5或软件层面的LVS、或者nginx等。-->
+		<!--客户端层就如Spring Cloud LoadBalancer，作为一个客户端去发现更新维护服务列表，自定义服务的均衡负载策略（随机、轮询、小流量的金丝雀等等）。-->
+		<!--Spring Cloud提供了自己的客户端负载平衡器抽象和实现。-->
+		<!--对于负载均衡机制，增加了ReactiveLoadBalancer接口，并提供了基于round-robin轮询和Random随机的实现。-->
+		<!--为了从响应式ServiceInstanceListSupplier中选择实例，需要使用ServiceInstanceListSupplier。-->
+		<!--目前支持ServiceInstanceListSupplier的基于服务发现的实现，该实现使用类路径中的发现客户端从Service Discovery中检索可用的实例。-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-loadbalancer</artifactId>
 			<version>4.0.0</version>
 			<!--4.0.4版本会出现依赖冲突，以国内的阿里巴巴为主-->
 		</dependency>
-		<dependency>
-			<groupId>com.lmax</groupId>
-			<artifactId>disruptor</artifactId>
-			<version>4.0.0</version>
-		</dependency>
+
 		<!--引入sentinel依赖-->
 		<!--报错：-->
 		<!--<dependency>-->
@@ -624,16 +663,22 @@
 		<!--分布式组件-->
 		<!--=============================================================================================-->
 		<!--java项目使用restful风格的接口来调用elasticSearch-->
-		<dependency>
-			<groupId>org.elasticsearch.client</groupId>
-			<artifactId>elasticsearch-rest-high-level-client</artifactId>
-			<version>7.17.15</version>
-		</dependency>
+		<!--<dependency>-->
+		<!--	<groupId>org.elasticsearch.client</groupId>-->
+		<!--	<artifactId>elasticsearch-rest-high-level-client</artifactId>-->
+		<!--<version>7.17.15</version>-->
+		<!--依赖冲突，暂时注掉-->
+		<!--</dependency>-->
 
 		<!--=============================================================================================-->
 		<!--高并发组件-->
 		<!--=============================================================================================-->
-
+		<!--高并发依赖-->
+		<dependency>
+			<groupId>com.lmax</groupId>
+			<artifactId>disruptor</artifactId>
+			<version>4.0.0</version>
+		</dependency>
 
 		<!--=============================================================================================-->
 		<!--swagger文档组件-->
@@ -651,18 +696,18 @@
 		</dependency>
 
 		<!--swagger文档-->
-		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger2</artifactId>
-			<version>3.0.0</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger-ui</artifactId>
-			<version>3.0.0</version>
-		</dependency>
+		<!--<dependency>-->
+		<!--	<groupId>io.springfox</groupId>-->
+		<!--	<artifactId>springfox-swagger2</artifactId>-->
+		<!--	<version>3.0.0</version>-->
+		<!--</dependency>-->
+		<!--<dependency>-->
+		<!--	<groupId>io.springfox</groupId>-->
+		<!--	<artifactId>springfox-swagger-ui</artifactId>-->
+		<!--	<version>3.0.0</version>-->
+		<!--</dependency>-->
+		<!--正如XPath之于XML文档一样，JsonPath为Json文档提供了解析能力。-->
+		<!--通过使用JsonPath，你可以方便的查找节点、获取想要的数据，JsonPath是Json版的XPath。-->
 		<dependency>
 			<groupId>com.jayway.jsonpath</groupId>
 			<artifactId>json-path</artifactId>
@@ -670,6 +715,10 @@
 		<!--=============================================================================================-->
 		<!--项目特殊依赖-->
 		<!--=============================================================================================-->
+		<!--Spring Native 可以通过 GraalVM 将 Spring 应用程序编译成原生镜像，提供了一种新的方式来部署 Spring 应用。-->
+		<!--Spring Native 支持 Java 和 Kotlin。-->
+		<!--这个项目的目标是寻找 Spring JVM 的替代方案，提供一个能将应用程序打包，并运行在轻量级容器的方案。-->
+		<!--期望能够在 Spring Native 中支持所有的 Spring 应用程序（几乎不用修改代码）。-->
 		<!--添加这个依赖以后，阿里云效找不到依赖，以后建议全部注释掉-->
 		<!--<dependency>-->
 		<!--	<groupId>org.springframework.experimental</groupId>-->
@@ -677,52 +726,47 @@
 		<!--	<version>0.12.0</version>-->
 		<!--</dependency>-->
 		<!--Selenium是一系列基于Web的自动化工具，提供一套测试函数，用于支持Web自动化测试。函数非常灵活，能够完成界面元素定位、窗口跳转、结果比较。-->
-		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
-			<version>4.15.0</version>
-		</dependency>
-		<!--FreeMarker 是一款 模板引擎： 即一种基于模板和要改变的数据， 并用来生成输出文本(HTML网页，电子邮件，配置文件，源代码等)的通用工具。-->
+		<!--<dependency>-->
+		<!--	<groupId>org.seleniumhq.selenium</groupId>-->
+		<!--	<artifactId>selenium-java</artifactId>-->
+		<!--	<version>4.15.0</version>-->
+		<!--</dependency>-->
+		<!--FreeMarker 是一款模板引擎： 即一种基于模板和要改变的数据，并用来生成输出文本(HTML网页，电子邮件，配置文件，源代码等)的通用工具。-->
 		<!--它不是面向最终用户的，而是一个Java类库，是一款程序员可以嵌入他们所开发产品的组件。-->
-		<dependency>
-			<groupId>org.freemarker</groupId>
-			<artifactId>freemarker</artifactId>
-			<version>2.3.32</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.dom4j/dom4j -->
-		<!--用于Java的灵活的XML框架-->
-		<dependency>
-			<groupId>org.dom4j</groupId>
-			<artifactId>dom4j</artifactId>
-			<version>2.1.4</version>
-		</dependency>
-		<dependency>
-			<groupId>xerces</groupId>
-			<artifactId>xercesImpl</artifactId>
-			<version>2.12.2</version>
-		</dependency>
+		<!--<dependency>-->
+		<!--	<groupId>org.freemarker</groupId>-->
+		<!--	<artifactId>freemarker</artifactId>-->
+		<!--	<version>2.3.32</version>-->
+		<!--</dependency>-->
+		<!--DOM4J是 dom4j.org 出品的一个开源 XML 解析包。DOM4J应用于 Java 平台，采用了 Java 集合框架并完全支持 DOM，SAX 和 JAXP。-->
+		<!--DOM4J 使用起来非常简单。只要你了解基本的 XML-DOM 模型，就能使用。-->
+		<!--Dom：把整个文档作为一个对象。Dom把XML文档转换为一个包含其内容的树，并且可以对树进行遍历，检索或修改。-->
+		<!--DOM4J 最大的特色是使用大量的接口。它的主要接口都在org.dom4j里面定义：-->
+		<!--<dependency>-->
+		<!--	<groupId>org.dom4j</groupId>-->
+		<!--	<artifactId>dom4j</artifactId>-->
+		<!--	<version>2.1.4</version>-->
+		<!--</dependency>-->
+		<!--用于Java解析xml的类库-->
+		<!--<dependency>-->
+		<!--	<groupId>xerces</groupId>-->
+		<!--	<artifactId>xercesImpl</artifactId>-->
+		<!--	<version>2.12.2</version>-->
+		<!--</dependency>-->
 
 		<!--阿里云短信服务-->
 		<!--阿帕奇HttpComponents客户端-->
-		<dependency>
-			<groupId>com.aliyun</groupId>
-			<artifactId>aliyun-java-sdk-core</artifactId>
-			<version>4.6.4</version>
-		</dependency>
-		<dependency>
-			<groupId>com.aliyun</groupId>
-			<artifactId>aliyun-java-sdk-dysmsapi</artifactId>
-			<version>2.2.1</version>
-		</dependency>
-
-
-		<!--Guava是一种基于开源的Java库，Google Guava源于2007年的"Google Collections Library"。-->
-		<!--这个库是为了方便编码，并减少编码错误。这个库用于提供集合，缓存，支持原语句，并发性，常见注解，字符串处理，I/O和验证的实用方法。-->
 		<!--<dependency>-->
-		<!--	<groupId>com.google.guava</groupId>-->
-		<!--	<artifactId>guava</artifactId>-->
-		<!--	<version>23.0</version>-->
+		<!--	<groupId>com.aliyun</groupId>-->
+		<!--	<artifactId>aliyun-java-sdk-core</artifactId>-->
+		<!--	<version>4.6.4</version>-->
 		<!--</dependency>-->
+		<!--<dependency>-->
+		<!--	<groupId>com.aliyun</groupId>-->
+		<!--	<artifactId>aliyun-java-sdk-dysmsapi</artifactId>-->
+		<!--	<version>2.2.1</version>-->
+		<!--</dependency>-->
+
 		<!--POI报表-->
 		<!--Apache POI 访问微软格式文件的Java API-->
 		<!--<dependency>-->
@@ -735,7 +779,6 @@
 		<!--	<artifactId>poi-ooxml</artifactId>-->
 		<!--	<version>5.2.4</version>-->
 		<!--</dependency>-->
-
 	</dependencies>
 
 	<build>
@@ -801,11 +844,17 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.2</version>
+				<version>3.11.0</version>
 				<configuration>
 					<source>17</source>
 					<target>17</target>
 					<encoding>UTF-8</encoding>
+					<!--<path>-->
+					<!--mybatis-flex的apt设置，如果添加以下代码，就不需要在上面加flex-processor依赖-->
+					<!--	<groupId>com.mybatis-flex</groupId>-->
+					<!--	<artifactId>mybatis-flex-processor</artifactId>-->
+					<!--	<version>1.7.5</version>-->
+					<!--</path>-->
 				</configuration>
 			</plugin>
 			<!--注掉下面的配置，否则maven：install报错-->
