@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.1.5</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<version>3.2.0</version>
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>wo1261931780</groupId>
 	<artifactId>testSpringProject</artifactId>
@@ -41,7 +41,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<version>3.1.5</version>
+			<version>3.2.0</version>
 			<!--<scope>test</scope>-->
 			<!--上面的scope表示作用范围-->
 			<!--在没有说明的情况下，scope默认就是compile-->
@@ -62,7 +62,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aspects</artifactId>
-			<version>6.1.0</version>
+			<version>6.1.1</version>
 		</dependency>
 		<!--一开始是在spring
 		boot context里面-->
@@ -70,7 +70,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-cache</artifactId>
-			<version>3.1.5</version>
+			<version>3.2.0</version>
 		</dependency>
 		<!--Spring
 		Boot DevTools 开发人员工具-->
@@ -100,18 +100,18 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
-			<version>3.1.5</version>
+			<version>3.2.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>3.141.59</version>
+			<version>4.15.0</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
 		<dependency>
 			<groupId>org.freemarker</groupId>
 			<artifactId>freemarker</artifactId>
-			<version>2.3.28</version>
+			<version>2.3.32</version>
 		</dependency>
 		<!--=============================================================================================-->
 		<!--DEVELOPER_TOOLS-->
@@ -127,12 +127,11 @@
 			<!--因为只是源代码中提供了对应的功能-->
 			<!--所以其实不需要参与源代码的打包-->
 		</dependency>
-		<dependency>
-			<groupId>org.elasticsearch.client</groupId>
-			<artifactId>elasticsearch-rest-high-level-client</artifactId>
-			<!--<version>7.12.1</version>-->
-			<version>8.0.0-alpha2</version>
-		</dependency>
+		<!--<dependency>-->
+		<!--	<groupId>org.elasticsearch.client</groupId>-->
+		<!--	<artifactId>elasticsearch-rest-high-level-client</artifactId>-->
+		<!--	<version>7.17.15</version>-->
+		<!--</dependency>-->
 
 		<!--=============================================================================================-->
 		<!--WEB-->
@@ -178,11 +177,11 @@
 		<!--    <artifactId>spring-session-jdbc</artifactId>-->
 		<!--</dependency>-->
 		<!--阿里巴巴的Fastjson是一个用Java编写的JSON处理器（JSON解析器+JSON生成器）。-->
-		<!--用2.0.31,否则和dubbo冲突-->
+		<!--多个依赖和dubbo冲突-->
 		<dependency>
 			<groupId>com.alibaba.fastjson2</groupId>
 			<artifactId>fastjson2</artifactId>
-			<version>2.0.41</version>
+			<version>2.0.42</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
@@ -239,7 +238,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jms</artifactId>
-			<version>6.1.0</version>
+			<version>6.1.1</version>
 		</dependency>
 
 
@@ -285,15 +284,16 @@
 		<!--Mybatis-->
 		<!--=============================================================================================-->
 		<!--mybatis的分页助手插件-->
-		<dependency>
-			<groupId>com.github.pagehelper</groupId>
-			<artifactId>pagehelper</artifactId>
-			<version>6.0.0</version>
-		</dependency>
+		<!--2023年11月26日14:24:04，有依赖冲突问题，和Mybatis-plus-->
+		<!--<dependency>-->
+		<!--	<groupId>com.github.pagehelper</groupId>-->
+		<!--	<artifactId>pagehelper</artifactId>-->
+		<!--	<version>6.0.0</version>-->
+		<!--</dependency>-->
 		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
-			<version>1.2</version>
+			<version>1.1.2</version>
 		</dependency>
 		<dependency>
 			<groupId>taglibs</groupId>
@@ -315,7 +315,7 @@
 		<dependency>
 			<groupId>com.baomidou</groupId>
 			<artifactId>mybatis-plus-boot-starter</artifactId>
-			<version>3.5.4</version>
+			<version>3.5.4.1</version>
 			<!--依赖中一共两个jar包-->
 			<!--一个是mybatis和spring整合包-->
 			<!--一个是mybatis包-->
@@ -377,13 +377,13 @@
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
-			<version>2.9.2</version>
+			<version>3.0.0</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
-			<version>2.9.2</version>
+			<version>3.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.jayway.jsonpath</groupId>
@@ -404,7 +404,7 @@
 		<dependency>
 			<groupId>redis.clients</groupId>
 			<artifactId>jedis</artifactId>
-			<version>5.0.2</version>
+			<version>5.1.0</version>
 		</dependency>
 
 
@@ -416,7 +416,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<version>3.1.5</version>
+			<version>3.2.0</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -427,14 +427,6 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
-		</dependency>
-		<!--2021年8月12日08:31:05，下面的依赖是数美科技的机审-->
-		<dependency>
-			<groupId>net.sf.json-lib</groupId>
-			<artifactId>json-lib</artifactId>
-			<version>2.4</version>
-			<!--下面这一行如果不加，就无法使用-->
-			<classifier>jdk15</classifier>
 		</dependency>
 
 		<!--=============================================================================================-->
@@ -482,7 +474,7 @@
 		<dependency>
 			<groupId>org.apache.dubbo</groupId>
 			<artifactId>dubbo</artifactId>
-			<version>3.2.8</version>
+			<version>3.2.9</version>
 		</dependency>
 		<!--zookeeper是一个为分布式应用提供一致性服务的软件，提供的功能包括：配置维护、域名服务、分布式同步、组服务等。-->
 		<!--没有配置，项目报错，启动失败-->
@@ -501,7 +493,7 @@
 			<!--但是比Commons-io范围大-->
 			<groupId>commons-fileupload</groupId>
 			<artifactId>commons-fileupload</artifactId>
-			<version>1.5</version>
+			<version>1.4</version>
 		</dependency>
 		<!--Quartz是一个工作调度库，可以嵌入到java应用程序中，支持事务、持久性、集群和插件。-->
 		<dependency>
@@ -593,16 +585,17 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-autoconfigure</artifactId>
-			<version>3.1.5</version>
+			<version>3.2.0</version>
 		</dependency>
 		<!-- hutool -->
 		<!--字符串不为空的判断工具-->
 		<dependency>
 			<groupId>cn.hutool</groupId>
 			<artifactId>hutool-all</artifactId>
-			<version>5.7.2</version>
+			<version>5.8.23</version>
 		</dependency>
-		<!--spring cloud-->
+		<!--spring
+		cloud-->
 
 		<!-- nacos依赖 -->
 		<dependency>
@@ -631,7 +624,7 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-gateway</artifactId>
-			<version>4.0.7</version>
+			<version>4.0.0</version>
 		</dependency>
 		<!--注册中心的客户端核心依赖-->
 		<!--		<dependency>-->
@@ -645,11 +638,6 @@
 		<!--	<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>-->
 		<!--	<version>4.0.3</version>-->
 		<!--</dependency>-->
-		<dependency>
-			<groupId>com.alibaba.cloud</groupId>
-			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-			<version>2022.0.0.0</version>
-		</dependency>
 		<!--nacos配置文件管理依赖，读取bootstrap的-->
 		<!--<dependency>-->
 		<!--	<groupId>com.alibaba.cloud</groupId>-->
@@ -661,25 +649,28 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
-			<version>4.0.4</version>
+			<version>4.0.0</version>
+			<!--4.0.4版本会出现依赖冲突，以国内的阿里巴巴为主-->
 		</dependency>
 		<!--引入HttpClient依赖-->
 		<!--因为feign不支持连接池，所以这里手动引入一个 -->
 		<dependency>
 			<groupId>io.github.openfeign</groupId>
 			<artifactId>feign-httpclient</artifactId>
-			<version>12.5</version>
+			<!--<version>13.1</version>-->
+			<version>12.4</version>
 			<!--这里是不需要写版本的，因为已经被Spring管理起来了-->
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-loadbalancer</artifactId>
-			<version>4.0.4</version>
+			<version>4.0.0</version>
+			<!--4.0.4版本会出现依赖冲突，以国内的阿里巴巴为主-->
 		</dependency>
 		<dependency>
 			<groupId>com.lmax</groupId>
 			<artifactId>disruptor</artifactId>
-			<version>3.4.4</version>
+			<version>4.0.0</version>
 		</dependency>
 		<!--引入sentinel依赖-->
 		<!--报错：-->
@@ -687,15 +678,15 @@
 		<!--	<groupId>com.alibaba.cloud</groupId>-->
 		<!--	<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>-->
 		<!--</dependency>-->
-		<dependency>
-			<groupId>com.alibaba.csp</groupId>
-			<artifactId>sentinel-datasource-nacos</artifactId>
-		</dependency>
+		<!--<dependency>-->
+		<!--	<groupId>com.alibaba.csp</groupId>-->
+		<!--	<artifactId>sentinel-datasource-nacos</artifactId>-->
+		<!--</dependency>-->
 	</dependencies>
 
 	<build>
 		<!--<resources>-->
-		<!--	<resource>-->
+		<!--	<resource>-->-
 		<!--		<directory>src/main/java</directory>-->
 		<!--		<includes>-->
 		<!--			<include>**/*.*</include>-->
