@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns="http://maven.apache.org/POM/4.0.0"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.2.0</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>wo1261931780</groupId>
 	<artifactId>testSpringProject</artifactId>
@@ -34,10 +34,8 @@
 			<version>3.2.0</version>
 		</dependency>
 		<!--spring网络WEB-->
-		<!--使用Spring
-		MVC构建Web，包括RESTful，应用程序。使用Apache Tomcat作为默认的嵌入式容器。-->
-		<!--里面已经包含了spring
-		MVC的内容-->
+		<!--使用SpringMVC构建Web，包括RESTful，应用程序。使用Apache Tomcat作为默认的嵌入式容器。-->
+		<!--里面已经包含了springMVC的内容-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -50,98 +48,115 @@
 		</dependency>
 
 		<!--=============================================================================================-->
-		<!--spring-->
+		<!--spring相关-->
 		<!--=============================================================================================-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+			<version>3.2.0</version>
 		</dependency>
-		<!--Spring
-		Aspects将Spring与AspectJ整合在一起。-->
+		<!--SpringAspects将Spring与AspectJ整合在一起。-->
 		<!--AOP切面编程的依赖-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aspects</artifactId>
 			<version>6.1.1</version>
 		</dependency>
-		<!--一开始是在spring
-		boot context里面-->
+		<!--一开始是在springboot context里面-->
 		<!--现在是在cache里面-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-cache</artifactId>
 			<version>3.2.0</version>
 		</dependency>
-		<!--Spring
-		Boot DevTools 开发人员工具-->
+		<!--SpringBoot DevTools 开发人员工具-->
 		<!--提供快速的应用重启、LiveReload和配置，以增强开发体验。-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
+			<version>3.2.0</version>
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-		<!--Spring配置处理器
-		开发者工具-->
-		<!--为开发人员生成元数据，以便在使用自定义配置键（ex.application.properties/.yml文件）时提供上下文帮助和
-		"代码完成"。-->
+		<!--Spring配置处理器开发者工具-->
+		<!--为开发人员生成元数据，以便在使用自定义配置键（ex.application.properties/.yml文件）时提供上下文帮助和"代码完成"。-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
+			<version>3.2.0</version>
 			<optional>true</optional>
 			<!--添加以后，可以避免自动装配报错-->
 		</dependency>
-		<dependency>
-			<groupId>com.zaxxer</groupId>
-			<artifactId>HikariCP</artifactId>
-		</dependency>
-		<!--使用Spring
-		Boot的Actuator的入门课程，它提供了生产准备的功能，帮助你监控和管理你的应用程序。-->
+
+		<!--使用Spring Boot的Actuator的入门课程，它提供了生产准备的功能，帮助你监控和管理你的应用程序。-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 			<version>3.2.0</version>
 		</dependency>
-		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
-			<version>4.15.0</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
-		<dependency>
-			<groupId>org.freemarker</groupId>
-			<artifactId>freemarker</artifactId>
-			<version>2.3.32</version>
-		</dependency>
+
 		<!--=============================================================================================-->
 		<!--DEVELOPER_TOOLS-->
 		<!--=============================================================================================-->
-		<!--Lombok
-		开发者工具-->
+		<!--Lombok开发者工具-->
 		<!--帮助减少模板代码的Java注释库。-->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
+			<version>1.18.30</version>
 			<optional>true</optional>
 			<scope>provided</scope>
 			<!--因为只是源代码中提供了对应的功能-->
 			<!--所以其实不需要参与源代码的打包-->
 		</dependency>
-		<!--<dependency>-->
-		<!--	<groupId>org.elasticsearch.client</groupId>-->
-		<!--	<artifactId>elasticsearch-rest-high-level-client</artifactId>-->
-		<!--	<version>7.17.15</version>-->
-		<!--</dependency>-->
+		<!--提供便捷的，model到Mapper转换-->
+		<dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>3.2.0</version>
+		</dependency>
+		<!--通过 AutoConfiguration 机制使得应用可以在启动时根据引入的类和配置，自动加载配置类（Configuration），从而在这些类中初始化所需的 Spring Bean。-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-autoconfigure</artifactId>
+			<version>3.2.0</version>
+		</dependency>
+		<!-- hutool -->
+		<!--字符串不为空的判断工具-->
+		<!--Hutool是一个小而全的Java工具类库，通过静态方法封装，降低相关API的学习成本，提高工作效率，使Java拥有函数式语言般的优雅。-->
+		<!--Hutool是项目中“util”包友好的替代，它节省了开发人员对项目中公用类和公用工具方法的封装时间，使开发专注于业务，同时可以最大限度的避免封装不完善带来的bug。-->
+		<!--【以前】打开搜索引擎 -> 搜“Java MD5加密” -> 打开某篇博客-> 复制粘贴 -> 改改好用-->
+		<!--【现在】引入Hutool -> SecureUtil.md5()-->
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-all</artifactId>
+			<version>5.8.23</version>
+		</dependency>
+		<!--阿里巴巴的Fastjson是一个用Java编写的JSON处理器（JSON解析器+JSON生成器）。-->
+		<!--多个依赖和dubbo冲突-->
+		<dependency>
+			<groupId>com.alibaba.fastjson2</groupId>
+			<artifactId>fastjson2</artifactId>
+			<version>2.0.42</version>
+		</dependency>
+		<!--标准 Java 库无法为核心类的操作提供足够的方法。Apache Commons Lang 提供了这些额外的方法。-->
+		<!--Apache Commons Lang 为 java.lang API 提供了大量辅助实用程序，尤其是字符串操作方法、基本数值方法、对象反射、并发、创建和序列化以及系统属性。-->
+		<!--此外，它还包含对 java.util.Date 的基本增强，以及一系列专用于帮助构建方法的实用程序，如 hashCode、toString 和 equals。-->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.14.0</version>
+		</dependency>
 
 		<!--=============================================================================================-->
 		<!--WEB-->
 		<!--=============================================================================================-->
-		<!--Spring
-		Web Services WEB-->
+		<!--SpringWeb Services WEB-->
 		<!--为契约优先的SOAP开发提供了便利。允许使用许多操作XML有效载荷的方法之一来创建灵活的Web服务。-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web-services</artifactId>
+			<version>3.2.0</version>
 		</dependency>
 		<!--相比来说，jetty更加轻量，而且拓展性更强-->
 		<!--tomcat是apache的，而jetty是eclipse的-->
@@ -152,8 +167,7 @@
 		<!--因为starter-web中是没有jetty存在的，所以这里暂时不修改启动服务器-->
 		<!--</dependency>-->
 
-		<!--Java
-		Servlet是Java企业平台中的基础网络规范。开发人员可以使用Servlet API构建Web应用程序，与请求/响应工作流进行交互。-->
+		<!--JavaServlet是Java企业平台中的基础网络规范。开发人员可以使用Servlet API构建Web应用程序，与请求/响应工作流进行交互。-->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -162,63 +176,64 @@
 			<!--必须把scope变成provide，否则会和tomcat发生冲突-->
 		</dependency>
 		<!--spring的反应性网络WEB-->
-		<!--使用Spring
-		WebFlux和Netty构建反应式Web应用。-->
+		<!--使用SpringWebFlux和Netty构建反应式Web应用。-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
+			<version>3.2.0</version>
 		</dependency>
-		<!--Spring
-		Session WEB-->
+		<!--SpringSession WEB-->
 		<!--为管理用户会话信息提供API和实现。-->
 		<!--没有配置，项目报错，启动失败-->
 		<!--<dependency>-->
 		<!--    <groupId>org.springframework.session</groupId>-->
 		<!--    <artifactId>spring-session-jdbc</artifactId>-->
 		<!--</dependency>-->
-		<!--阿里巴巴的Fastjson是一个用Java编写的JSON处理器（JSON解析器+JSON生成器）。-->
-		<!--多个依赖和dubbo冲突-->
-		<dependency>
-			<groupId>com.alibaba.fastjson2</groupId>
-			<artifactId>fastjson2</artifactId>
-			<version>2.0.42</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-		</dependency>
 
 		<!--=============================================================================================-->
 		<!--MESSAGING-->
 		<!--=============================================================================================-->
-		<!--使用Spring
-		AMQP和Rabbit MQ的启动程序-->
-		<!--添加以后会在控制台报错，Rabbit
-		health check failed-->
+		<!--使用SpringAMQP和Rabbit MQ的启动程序-->
+		<!--添加以后会在控制台报错，Rabbit health check failed-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-amqp</artifactId>
+			<version>3.2.0</version>
 		</dependency>
-		<!--Spring
-		for RabbitMQ 消息-->
+		<!--Spring for RabbitMQ 消息-->
 		<!--为您的应用程序提供一个用于发送和接收消息的通用平台，并为您的消息提供一个安全的地方，直到收到为止。-->
 		<dependency>
 			<groupId>org.springframework.amqp</groupId>
 			<artifactId>spring-rabbit-test</artifactId>
+			<version>3.1.0</version>
 			<scope>test</scope>
 		</dependency>
 		<!--json的序列化依赖-->
 		<!--相当于，使用这个依赖覆盖默认的jdk序列化方式-->
+		<!--Jackson 是当前用的比较广泛的，用来序列化和反序列化 json 的 Java 的开源框架。-->
+		<!--Jackson 社区相对比较活跃，更新速度也比较快， 从 Github 中的统计来看，Jackson 是最流行的 json 解析器之一 。 -->
+		<!--Spring MVC 的默认 json 解析器便是 Jackson。 Jackson 优点很多。 Jackson 所依赖的 jar 包较少 ，简单易用。-->
+		<!--与其他 Java 的 json 的框架 Gson 等相比， Jackson 解析大的 json 文件速度比较快；Jackson 运行时占用内存比较低，性能比较好；-->
+		<!--Jackson 有灵活的 API，可以很容易进行扩展和定制。-->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
+			<version>2.16.0</version>
 		</dependency>
-		<!--Apache
-		Kafka Streams的Spring 讯息交流-->
-		<!--使用Apache
-		Kafka Streams构建流处理应用程序。-->
-		<!--Spring
-		for Apache Kafka MESSAGING-->
+
+		<!--JMS支持包，包括用于发送/接收JMS消息的辅助类-->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jms</artifactId>
+			<version>6.1.1</version>
+		</dependency>
+
+		<!--=============================================================================================-->
+		<!--日志系统-->
+		<!--=============================================================================================-->
+		<!--Apache Kafka Streams的Spring 讯息交流-->
+		<!--使用Apache Kafka Streams构建流处理应用程序。-->
+		<!--Spring for Apache Kafka MESSAGING-->
 		<!--发布、订阅、存储和处理记录流。-->
 		<dependency>
 			<groupId>org.apache.kafka</groupId>
@@ -228,49 +243,43 @@
 		<dependency>
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka</artifactId>
+			<version>3.1.0</version>
 		</dependency>
+		<!--Scala是一种运行在JVM上的一种编程语言(运行在JVM上的编程语言还有Groovy和Kotlin)，即最终都会编译成.class文件。-->
+		<!--Scala编程语言的特点：-->
+		<!--面向对象-->
+		<!--函数式编程-->
+		<!--开发效率高，表达能力强：scala一行代码抵java多行代码-->
+		<!--哪些框架是使用Scala开发的：-->
+		<!--Spark是使用Scala编程语言开发的。开发Spark程序可以使用Java、Python和Scala，但是Scala是最优雅的方式-->
+		<!--Kafka也是使用Scala编写的-->
 		<dependency>
 			<groupId>org.scala-lang</groupId>
 			<artifactId>scala-library</artifactId>
 			<version>2.13.12</version>
 		</dependency>
-		<!--JMS支持包，包括用于发送/接收JMS消息的辅助类-->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jms</artifactId>
-			<version>6.1.1</version>
-		</dependency>
-
-
 		<!--=============================================================================================-->
-		<!--日志系统-->
+		<!--数据库和jdbc-->
 		<!--=============================================================================================-->
-
-
-		<!--=============================================================================================-->
-		<!--数据库-->
-		<!--=============================================================================================-->
-		<!--JDBC
-		API SQL-->
+		<!--JDBC API SQL-->
 		<!--数据库连接API，定义了客户端如何连接和查询数据库。-->
 		<!--没有配置，项目报错，启动失败-->
 		<!--<dependency>-->
-		<!--    <groupId>org.springframework.boot</groupId>-->
-		<!--    &lt;!&ndash;spring操作数据库的包&ndash;&gt;-->
-		<!--    <artifactId>spring-boot-starter-data-jdbc</artifactId>-->
+		<!--	<groupId>org.springframework.boot</groupId>-->
+		<!--spring操作数据库的包-->
+		<!--<artifactId>spring-boot-starter-data-jdbc</artifactId>-->
+		<!--<version>3.2.0</version>-->
 		<!--</dependency>-->
 
-		<!--Spring
-		Data JDBC SQL-->
-		<!--使用Spring
-		Data，用普通的JDBC在SQL存储中保存数据。-->
+		<!--Spring Data JDBC SQL-->
+		<!--使用Spring Data，用普通的JDBC在SQL存储中保存数据。-->
 		<!--没有配置，项目报错，启动失败-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
+			<version>3.2.0</version>
 		</dependency>
-		<!--MySQL
-		JDBC driver.驱动-->
+		<!--MySQL JDBC driver.驱动-->
 		<!--mysql的驱动-->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -278,7 +287,6 @@
 			<version>8.0.33</version>
 			<scope>runtime</scope>
 		</dependency>
-
 
 		<!--=============================================================================================-->
 		<!--Mybatis-->
@@ -290,25 +298,28 @@
 		<!--	<artifactId>pagehelper</artifactId>-->
 		<!--	<version>6.0.0</version>-->
 		<!--</dependency>-->
-		<dependency>
-			<groupId>jstl</groupId>
-			<artifactId>jstl</artifactId>
-			<version>1.1.2</version>
-		</dependency>
-		<dependency>
-			<groupId>taglibs</groupId>
-			<artifactId>standard</artifactId>
-			<version>1.1.2</version>
-		</dependency>
+		<!--JSP标准标签库（JSTL）是一个JSP标签集合，它封装了JSP应用的通用核心功能。-->
+		<!--JSTL支持通用的、结构化的任务，比如迭代，条件判断，XML文档操作，国际化标签，SQL标签。 除了这些，它还提供了一个框架来使用集成JSTL的自定义标签。-->
+		<!--<dependency>-->
+		<!--	<groupId>jstl</groupId>-->
+		<!--	<artifactId>jstl</artifactId>-->
+		<!--	<version>1.1.2</version>-->
+		<!--</dependency>-->
+		<!--在JSP页面中使用的标记所组成的库。JSP容器推出时带有一个小型的、默认的标记库。-->
+		<!--<dependency>-->
+		<!--	<groupId>taglibs</groupId>-->
+		<!--	<artifactId>standard</artifactId>-->
+		<!--	<version>1.1.2</version>-->
+		<!--</dependency>-->
 		<!--MyBatis框架SQL-->
 		<!--持久性框架，支持自定义SQL，存储过程和高级映射。MyBatis使用XML描述符或注解将对象与存储程序或SQL语句结合起来。-->
 		<!--这里是mybatis按照spring的标准，开发出来的整合包-->
 		<!--没有配置，项目报错，启动失败-->
-		<!-- <dependency> -->
-		<!-- <groupId>org.mybatis.spring.boot</groupId> -->
-		<!-- <artifactId>mybatis-spring-boot-starter</artifactId> -->
-		<!-- <version>3.0.2</version> -->
-		<!-- </dependency> -->
+		<!--<dependency>-->
+		<!--	<groupId>org.mybatis.spring.boot</groupId>-->
+		<!--	<artifactId>mybatis-spring-boot-starter</artifactId>-->
+		<!--	<version>3.0.2</version>-->
+		<!--</dependency>-->
 
 		<!--使用mybatis-plus以后，这些东西就不需要了-->
 		<!--没有配置，项目报错，启动失败-->
@@ -321,7 +332,7 @@
 			<!--一个是mybatis包-->
 		</dependency>
 		<!-- mybatis-plus 多数据源 -->
-		<!--		目前，多数项目会有多数据源的要求，或者是主从部署的要求，所以我们还需要引入 mybatis-plus 关于多数据源的依赖：-->
+		<!--目前，多数项目会有多数据源的要求，或者是主从部署的要求，所以我们还需要引入 mybatis-plus 关于多数据源的依赖：-->
 		<dependency>
 			<groupId>com.baomidou</groupId>
 			<artifactId>dynamic-datasource-spring-boot-starter</artifactId>
@@ -336,23 +347,28 @@
 		</dependency>
 
 		<!--生成器对应的模板技术-->
-		<dependency>
-			<groupId>org.apache.velocity</groupId>
-			<artifactId>velocity-engine-core</artifactId>
-			<version>2.3</version>
-		</dependency>
-		<!--mybatis-plus-generator-ui可视化工具-->
-		<!--提供交互式的Web
-		UI用于生成兼容mybatis-plus框架的相关功能代码，-->
-		<!--包括Entity,Mapper,Mapper.xml,Service,Controller等
-		，-->
-		<!--可以自定义模板以及各类输出参数，也可通过SQL查询语句直接生成代码。-->
+		<!--Web应用程序：作为为应用程序的视图，展示数据-->
+		<!--源代码生成：Velocity用于基于模板生成Java源代码-->
+		<!--自动电子邮件：网站注册，认证等的电子邮件模板-->
+		<!--网页静态化：基于velocity模板，生成静态网页-->
 		<!--<dependency>-->
-		<!--	<groupId>com.github.davidfantasy</groupId>-->
-		<!--	<artifactId>mybatis-plus-generator-ui</artifactId>-->
-		<!--	<version>2.0.5</version>-->
-		<!--	<scope>test</scope>-->
+		<!--	<groupId>org.apache.velocity</groupId>-->
+		<!--	<artifactId>velocity-engine-core</artifactId>-->
+		<!--	<version>2.3</version>-->
 		<!--</dependency>-->
+		<!--mybatis-plus-generator-ui可视化工具-->
+		<!--提供交互式的WebUI用于生成兼容mybatis-plus框架的相关功能代码，-->
+		<!--包括Entity,Mapper,Mapper.xml,Service,Controller等-->
+		<!--可以自定义模板以及各类输出参数，也可通过SQL查询语句直接生成代码。-->
+		<!--引入maven的相关依赖，注意scope只需要写test就可以了-->
+		<!--在项目的test目录新建一个启动类，代码示例如下：-->
+		<!--运行该启动类，启动一个Generator Server。然后访问http://localhost:8068（端口是可配置的）即可进入到管理界面。-->
+		<dependency>
+			<groupId>com.github.davidfantasy</groupId>
+			<artifactId>mybatis-plus-generator-ui</artifactId>
+			<version>2.0.5</version>
+			<scope>test</scope>
+		</dependency>
 
 		<!--=============================================================================================-->
 		<!--数据库连接池-->
@@ -360,10 +376,10 @@
 		<!--c3p0相关包-->
 		<!--没有配置，项目报错，启动失败-->
 		<!--<dependency>-->
-		<!--	&lt;!&ndash;c3p0是一个连接池对象&ndash;&gt;-->
-		<!--	<groupId>c3p0</groupId>-->
-		<!--	<artifactId>c3p0</artifactId>-->
-		<!--	<version>0.9.0</version>-->
+		<!--c3p0是一个连接池对象-->
+		<!--<groupId>c3p0</groupId>-->
+		<!--<artifactId>c3p0</artifactId>-->
+		<!--<version>0.9.0</version>-->
 		<!--</dependency>-->
 
 		<!--阿里巴巴德鲁伊连接池-->
@@ -372,31 +388,24 @@
 			<artifactId>druid-spring-boot-starter</artifactId>
 			<version>1.2.20</version>
 		</dependency>
-		<!--swagger渚濊禆-->
-		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
+
+		<!--HikariCP 是一个高性能的 JDBC 连接池组件，号称性能最好的后起之秀，是一个基于BoneCP做了不少的改进和优化的高性能JDBC连接池。-->
+		<!--其作者还有产出了另外一个开源作品HikariJSON——高性能的JSON解析器。-->
+		<!--代码体积更是少的可怜，130kb。Spring Boot 2都已经宣布支持了该组件，由之前的Tomcat换成HikariCP。-->
+		<!--其性能远高于c3p0、tomcat等连接池，以致后来BoneCP作者都放弃了维护，在Github项目主页推荐大家使用HikariCP-->
 		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger2</artifactId>
-			<version>3.0.0</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger-ui</artifactId>
-			<version>3.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.jayway.jsonpath</groupId>
-			<artifactId>json-path</artifactId>
+			<groupId>com.zaxxer</groupId>
+			<artifactId>HikariCP</artifactId>
+			<version>5.0.1</version>
 		</dependency>
 		<!--=============================================================================================-->
 		<!--redis的包-->
 		<!--=============================================================================================-->
-		<!--spring
-		boot对redis做了整合-->
+		<!--springboot对redis做了整合-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
+			<version>3.2.0</version>
 		</dependency>
 		<!--用来连接，操作redis-->
 		<!--Apache
@@ -427,6 +436,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
+			<version>6.1.1</version>
 		</dependency>
 
 		<!--=============================================================================================-->
@@ -438,16 +448,19 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
+			<version>3.2.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
+			<version>6.2.0</version>
 			<scope>test</scope>
 		</dependency>
 		<!--设置权限-->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-taglibs</artifactId>
+			<version>6.2.0</version>
 		</dependency>
 		<!--特殊依赖，但是保留会报错，有安全问题，暂时注掉-->
 		<!--<dependency>-->
@@ -499,10 +512,12 @@
 		<dependency>
 			<groupId>org.quartz-scheduler</groupId>
 			<artifactId>quartz</artifactId>
+			<version>2.3.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.quartz-scheduler</groupId>
 			<artifactId>quartz-jobs</artifactId>
+			<version>2.3.2</version>
 		</dependency>
 		<!--存储服务-->
 		<dependency>
@@ -515,87 +530,9 @@
 			<artifactId>jersey-client</artifactId>
 			<version>1.19.4</version>
 		</dependency>
-
-
 		<!--=============================================================================================-->
-		<!--项目特殊依赖-->
+		<!--spring cloud组件-->
 		<!--=============================================================================================-->
-		<!--添加这个依赖以后，阿里云效找不到依赖，以后建议全部注释掉-->
-		<!--<dependency>-->
-		<!--	<groupId>org.springframework.experimental</groupId>-->
-		<!--	<artifactId>spring-native</artifactId>-->
-		<!--	<version>0.12.0</version>-->
-		<!--</dependency>-->
-
-		<!-- https://mvnrepository.com/artifact/org.dom4j/dom4j -->
-		<!--用于Java的灵活的XML框架-->
-		<dependency>
-			<groupId>org.dom4j</groupId>
-			<artifactId>dom4j</artifactId>
-			<version>2.1.4</version>
-		</dependency>
-		<dependency>
-			<groupId>xerces</groupId>
-			<artifactId>xercesImpl</artifactId>
-			<version>2.12.2</version>
-		</dependency>
-
-		<!--阿里云短信服务-->
-		<!--阿帕奇HttpComponents客户端-->
-		<dependency>
-			<groupId>com.aliyun</groupId>
-			<artifactId>aliyun-java-sdk-core</artifactId>
-			<version>4.6.4</version>
-		</dependency>
-		<dependency>
-			<groupId>com.aliyun</groupId>
-			<artifactId>aliyun-java-sdk-dysmsapi</artifactId>
-			<version>2.2.1</version>
-		</dependency>
-		<!--这里需要使用swagger技术，实际上是为了生成接口文档-->
-		<!--<dependency>-->
-		<!--	<groupId>com.github.xiaoymin</groupId>-->
-		<!--	<artifactId>knife4j-spring-boot-starter</artifactId>-->
-		<!--	<version>3.0.3</version>-->
-		<!--</dependency>-->
-		<!--Guava是一套核心库和扩展库，包括实用类、Google的集合、I/O类等等。-->
-		<!--<dependency>-->
-		<!--	<groupId>com.google.guava</groupId>-->
-		<!--	<artifactId>guava</artifactId>-->
-		<!--	<version>23.0</version>-->
-		<!--</dependency>-->
-		<!--POI报表-->
-		<!--Apache
-		POI - 访问微软格式文件的Java API-->
-		<!--<dependency>-->
-		<!--	<groupId>org.apache.poi</groupId>-->
-		<!--	<artifactId>poi</artifactId>-->
-		<!--	<version>5.2.4</version>-->
-		<!--</dependency>-->
-		<!--<dependency>-->
-		<!--	<groupId>org.apache.poi</groupId>-->
-		<!--	<artifactId>poi-ooxml</artifactId>-->
-		<!--	<version>5.2.4</version>-->
-		<!--</dependency>-->
-		<dependency>
-			<groupId>org.modelmapper</groupId>
-			<artifactId>modelmapper</artifactId>
-			<version>3.2.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-autoconfigure</artifactId>
-			<version>3.2.0</version>
-		</dependency>
-		<!-- hutool -->
-		<!--字符串不为空的判断工具-->
-		<dependency>
-			<groupId>cn.hutool</groupId>
-			<artifactId>hutool-all</artifactId>
-			<version>5.8.23</version>
-		</dependency>
-		<!--spring
-		cloud-->
 
 		<!-- nacos依赖 -->
 		<dependency>
@@ -682,11 +619,128 @@
 		<!--	<groupId>com.alibaba.csp</groupId>-->
 		<!--	<artifactId>sentinel-datasource-nacos</artifactId>-->
 		<!--</dependency>-->
+
+		<!--=============================================================================================-->
+		<!--分布式组件-->
+		<!--=============================================================================================-->
+		<!--java项目使用restful风格的接口来调用elasticSearch-->
+		<dependency>
+			<groupId>org.elasticsearch.client</groupId>
+			<artifactId>elasticsearch-rest-high-level-client</artifactId>
+			<version>7.17.15</version>
+		</dependency>
+
+		<!--=============================================================================================-->
+		<!--高并发组件-->
+		<!--=============================================================================================-->
+
+
+		<!--=============================================================================================-->
+		<!--swagger文档组件-->
+		<!--=============================================================================================-->
+		<!--这里需要使用swagger技术，实际上是为了生成接口文档-->
+		<!--Spring Boot 3 只支持OpenAPI3规范-->
+		<!--Knife4j提供的starter已经引用springdoc-openapi的jar，开发者需注意避免jar包冲突-->
+		<!--JDK版本必须 >= 17-->
+		<!--详细Demo请参考knife4j-spring-boot3-demo-->
+		<!--访问Knife4j的文档地址：http://ip:port/doc.html即可查看文档-->
+		<dependency>
+			<groupId>com.github.xiaoymin</groupId>
+			<artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
+			<version>4.3.0</version>
+		</dependency>
+
+		<!--swagger文档-->
+		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jayway.jsonpath</groupId>
+			<artifactId>json-path</artifactId>
+		</dependency>
+		<!--=============================================================================================-->
+		<!--项目特殊依赖-->
+		<!--=============================================================================================-->
+		<!--添加这个依赖以后，阿里云效找不到依赖，以后建议全部注释掉-->
+		<!--<dependency>-->
+		<!--	<groupId>org.springframework.experimental</groupId>-->
+		<!--	<artifactId>spring-native</artifactId>-->
+		<!--	<version>0.12.0</version>-->
+		<!--</dependency>-->
+		<!--Selenium是一系列基于Web的自动化工具，提供一套测试函数，用于支持Web自动化测试。函数非常灵活，能够完成界面元素定位、窗口跳转、结果比较。-->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.15.0</version>
+		</dependency>
+		<!--FreeMarker 是一款 模板引擎： 即一种基于模板和要改变的数据， 并用来生成输出文本(HTML网页，电子邮件，配置文件，源代码等)的通用工具。-->
+		<!--它不是面向最终用户的，而是一个Java类库，是一款程序员可以嵌入他们所开发产品的组件。-->
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.32</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.dom4j/dom4j -->
+		<!--用于Java的灵活的XML框架-->
+		<dependency>
+			<groupId>org.dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>2.1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>xerces</groupId>
+			<artifactId>xercesImpl</artifactId>
+			<version>2.12.2</version>
+		</dependency>
+
+		<!--阿里云短信服务-->
+		<!--阿帕奇HttpComponents客户端-->
+		<dependency>
+			<groupId>com.aliyun</groupId>
+			<artifactId>aliyun-java-sdk-core</artifactId>
+			<version>4.6.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.aliyun</groupId>
+			<artifactId>aliyun-java-sdk-dysmsapi</artifactId>
+			<version>2.2.1</version>
+		</dependency>
+
+
+		<!--Guava是一种基于开源的Java库，Google Guava源于2007年的"Google Collections Library"。-->
+		<!--这个库是为了方便编码，并减少编码错误。这个库用于提供集合，缓存，支持原语句，并发性，常见注解，字符串处理，I/O和验证的实用方法。-->
+		<!--<dependency>-->
+		<!--	<groupId>com.google.guava</groupId>-->
+		<!--	<artifactId>guava</artifactId>-->
+		<!--	<version>23.0</version>-->
+		<!--</dependency>-->
+		<!--POI报表-->
+		<!--Apache POI 访问微软格式文件的Java API-->
+		<!--<dependency>-->
+		<!--	<groupId>org.apache.poi</groupId>-->
+		<!--	<artifactId>poi</artifactId>-->
+		<!--	<version>5.2.4</version>-->
+		<!--</dependency>-->
+		<!--<dependency>-->
+		<!--	<groupId>org.apache.poi</groupId>-->
+		<!--	<artifactId>poi-ooxml</artifactId>-->
+		<!--	<version>5.2.4</version>-->
+		<!--</dependency>-->
+
 	</dependencies>
 
 	<build>
 		<!--<resources>-->
-		<!--	<resource>-->-
+		<!--	<resource>-->
 		<!--		<directory>src/main/java</directory>-->
 		<!--		<includes>-->
 		<!--			<include>**/*.*</include>-->
@@ -701,80 +755,79 @@
 		<!--但是我用idea自带的创建工具，就在路径下创建了一个完全相同的路径，然后在里面自动创建了一个配置文件-->
 		<!--但是上面两个都是无效的-->
 		<!--我使用idea自带的配置文件创建工具，直接创建对应名称对象，就解决了该问题-->
-		<!--<plugins>-->
 		<!--=============================================================================================-->
 		<!--DEVELOPER_TOOLS-->
 		<!--=============================================================================================-->
-
-		<!--GraalVM本地支持开发者工具-->
-		<!--支持使用GraalVM本地图像编译器将Spring应用程序编译为本地可执行文件。-->
-		<!--	<plugin>-->
-		<!--		<groupId>org.graalvm.buildtools</groupId>-->
-		<!--		<artifactId>native-maven-plugin</artifactId>-->
-		<!--	</plugin>-->
-		<!--	<plugin>-->
-		<!--		<groupId>org.springframework.boot</groupId>-->
-		<!--		<artifactId>spring-boot-maven-plugin</artifactId>-->
-		<!--		<configuration>-->
-		<!--			&lt;!&ndash;<fork>true</fork>&ndash;&gt;-->
-		<!--			<addResources>true</addResources>-->
-		<!--			<excludes>-->
-		<!--				<exclude>-->
-		<!--					<groupId>org.projectlombok</groupId>-->
-		<!--					<artifactId>lombok</artifactId>-->
-		<!--				</exclude>-->
-		<!--			</excludes>-->
-		<!--			&lt;!&ndash;<classifier>${repackage.classifier}</classifier>&ndash;&gt;-->
-		<!--			<image>-->
-		<!--				<builder>paketobuildpacks/builder:tiny</builder>-->
-		<!--				<env>-->
-		<!--					<BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>-->
-		<!--				</env>-->
-		<!--			</image>-->
-		<!--		</configuration>-->
-		<!--	</plugin>-->
-		<!--	<plugin>-->
-		<!--		<groupId>org.apache.maven.plugins</groupId>-->
-		<!--		<artifactId>maven-resources-plugin</artifactId>-->
-		<!--		<version>3.3.0</version>-->
-		<!--		&lt;!&ndash;添加这个插件以后，我们就可以直接使用pom中的配置文件&ndash;&gt;-->
-		<!--		&lt;!&ndash;接着，其它地方就可以解析这里的配置参数&ndash;&gt;-->
-		<!--		<configuration>-->
-		<!--			<encoding>UTF-8</encoding>-->
-		<!--			<useDefaultDelimiters>true</useDefaultDelimiters>-->
-		<!--		</configuration>-->
-		<!--	</plugin>-->
-		<!--	&lt;!&ndash; java编译插件 &ndash;&gt;-->
-		<!--	<plugin>-->
-		<!--		<groupId>org.apache.maven.plugins</groupId>-->
-		<!--		<artifactId>maven-compiler-plugin</artifactId>-->
-		<!--		<version>3.2</version>-->
-		<!--		<configuration>-->
-		<!--			<source>17</source>-->
-		<!--			<target>17</target>-->
-		<!--			<encoding>UTF-8</encoding>-->
-		<!--		</configuration>-->
-		<!--	</plugin>-->
-		<!--	&lt;!&ndash;注掉下面的配置，否则maven：install报错&ndash;&gt;-->
-		<!--	<plugin>-->
-		<!--		<groupId>org.springframework.experimental</groupId>-->
-		<!--		<artifactId>spring-aot-maven-plugin</artifactId>-->
-		<!--		<executions>-->
-		<!--			<execution>-->
-		<!--				<id>test-generate</id>-->
-		<!--				<goals>-->
-		<!--					<goal>test-generate</goal>-->
-		<!--				</goals>-->
-		<!--			</execution>-->
-		<!--			<execution>-->
-		<!--				<id>generate</id>-->
-		<!--				<goals>-->
-		<!--					<goal>generate</goal>-->
-		<!--				</goals>-->
-		<!--			</execution>-->
-		<!--		</executions>-->
-		<!--	</plugin>-->
-		<!--</plugins>-->
+		<plugins>
+			<!--GraalVM本地支持开发者工具-->
+			<!--支持使用GraalVM本地图像编译器将Spring应用程序编译为本地可执行文件。-->
+			<!--	<plugin>-->
+			<!--		<groupId>org.graalvm.buildtools</groupId>-->
+			<!--		<artifactId>native-maven-plugin</artifactId>-->
+			<!--	</plugin>-->
+			<!--	<plugin>-->
+			<!--		<groupId>org.springframework.boot</groupId>-->
+			<!--		<artifactId>spring-boot-maven-plugin</artifactId>-->
+			<!--		<configuration>-->
+			<!--			&lt;!&ndash;<fork>true</fork>&ndash;&gt;-->
+			<!--			<addResources>true</addResources>-->
+			<!--			<excludes>-->
+			<!--				<exclude>-->
+			<!--					<groupId>org.projectlombok</groupId>-->
+			<!--					<artifactId>lombok</artifactId>-->
+			<!--				</exclude>-->
+			<!--			</excludes>-->
+			<!--			&lt;!&ndash;<classifier>${repackage.classifier}</classifier>&ndash;&gt;-->
+			<!--			<image>-->
+			<!--				<builder>paketobuildpacks/builder:tiny</builder>-->
+			<!--				<env>-->
+			<!--					<BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>-->
+			<!--				</env>-->
+			<!--			</image>-->
+			<!--		</configuration>-->
+			<!--	</plugin>-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.3.0</version>
+				<!--添加这个插件以后，我们就可以直接使用pom中的配置文件-->
+				<!--接着，其它地方就可以解析这里的配置参数-->
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<useDefaultDelimiters>true</useDefaultDelimiters>
+				</configuration>
+			</plugin>
+			<!-- java编译插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.2</version>
+				<configuration>
+					<source>17</source>
+					<target>17</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<!--注掉下面的配置，否则maven：install报错-->
+			<!--<plugin>-->
+			<!--	<groupId>org.springframework.experimental</groupId>-->
+			<!--	<artifactId>spring-aot-maven-plugin</artifactId>-->
+			<!--	<executions>-->
+			<!--		<execution>-->
+			<!--			<id>test-generate</id>-->
+			<!--			<goals>-->
+			<!--				<goal>test-generate</goal>-->
+			<!--			</goals>-->
+			<!--		</execution>-->
+			<!--		<execution>-->
+			<!--			<id>generate</id>-->
+			<!--			<goals>-->
+			<!--				<goal>generate</goal>-->
+			<!--			</goals>-->
+			<!--		</execution>-->
+			<!--	</executions>-->
+			<!--</plugin>-->
+		</plugins>
 	</build>
 	<repositories>
 		<!--阿里云搭建了一个国内镜像http://maven.aliyun.com，跑起来速度很快，可以进行配置-->
@@ -842,46 +895,46 @@
 	</pluginRepositories>
 	<profiles>
 		<!--下面实际上就是配置多环境运行的配置-->
-		<!--<profile>-->
-		<!--	<id>native</id>-->
-		<!--	<properties>-->
-		<!--		<repackage.classifier>exec</repackage.classifier>-->
-		<!--	</properties>-->
-		<!--	<dependencies>-->
-		<!--		<dependency>-->
-		<!--			<groupId>org.junit.platform</groupId>-->
-		<!--			<artifactId>junit-platform-launcher</artifactId>-->
-		<!--			<scope>test</scope>-->
-		<!--		</dependency>-->
-		<!--	</dependencies>-->
-		<!--	<build>-->
-		<!--		<plugins>-->
-		<!--			<plugin>-->
-		<!--				<groupId>org.graalvm.buildtools</groupId>-->
-		<!--				<artifactId>native-maven-plugin</artifactId>-->
-		<!--				&lt;!&ndash;<version>${native-buildtools.version}</version>&ndash;&gt;-->
-		<!--				&lt;!&ndash;<version>0.9.13</version>&ndash;&gt;-->
-		<!--				<extensions>true</extensions>-->
-		<!--				<executions>-->
-		<!--					<execution>-->
-		<!--						<id>test-native</id>-->
-		<!--						<phase>test</phase>-->
-		<!--						<goals>-->
-		<!--							<goal>test</goal>-->
-		<!--						</goals>-->
-		<!--					</execution>-->
-		<!--					<execution>-->
-		<!--						<id>build-native</id>-->
-		<!--						<phase>package</phase>-->
-		<!--						<goals>-->
-		<!--							<goal>build</goal>-->
-		<!--						</goals>-->
-		<!--					</execution>-->
-		<!--				</executions>-->
-		<!--			</plugin>-->
-		<!--		</plugins>-->
-		<!--	</build>-->
-		<!--</profile>-->
+		<profile>
+			<id>native</id>
+			<properties>
+				<repackage.classifier>exec</repackage.classifier>
+			</properties>
+			<dependencies>
+				<dependency>
+					<groupId>org.junit.platform</groupId>
+					<artifactId>junit-platform-launcher</artifactId>
+					<scope>test</scope>
+				</dependency>
+			</dependencies>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.graalvm.buildtools</groupId>
+						<artifactId>native-maven-plugin</artifactId>
+						<!--<version>${native-buildtools.version}</version>-->
+						<!--<version>0.9.13</version>-->
+						<extensions>true</extensions>
+						<executions>
+							<execution>
+								<id>test-native</id>
+								<phase>test</phase>
+								<goals>
+									<goal>test</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>build-native</id>
+								<phase>package</phase>
+								<goals>
+									<goal>build</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
 		<profile>
 			<id>native2</id>
 			<properties>
