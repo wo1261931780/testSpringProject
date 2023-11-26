@@ -20,7 +20,7 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<java.version>1.8</java.version>
 		<mysql.version>8.0.28</mysql.version>
-		<spring.boot.version>2.1.16.RELEASE</spring.boot.version>
+		<spring.boot.version>2.5.12</spring.boot.version>
 	</properties>
 
 
