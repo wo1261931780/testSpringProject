@@ -91,12 +91,27 @@
 			<optional>true</optional>
 			<!--添加以后，可以避免自动装配报错-->
 		</dependency>
+		<dependency>
+			<groupId>com.zaxxer</groupId>
+			<artifactId>HikariCP</artifactId>
+		</dependency>
 		<!--使用Spring
 		Boot的Actuator的入门课程，它提供了生产准备的功能，帮助你监控和管理你的应用程序。-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 			<version>3.1.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.141.59</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.28</version>
 		</dependency>
 		<!--=============================================================================================-->
 		<!--DEVELOPER_TOOLS-->
@@ -112,7 +127,12 @@
 			<!--因为只是源代码中提供了对应的功能-->
 			<!--所以其实不需要参与源代码的打包-->
 		</dependency>
-
+		<dependency>
+			<groupId>org.elasticsearch.client</groupId>
+			<artifactId>elasticsearch-rest-high-level-client</artifactId>
+			<!--<version>7.12.1</version>-->
+			<version>8.0.0-alpha2</version>
+		</dependency>
 
 		<!--=============================================================================================-->
 		<!--WEB-->
@@ -164,7 +184,10 @@
 			<artifactId>fastjson2</artifactId>
 			<version>2.0.41</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
 
 		<!--=============================================================================================-->
 		<!--MESSAGING-->
@@ -185,6 +208,12 @@
 			<artifactId>spring-rabbit-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!--json的序列化依赖-->
+		<!--相当于，使用这个依赖覆盖默认的jdk序列化方式-->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
 		<!--Apache
 		Kafka Streams的Spring 讯息交流-->
 		<!--使用Apache
@@ -196,6 +225,10 @@
 			<groupId>org.apache.kafka</groupId>
 			<artifactId>kafka-clients</artifactId>
 			<version>3.6.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.scala-lang</groupId>
@@ -256,6 +289,16 @@
 			<groupId>com.github.pagehelper</groupId>
 			<artifactId>pagehelper</artifactId>
 			<version>6.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
 		</dependency>
 		<!--MyBatis框架SQL-->
 		<!--持久性框架，支持自定义SQL，存储过程和高级映射。MyBatis使用XML描述符或注解将对象与存储程序或SQL语句结合起来。-->
@@ -329,8 +372,23 @@
 			<artifactId>druid-spring-boot-starter</artifactId>
 			<version>1.2.20</version>
 		</dependency>
-
-
+		<!--swagger渚濊禆-->
+		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jayway.jsonpath</groupId>
+			<artifactId>json-path</artifactId>
+		</dependency>
 		<!--=============================================================================================-->
 		<!--redis的包-->
 		<!--=============================================================================================-->
@@ -370,7 +428,14 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 		</dependency>
-
+		<!--2021年8月12日08:31:05，下面的依赖是数美科技的机审-->
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>2.4</version>
+			<!--下面这一行如果不加，就无法使用-->
+			<classifier>jdk15</classifier>
+		</dependency>
 
 		<!--=============================================================================================-->
 		<!--安全框架-->
@@ -545,6 +610,23 @@
 			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
 			<version>2022.0.0.0</version>
 		</dependency>
+		<!--其实有了nacos，就不需要eureka了-->
+		<!--所以同时要把子项目中的eureka依赖注释掉-->
+		<!--<dependency>-->
+		<!--	<groupId>com.alibaba.cloud</groupId>-->
+		<!--	<artifactId>spring-cloud-alibaba-dependencies</artifactId>-->
+		<!--	<version>2022.0.0.0</version>-->
+		<!--	<type>pom</type>-->
+		<!--	<scope>import</scope>-->
+		<!--</dependency>-->
+		<!--nacos的管理依赖-->
+		<!--<dependency>-->
+		<!--	<groupId>com.alibaba.cloud</groupId>-->
+		<!--	<artifactId>spring-cloud-alibaba-dependencies</artifactId>-->
+		<!--	<version>2022.0.0.0-RC1</version>-->
+		<!--	<type>pom</type>-->
+		<!--	<scope>import</scope>-->
+		<!--</dependency>-->
 		<!-- 网关的服务依赖 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -557,6 +639,12 @@
 		<!--			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
 		<!--			<version>4.0.3</version>-->
 		<!--		</dependency>-->
+		<!--注册中心的核心依赖-->
+		<!--<dependency>-->
+		<!--	<groupId>org.springframework.cloud</groupId>-->
+		<!--	<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>-->
+		<!--	<version>4.0.3</version>-->
+		<!--</dependency>-->
 		<dependency>
 			<groupId>com.alibaba.cloud</groupId>
 			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
@@ -587,6 +675,21 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-loadbalancer</artifactId>
 			<version>4.0.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.lmax</groupId>
+			<artifactId>disruptor</artifactId>
+			<version>3.4.4</version>
+		</dependency>
+		<!--引入sentinel依赖-->
+		<!--报错：-->
+		<!--<dependency>-->
+		<!--	<groupId>com.alibaba.cloud</groupId>-->
+		<!--	<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>-->
+		<!--</dependency>-->
+		<dependency>
+			<groupId>com.alibaba.csp</groupId>
+			<artifactId>sentinel-datasource-nacos</artifactId>
 		</dependency>
 	</dependencies>
 
