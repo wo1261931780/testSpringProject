@@ -31,7 +31,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
-			<version>3.2.0</version>
+			<version>3.1.6</version>
 		</dependency>
 		<!--spring网络WEB-->
 		<!--使用Spring
@@ -52,10 +52,7 @@
 		<!--=============================================================================================-->
 		<!--spring-->
 		<!--=============================================================================================-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
+
 		<!--Spring
 		Aspects将Spring与AspectJ整合在一起。-->
 		<!--AOP切面编程的依赖-->
@@ -530,64 +527,6 @@
 			<artifactId>spring-boot-autoconfigure</artifactId>
 			<version>3.1.5</version>
 		</dependency>
-		<!-- hutool -->
-		<!--字符串不为空的判断工具-->
-		<dependency>
-			<groupId>cn.hutool</groupId>
-			<artifactId>hutool-all</artifactId>
-			<version>5.7.2</version>
-		</dependency>
-		<!--spring cloud-->
-
-		<!-- nacos依赖 -->
-		<dependency>
-			<groupId>com.alibaba.cloud</groupId>
-			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-			<version>2022.0.0.0</version>
-		</dependency>
-		<!-- 网关的服务依赖 -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-gateway</artifactId>
-			<version>4.0.7</version>
-		</dependency>
-		<!--注册中心的客户端核心依赖-->
-		<!--		<dependency>-->
-		<!--			<groupId>org.springframework.cloud</groupId>-->
-		<!--			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
-		<!--			<version>4.0.3</version>-->
-		<!--		</dependency>-->
-		<dependency>
-			<groupId>com.alibaba.cloud</groupId>
-			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-			<version>2022.0.0.0</version>
-		</dependency>
-		<!--nacos配置文件管理依赖，读取bootstrap的-->
-		<!--<dependency>-->
-		<!--	<groupId>com.alibaba.cloud</groupId>-->
-		<!--	<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
-		<!--	<version>2022.0.0.0</version>-->
-		<!--</dependency>-->
-		<!--feign客户端依赖-->
-		<!-- feign内部已经继承了ribbon，不需要额外引入 -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
-			<version>4.0.4</version>
-		</dependency>
-		<!--引入HttpClient依赖-->
-		<!--因为feign不支持连接池，所以这里手动引入一个 -->
-		<dependency>
-			<groupId>io.github.openfeign</groupId>
-			<artifactId>feign-httpclient</artifactId>
-			<version>12.5</version>
-			<!--这里是不需要写版本的，因为已经被Spring管理起来了-->
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-loadbalancer</artifactId>
-			<version>4.0.4</version>
-		</dependency>
 	</dependencies>
 
 	<build>
@@ -611,7 +550,6 @@
 		<!--=============================================================================================-->
 		<!--DEVELOPER_TOOLS-->
 		<!--=============================================================================================-->
-
 		<!--GraalVM本地支持开发者工具-->
 		<!--支持使用GraalVM本地图像编译器将Spring应用程序编译为本地可执行文件。-->
 		<!--	<plugin>-->
