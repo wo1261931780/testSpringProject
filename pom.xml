@@ -644,7 +644,7 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-loadbalancer</artifactId>
-			<version>4.0.0</version>
+			<version>4.0.4</version>
 			<!--4.0.4版本会出现依赖冲突，以国内的阿里巴巴为主-->
 		</dependency>
 
