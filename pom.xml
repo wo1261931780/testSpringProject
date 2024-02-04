@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.0</version>
+		<version>3.2.2</version>
 		<!--一个月以后更新到3.2.0-->
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
