@@ -679,11 +679,12 @@
 
 		<!--feign客户端依赖-->
 		<!-- feign内部已经继承了ribbon，不需要额外引入 -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		<!--版本冲突，项目报错，启动失败-->
+		<!--<dependency>-->
+		<!--	<groupId>org.springframework.cloud</groupId>-->
+		<!--	<artifactId>spring-cloud-starter-openfeign</artifactId>-->
 			<!--<version>4.1.1</version>-->
-		</dependency>
+		<!--</dependency>-->
 		<!--引入HttpClient依赖-->
 		<!--因为feign不支持连接池，所以这里手动引入一个 -->
 		<dependency>
