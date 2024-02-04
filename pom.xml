@@ -145,7 +145,8 @@
 		<dependency>
 			<groupId>com.alibaba.fastjson2</groupId>
 			<artifactId>fastjson2</artifactId>
-			<version>2.0.46.android8</version>
+			<!--<version>2.0.46.android8</version>-->
+			<version>2.0.45</version>
 		</dependency>
 		<!--标准
 		Java 库无法为核心类的操作提供足够的方法。Apache Commons Lang 提供了这些额外的方法。-->
@@ -156,7 +157,8 @@
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>3.14.0</version>
+			<!--<version>3.14.0</version>-->
+			<version>3.13.0</version>
 		</dependency>
 		<!--Guava是一种基于开源的Java库，Google
 		Guava源于2007年的"Google Collections Library"。-->
@@ -175,7 +177,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web-services</artifactId>
-			<version>3.2.0</version>
+			<version>3.2.2</version>
 		</dependency>
 		<!--相比来说，jetty更加轻量，而且拓展性更强-->
 		<!--tomcat是apache的，而jetty是eclipse的-->
@@ -207,8 +209,8 @@
 		<!--为管理用户会话信息提供API和实现。-->
 		<!--没有配置，项目报错，启动失败-->
 		<!--<dependency>-->
-		<!--    <groupId>org.springframework.session</groupId>-->
-		<!--    <artifactId>spring-session-jdbc</artifactId>-->
+		<!--	<groupId>org.springframework.session</groupId>-->
+		<!--	<artifactId>spring-session-jdbc</artifactId>-->
 		<!--</dependency>-->
 		<!--Jersey是一个RESTFUL请求服务JAVA框架，与常规的JAVA编程使用的struts框架类似，它主要用于处理业务逻辑层。-->
 		<!--与springmvc
@@ -321,9 +323,9 @@
 		<!--没有配置，项目报错，启动失败-->
 		<!--<dependency>-->
 		<!--	<groupId>org.springframework.boot</groupId>-->
-		<!--spring操作数据库的包-->
-		<!--<artifactId>spring-boot-starter-data-jdbc</artifactId>-->
-		<!--<version>3.2.0</version>-->
+			<!--spring操作数据库的包-->
+			<!--<artifactId>spring-boot-starter-data-jdbc</artifactId>-->
+			<!--<version>3.2.2</version>-->
 		<!--</dependency>-->
 
 		<!--Spring
@@ -351,11 +353,11 @@
 		<!--=============================================================================================-->
 		<!--mybatis的分页助手插件-->
 		<!--2023年11月26日14:24:04，有依赖冲突问题，和Mybatis-plus-->
-		<!--<dependency>-->
-		<!--	<groupId>com.github.pagehelper</groupId>-->
-		<!--	<artifactId>pagehelper</artifactId>-->
-		<!--	<version>6.0.0</version>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+			<version>6.1.0</version>
+		</dependency>
 		<!--JSP标准标签库（JSTL）是一个JSP标签集合，它封装了JSP应用的通用核心功能。-->
 		<!--JSTL支持通用的、结构化的任务，比如迭代，条件判断，XML文档操作，国际化标签，SQL标签。
 		除了这些，它还提供了一个框架来使用集成JSTL的自定义标签。-->
@@ -377,7 +379,7 @@
 		<!--<dependency>-->
 		<!--	<groupId>org.mybatis.spring.boot</groupId>-->
 		<!--	<artifactId>mybatis-spring-boot-starter</artifactId>-->
-		<!--	<version>3.0.2</version>-->
+		<!--	<version>3.0.3</version>-->
 		<!--</dependency>-->
 
 		<!--使用mybatis-plus以后，这些东西就不需要了-->
@@ -386,24 +388,24 @@
 		<!--	<groupId>com.baomidou</groupId>-->
 		<!--	<artifactId>mybatis-plus-boot-starter</artifactId>-->
 		<!--	<version>3.5.4.1</version>-->
-		<!--依赖中一共两个jar包-->
-		<!--一个是mybatis和spring整合包-->
-		<!--一个是mybatis包-->
+			<!--依赖中一共两个jar包-->
+			<!--一个是mybatis和spring整合包-->
+			<!--一个是mybatis包-->
 		<!--</dependency>-->
 		<!-- mybatis-plus 多数据源 -->
 		<!--目前，多数项目会有多数据源的要求，或者是主从部署的要求，所以我们还需要引入
 		mybatis-plus 关于多数据源的依赖：-->
-		<dependency>
-			<groupId>com.baomidou</groupId>
-			<artifactId>dynamic-datasource-spring-boot-starter</artifactId>
-			<version>4.3.0</version>
-		</dependency>
+		<!--<dependency>-->
+		<!--	<groupId>com.baomidou</groupId>-->
+		<!--	<artifactId>dynamic-datasource-spring-boot-starter</artifactId>-->
+		<!--	<version>4.3.0</version>-->
+		<!--</dependency>-->
 		<!--mybatis-plus的代码生成器-->
-		<dependency>
-			<groupId>com.baomidou</groupId>
-			<artifactId>mybatis-plus-generator</artifactId>
-			<version>3.5.5</version>
-		</dependency>
+		<!--<dependency>-->
+		<!--	<groupId>com.baomidou</groupId>-->
+		<!--	<artifactId>mybatis-plus-generator</artifactId>-->
+		<!--	<version>3.5.5</version>-->
+		<!--</dependency>-->
 
 		<!--生成器对应的模板技术-->
 		<!--Web应用程序：作为为应用程序的视图，展示数据-->
@@ -459,10 +461,10 @@
 		<!--c3p0相关包-->
 		<!--没有配置，项目报错，启动失败-->
 		<!--<dependency>-->
-		<!--c3p0是一个连接池对象-->
-		<!--<groupId>c3p0</groupId>-->
-		<!--<artifactId>c3p0</artifactId>-->
-		<!--<version>0.9.0</version>-->
+			<!--c3p0是一个连接池对象-->
+			<!--<groupId>c3p0</groupId>-->
+			<!--<artifactId>c3p0</artifactId>-->
+			<!--<version>0.9.0</version>-->
 		<!--</dependency>-->
 
 		<!--阿里巴巴德鲁伊连接池-->
@@ -481,7 +483,8 @@
 		<dependency>
 			<groupId>com.zaxxer</groupId>
 			<artifactId>HikariCP</artifactId>
-			<version>5.1.0</version>
+			<!--<version>5.1.0</version>不兼容-->
+			<version>5.0.1</version>
 		</dependency>
 
 		<!--=============================================================================================-->
@@ -556,14 +559,13 @@
 		<!--<dependency>-->
 		<!--	<groupId>org.springframework.security</groupId>-->
 		<!--	<artifactId>spring-security-taglibs</artifactId>-->
-		<!--	<version>6.2.0</version>-->
+		<!--	<version>6.2.1</version>-->
 		<!--</dependency>-->
 		<!--特殊依赖，但是保留会报错，有安全问题，暂时注掉-->
 		<!--kaptcha
 		是一个很有用的验证码生成工具。有了它，你能够生成各种样式的验证码，由于它是可配置的。-->
 		<!--kaptcha工作的原理是调用com.google.code.kaptcha.servlet.KaptchaServlet，生成一个图片。-->
-		<!--同一时候将生成的验证码字符串放到
-		HttpSession中。-->
+		<!--同一时候将生成的验证码字符串放到HttpSession中。-->
 		<!--<dependency>-->
 		<!--	<groupId>com.github.penggle</groupId>-->
 		<!--	<artifactId>kaptcha</artifactId>-->
@@ -636,7 +638,7 @@
 		<!--<dependency>-->
 		<!--	<groupId>org.springframework.cloud</groupId>-->
 		<!--	<artifactId>spring-cloud-starter-gateway</artifactId>-->
-		<!--	<version>4.0.0</version>-->
+		<!--	<version>4.1.1</version>-->
 		<!--</dependency>-->
 		<!-- nacos依赖 -->
 		<!--cloud版本不匹配，项目报错，启动失败-->
@@ -653,7 +655,7 @@
 		<!--	<type>pom</type>-->
 		<!--	<scope>import</scope>-->
 		<!--</dependency>-->
-		<!--nacos配置文件管理依赖，读取bootstrap的-->
+		<!-- nacos配置文件管理依赖，读取bootstrap的 -->
 		<!--<dependency>-->
 		<!--	<groupId>com.alibaba.cloud</groupId>-->
 		<!--	<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
@@ -666,13 +668,13 @@
 		<!--<dependency>-->
 		<!--	<groupId>org.springframework.cloud</groupId>-->
 		<!--	<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
-		<!--	<version>4.0.3</version>-->
+		<!--	<version>4.1.0</version>-->
 		<!--</dependency>-->
 		<!--注册中心的核心依赖-->
 		<!--<dependency>-->
 		<!--	<groupId>org.springframework.cloud</groupId>-->
 		<!--	<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>-->
-		<!--	<version>4.0.3</version>-->
+		<!--	<version>4.1.0</version>-->
 		<!--</dependency>-->
 
 		<!--feign客户端依赖-->
@@ -680,8 +682,7 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
-			<version>4.1.0</version>
-			<!--4.0.4版本会出现依赖冲突，以国内的阿里巴巴为主-->
+			<!--<version>4.1.1</version>-->
 		</dependency>
 		<!--引入HttpClient依赖-->
 		<!--因为feign不支持连接池，所以这里手动引入一个 -->
@@ -729,8 +730,8 @@
 		<!--<dependency>-->
 		<!--	<groupId>org.elasticsearch.client</groupId>-->
 		<!--	<artifactId>elasticsearch-rest-high-level-client</artifactId>-->
-		<!--<version>7.17.15</version>-->
-		<!--依赖冲突，暂时注掉-->
+		<!--	<version>7.17.17</version>-->
+			<!--依赖冲突，暂时注掉-->
 		<!--</dependency>-->
 
 		<!--=============================================================================================-->
@@ -798,10 +799,9 @@
 		<!--<dependency>-->
 		<!--	<groupId>org.seleniumhq.selenium</groupId>-->
 		<!--	<artifactId>selenium-java</artifactId>-->
-		<!--	<version>4.15.0</version>-->
+		<!--	<version>4.17.0</version>-->
 		<!--</dependency>-->
-		<!--FreeMarker
-		是一款模板引擎： 即一种基于模板和要改变的数据，并用来生成输出文本(HTML网页，电子邮件，配置文件，源代码等)的通用工具。-->
+		<!--FreeMarker是一款模板引擎： 即一种基于模板和要改变的数据，并用来生成输出文本(HTML网页，电子邮件，配置文件，源代码等)的通用工具。-->
 		<!--它不是面向最终用户的，而是一个Java类库，是一款程序员可以嵌入他们所开发产品的组件。-->
 		<!--<dependency>-->
 		<!--	<groupId>org.freemarker</groupId>-->
@@ -810,8 +810,7 @@
 		<!--</dependency>-->
 		<!--DOM4J是
 		dom4j.org 出品的一个开源 XML 解析包。DOM4J应用于 Java 平台，采用了 Java 集合框架并完全支持 DOM，SAX 和 JAXP。-->
-		<!--DOM4J
-		使用起来非常简单。只要你了解基本的 XML-DOM 模型，就能使用。-->
+		<!--DOM4J使用起来非常简单。只要你了解基本的 XML-DOM 模型，就能使用。-->
 		<!--Dom：把整个文档作为一个对象。Dom把XML文档转换为一个包含其内容的树，并且可以对树进行遍历，检索或修改。-->
 		<!--DOM4J
 		最大的特色是使用大量的接口。它的主要接口都在org.dom4j里面定义：-->
@@ -846,12 +845,12 @@
 		<!--<dependency>-->
 		<!--	<groupId>org.apache.poi</groupId>-->
 		<!--	<artifactId>poi</artifactId>-->
-		<!--	<version>5.2.4</version>-->
+		<!--	<version>5.2.5</version>-->
 		<!--</dependency>-->
 		<!--<dependency>-->
 		<!--	<groupId>org.apache.poi</groupId>-->
 		<!--	<artifactId>poi-ooxml</artifactId>-->
-		<!--	<version>5.2.4</version>-->
+		<!--	<version>5.2.5</version>-->
 		<!--</dependency>-->
 	</dependencies>
 
