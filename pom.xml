@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.2</version>
+		<version>3.2.3</version>
 		<!--一个月以后更新到3.2.0-->
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
@@ -32,7 +32,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
-			<version>3.2.2</version>
+			<version>3.2.3</version>
 		</dependency>
 		<!--spring网络WEB-->
 		<!--使用SpringMVC构建Web，包括RESTful，应用程序。使用Apache
@@ -41,7 +41,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<version>3.2.2</version>
+			<version>3.2.3</version>
 			<!--<scope>test</scope>-->
 			<!--上面的scope表示作用范围-->
 			<!--在没有说明的情况下，scope默认就是compile-->
@@ -55,14 +55,14 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-			<version>3.2.2</version>
+			<version>3.2.3</version>
 		</dependency>
 		<!--SpringAspects将Spring与AspectJ整合在一起。-->
 		<!--AOP切面编程的依赖-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aspects</artifactId>
-			<version>6.1.3</version>
+			<version>6.1.4</version>
 		</dependency>
 		<!--一开始是在springboot
 		context里面-->
@@ -70,7 +70,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-cache</artifactId>
-			<version>3.2.2</version>
+			<version>3.2.3</version>
 		</dependency>
 		<!--SpringBoot
 		DevTools 开发人员工具-->
@@ -78,7 +78,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
-			<version>3.2.2</version>
+			<version>3.2.3</version>
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
@@ -87,7 +87,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
-			<version>3.2.2</version>
+			<version>3.2.3</version>
 			<optional>true</optional>
 			<!--添加以后，可以避免自动装配报错-->
 		</dependency>
@@ -97,7 +97,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
-			<version>3.2.2</version>
+			<version>3.2.3</version>
 		</dependency>
 
 		<!--=============================================================================================-->
@@ -125,7 +125,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-autoconfigure</artifactId>
-			<version>3.2.2</version>
+			<version>3.2.3</version>
 		</dependency>
 		<!-- hutool -->
 		<!--字符串不为空的判断工具-->
@@ -138,7 +138,7 @@
 		<dependency>
 			<groupId>cn.hutool</groupId>
 			<artifactId>hutool-all</artifactId>
-			<version>5.8.25</version>
+			<version>5.8.26</version>
 		</dependency>
 		<!--阿里巴巴的Fastjson是一个用Java编写的JSON处理器（JSON解析器+JSON生成器）。-->
 		<!--多个依赖和dubbo冲突-->
@@ -166,7 +166,7 @@
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
-			<version>32.1.3-jre</version>
+			<version>23.0</version>
 		</dependency>
 		<!--=============================================================================================-->
 		<!--WEB-->
@@ -177,7 +177,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web-services</artifactId>
-			<version>3.2.2</version>
+			<version>3.2.3</version>
 		</dependency>
 		<!--相比来说，jetty更加轻量，而且拓展性更强-->
 		<!--tomcat是apache的，而jetty是eclipse的-->
@@ -202,7 +202,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
-			<version>3.2.2</version>
+			<version>3.2.3</version>
 		</dependency>
 		<!--SpringSession
 		WEB-->
@@ -245,7 +245,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-amqp</artifactId>
-			<version>3.2.2</version>
+			<version>3.2.3</version>
 		</dependency>
 		<!--Spring
 		for RabbitMQ 消息-->
@@ -253,7 +253,7 @@
 		<dependency>
 			<groupId>org.springframework.amqp</groupId>
 			<artifactId>spring-rabbit-test</artifactId>
-			<version>3.1.1</version>
+			<version>3.1.2</version>
 			<scope>test</scope>
 		</dependency>
 		<!--json的序列化依赖-->
@@ -271,14 +271,14 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<version>2.16.1</version>
+			<version>2.15.4</version>
 		</dependency>
 
 		<!--JMS支持包，包括用于发送/接收JMS消息的辅助类-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jms</artifactId>
-			<version>6.1.3</version>
+			<version>6.1.4</version>
 		</dependency>
 
 		<!--=============================================================================================-->
@@ -294,12 +294,13 @@
 		<dependency>
 			<groupId>org.apache.kafka</groupId>
 			<artifactId>kafka-clients</artifactId>
+			<!-- 3.7和spring不兼容 -->
 			<version>3.6.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka</artifactId>
-			<version>3.1.1</version>
+			<version>3.1.2</version>
 		</dependency>
 		<!--Scala是一种运行在JVM上的一种编程语言(运行在JVM上的编程语言还有Groovy和Kotlin)，即最终都会编译成.class文件。-->
 		<!--Scala编程语言的特点：-->
@@ -312,7 +313,7 @@
 		<dependency>
 			<groupId>org.scala-lang</groupId>
 			<artifactId>scala-library</artifactId>
-			<version>2.13.12</version>
+			<version>2.13.13</version>
 		</dependency>
 		<!--=============================================================================================-->
 		<!--数据库和jdbc-->
@@ -323,9 +324,9 @@
 		<!--没有配置，项目报错，启动失败-->
 		<!--<dependency>-->
 		<!--	<groupId>org.springframework.boot</groupId>-->
-			<!--spring操作数据库的包-->
-			<!--<artifactId>spring-boot-starter-data-jdbc</artifactId>-->
-			<!--<version>3.2.2</version>-->
+		<!--spring操作数据库的包-->
+		<!--<artifactId>spring-boot-starter-data-jdbc</artifactId>-->
+		<!--<version>3.2.2</version>-->
 		<!--</dependency>-->
 
 		<!--Spring
@@ -336,7 +337,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
-			<version>3.2.2</version>
+			<version>3.2.3</version>
 		</dependency>
 		<!--MySQL
 		JDBC driver.驱动-->
@@ -388,9 +389,9 @@
 		<!--	<groupId>com.baomidou</groupId>-->
 		<!--	<artifactId>mybatis-plus-boot-starter</artifactId>-->
 		<!--	<version>3.5.4.1</version>-->
-			<!--依赖中一共两个jar包-->
-			<!--一个是mybatis和spring整合包-->
-			<!--一个是mybatis包-->
+		<!--依赖中一共两个jar包-->
+		<!--一个是mybatis和spring整合包-->
+		<!--一个是mybatis包-->
 		<!--</dependency>-->
 		<!-- mybatis-plus 多数据源 -->
 		<!--目前，多数项目会有多数据源的要求，或者是主从部署的要求，所以我们还需要引入
@@ -446,13 +447,13 @@
 		<dependency>
 			<groupId>com.mybatis-flex</groupId>
 			<artifactId>mybatis-flex-spring-boot-starter</artifactId>
-			<version>1.7.9</version>
+			<version>1.8.2</version>
 		</dependency>
 		<!--Mybatis-flex的apt依赖-->
 		<dependency>
 			<groupId>com.mybatis-flex</groupId>
 			<artifactId>mybatis-flex-processor</artifactId>
-			<version>1.7.9</version>
+			<version>1.8.2</version>
 			<scope>provided</scope>
 		</dependency>
 		<!--=============================================================================================-->
@@ -461,10 +462,10 @@
 		<!--c3p0相关包-->
 		<!--没有配置，项目报错，启动失败-->
 		<!--<dependency>-->
-			<!--c3p0是一个连接池对象-->
-			<!--<groupId>c3p0</groupId>-->
-			<!--<artifactId>c3p0</artifactId>-->
-			<!--<version>0.9.0</version>-->
+		<!--c3p0是一个连接池对象-->
+		<!--<groupId>c3p0</groupId>-->
+		<!--<artifactId>c3p0</artifactId>-->
+		<!--<version>0.9.0</version>-->
 		<!--</dependency>-->
 
 		<!--阿里巴巴德鲁伊连接池-->
@@ -494,7 +495,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
-			<version>3.2.2</version>
+			<version>3.2.3</version>
 		</dependency>
 		<!--用来连接，操作redis-->
 		<!--Apache
@@ -504,7 +505,7 @@
 		<dependency>
 			<groupId>redis.clients</groupId>
 			<artifactId>jedis</artifactId>
-			<version>5.1.0</version>
+			<version>5.1.2</version>
 		</dependency>
 
 
@@ -525,7 +526,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<version>3.2.2</version>
+			<version>3.2.3</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -536,7 +537,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
-			<version>6.1.3</version>
+			<version>6.1.4</version>
 		</dependency>
 
 		<!--=============================================================================================-->
@@ -547,12 +548,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
-			<version>3.2.2</version>
+			<version>3.2.3</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
-			<version>6.2.1</version>
+			<version>6.2.2</version>
 			<scope>test</scope>
 		</dependency>
 		<!--设置权限，和jsp相关？暂时注掉-->
@@ -683,7 +684,7 @@
 		<!--<dependency>-->
 		<!--	<groupId>org.springframework.cloud</groupId>-->
 		<!--	<artifactId>spring-cloud-starter-openfeign</artifactId>-->
-			<!--<version>4.1.1</version>-->
+		<!--<version>4.1.1</version>-->
 		<!--</dependency>-->
 		<!--引入HttpClient依赖-->
 		<!--因为feign不支持连接池，所以这里手动引入一个 -->
@@ -691,7 +692,7 @@
 			<groupId>io.github.openfeign</groupId>
 			<artifactId>feign-httpclient</artifactId>
 			<!--<version>13.1</version>-->
-			<version>13.2</version>
+			<version>13.2.1</version>
 			<!--这里是不需要写版本的，因为已经被Spring管理起来了-->
 		</dependency>
 		<!--一方面Netflix
@@ -732,7 +733,7 @@
 		<!--	<groupId>org.elasticsearch.client</groupId>-->
 		<!--	<artifactId>elasticsearch-rest-high-level-client</artifactId>-->
 		<!--	<version>7.17.17</version>-->
-			<!--依赖冲突，暂时注掉-->
+		<!--依赖冲突，暂时注掉-->
 		<!--</dependency>-->
 
 		<!--=============================================================================================-->
@@ -802,7 +803,8 @@
 		<!--	<artifactId>selenium-java</artifactId>-->
 		<!--	<version>4.17.0</version>-->
 		<!--</dependency>-->
-		<!--FreeMarker是一款模板引擎： 即一种基于模板和要改变的数据，并用来生成输出文本(HTML网页，电子邮件，配置文件，源代码等)的通用工具。-->
+		<!--FreeMarker是一款模板引擎：
+		即一种基于模板和要改变的数据，并用来生成输出文本(HTML网页，电子邮件，配置文件，源代码等)的通用工具。-->
 		<!--它不是面向最终用户的，而是一个Java类库，是一款程序员可以嵌入他们所开发产品的组件。-->
 		<!--<dependency>-->
 		<!--	<groupId>org.freemarker</groupId>-->
@@ -811,7 +813,8 @@
 		<!--</dependency>-->
 		<!--DOM4J是
 		dom4j.org 出品的一个开源 XML 解析包。DOM4J应用于 Java 平台，采用了 Java 集合框架并完全支持 DOM，SAX 和 JAXP。-->
-		<!--DOM4J使用起来非常简单。只要你了解基本的 XML-DOM 模型，就能使用。-->
+		<!--DOM4J使用起来非常简单。只要你了解基本的
+		XML-DOM 模型，就能使用。-->
 		<!--Dom：把整个文档作为一个对象。Dom把XML文档转换为一个包含其内容的树，并且可以对树进行遍历，检索或修改。-->
 		<!--DOM4J
 		最大的特色是使用大量的接口。它的主要接口都在org.dom4j里面定义：-->
