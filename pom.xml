@@ -378,9 +378,9 @@
 		<!--这里是mybatis按照spring的标准，开发出来的整合包-->
 		<!--没有配置，项目报错，启动失败-->
 		<!--<dependency>-->
-		<!--	<groupId>org.mybatis.spring.boot</groupId>-->
-		<!--	<artifactId>mybatis-spring-boot-starter</artifactId>-->
-		<!--	<version>3.0.3</version>-->
+		<!--	<groupId>com.baomidou</groupId>-->
+		<!--	<artifactId>mybatis-plus-spring-boot3-starter</artifactId>-->
+		<!--	<version>3.5.6</version>-->
 		<!--</dependency>-->
 
 		<!--使用mybatis-plus以后，这些东西就不需要了-->
@@ -388,7 +388,7 @@
 		<!--<dependency>-->
 		<!--	<groupId>com.baomidou</groupId>-->
 		<!--	<artifactId>mybatis-plus-boot-starter</artifactId>-->
-		<!--	<version>3.5.4.1</version>-->
+		<!--	<version>3.5.6</version>-->
 		<!--依赖中一共两个jar包-->
 		<!--一个是mybatis和spring整合包-->
 		<!--一个是mybatis包-->
