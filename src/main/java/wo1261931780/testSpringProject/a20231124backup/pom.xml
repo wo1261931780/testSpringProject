@@ -279,7 +279,7 @@
 		<dependency>
 			<groupId>com.baomidou</groupId>
 			<artifactId>dynamic-datasource-spring-boot-starter</artifactId>
-			<version>4.2.0</version>
+			<version>4.3.0</version>
 		</dependency>
 
 		<!--mybatis-plus的代码生成器-->
