@@ -242,7 +242,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-amqp</artifactId>
-			<version>3.3.0</version>
+			<version>3.3.1</version>
 		</dependency>
 		<!--Spring
 		for RabbitMQ 消息-->
