@@ -107,7 +107,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.32</version>
+			<version>1.18.34</version>
 			<optional>true</optional>
 			<scope>provided</scope>
 			<!--因为只是源代码中提供了对应的功能-->
