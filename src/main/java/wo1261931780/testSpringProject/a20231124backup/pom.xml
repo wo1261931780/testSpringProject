@@ -59,7 +59,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aspects</artifactId>
-			<version>6.1.9</version>
+			<version>6.1.10</version>
 		</dependency>
 		<!--一开始是在spring
 		boot context里面-->
