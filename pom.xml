@@ -137,7 +137,7 @@
 		<dependency>
 			<groupId>cn.hutool</groupId>
 			<artifactId>hutool-all</artifactId>
-			<version>5.8.28</version>
+			<version>5.8.29</version>
 		</dependency>
 		<!--阿里巴巴的Fastjson是一个用Java编写的JSON处理器（JSON解析器+JSON生成器）。-->
 		<!--多个依赖和dubbo冲突-->
