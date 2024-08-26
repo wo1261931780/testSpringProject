@@ -444,7 +444,7 @@
 		<dependency>
 			<groupId>com.mybatis-flex</groupId>
 			<artifactId>mybatis-flex-spring-boot-starter</artifactId>
-			<version>1.9.4</version>
+			<version>1.9.5</version>
 		</dependency>
 		<!--Mybatis-flex的apt依赖-->
 		<dependency>
