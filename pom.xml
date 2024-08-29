@@ -31,7 +31,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
-			<version>3.3.1</version>
+			<version>3.3.2</version>
 		</dependency>
 		<!--spring网络WEB-->
 		<!--使用SpringMVC构建Web，包括RESTful，应用程序。使用Apache
