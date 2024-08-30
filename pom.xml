@@ -347,7 +347,7 @@
 		<!--没有配置，项目报错，启动失败-->
 		<!--<dependency>-->
 		<!--	<groupId>com.baomidou</groupId>-->
-		<!--	<artifactId>mybatis-plus-boot-starter</artifactId>-->
+		<!--	<artifactId>mybatis-plus-boot3-starter</artifactId>-->
 		<!--	<version>3.5.7</version>-->
 		<!--依赖中一共两个jar包-->
 		<!--一个是mybatis和spring整合包-->
