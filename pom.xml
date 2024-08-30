@@ -34,8 +34,7 @@
 			<version>3.3.3</version>
 		</dependency>
 		<!--spring网络WEB-->
-		<!--使用SpringMVC构建Web，包括RESTful，应用程序。使用Apache
-		Tomcat作为默认的嵌入式容器。-->
+		<!--使用SpringMVC构建Web，包括RESTful，应用程序。使用ApacheTomcat作为默认的嵌入式容器。-->
 		<!--里面已经包含了springMVC的内容-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -63,16 +62,14 @@
 			<artifactId>spring-aspects</artifactId>
 			<version>6.1.11</version>
 		</dependency>
-		<!--一开始是在springboot
-		context里面-->
+		<!--一开始是在springboot context里面-->
 		<!--现在是在cache里面-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-cache</artifactId>
 			<version>3.3.3</version>
 		</dependency>
-		<!--SpringBoot
-		DevTools 开发人员工具-->
+		<!--SpringBoot DevTools 开发人员工具-->
 		<!--提供快速的应用重启、LiveReload和配置，以增强开发体验。-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -119,8 +116,7 @@
 			<artifactId>modelmapper</artifactId>
 			<version>3.2.1</version>
 		</dependency>
-		<!--通过
-		AutoConfiguration 机制使得应用可以在启动时根据引入的类和配置，自动加载配置类（Configuration），从而在这些类中初始化所需的 Spring Bean。-->
+		<!--通过	AutoConfiguration 机制使得应用可以在启动时根据引入的类和配置，自动加载配置类（Configuration），从而在这些类中初始化所需的 Spring Bean。-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-autoconfigure</artifactId>
@@ -130,10 +126,8 @@
 		<!--字符串不为空的判断工具-->
 		<!--Hutool是一个小而全的Java工具类库，通过静态方法封装，降低相关API的学习成本，提高工作效率，使Java拥有函数式语言般的优雅。-->
 		<!--Hutool是项目中“util”包友好的替代，它节省了开发人员对项目中公用类和公用工具方法的封装时间，使开发专注于业务，同时可以最大限度的避免封装不完善带来的bug。-->
-		<!--【以前】打开搜索引擎
-		-> 搜“Java MD5加密” -> 打开某篇博客-> 复制粘贴 -> 改改好用-->
-		<!--【现在】引入Hutool
-		-> SecureUtil.md5()-->
+		<!--【以前】打开搜索引擎-> 搜“Java MD5加密” -> 打开某篇博客-> 复制粘贴 -> 改改好用-->
+		<!--【现在】引入Hutool-> SecureUtil.md5()-->
 		<dependency>
 			<groupId>cn.hutool</groupId>
 			<artifactId>hutool-all</artifactId>
@@ -148,10 +142,8 @@
 		</dependency>
 		<!--标准
 		Java 库无法为核心类的操作提供足够的方法。Apache Commons Lang 提供了这些额外的方法。-->
-		<!--Apache
-		Commons Lang 为 java.lang API 提供了大量辅助实用程序，尤其是字符串操作方法、基本数值方法、对象反射、并发、创建和序列化以及系统属性。-->
-		<!--此外，它还包含对
-		java.util.Date 的基本增强，以及一系列专用于帮助构建方法的实用程序，如 hashCode、toString 和 equals。-->
+		<!--ApacheCommons Lang 为 java.lang API 提供了大量辅助实用程序，尤其是字符串操作方法、基本数值方法、对象反射、并发、创建和序列化以及系统属性。-->
+		<!--此外，它还包含对java.util.Date 的基本增强，以及一系列专用于帮助构建方法的实用程序，如 hashCode、toString 和 equals。-->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
@@ -168,8 +160,7 @@
 		<!--=============================================================================================-->
 		<!--WEB-->
 		<!--=============================================================================================-->
-		<!--SpringWeb
-		Services WEB-->
+		<!--SpringWebServices WEB-->
 		<!--为契约优先的SOAP开发提供了便利。允许使用许多操作XML有效载荷的方法之一来创建灵活的Web服务。-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -185,8 +176,7 @@
 		<!--因为starter-web中是没有jetty存在的，所以这里暂时不修改启动服务器-->
 		<!--</dependency>-->
 
-		<!--JavaServlet是Java企业平台中的基础网络规范。开发人员可以使用Servlet
-		API构建Web应用程序，与请求/响应工作流进行交互。-->
+		<!--JavaServlet是Java企业平台中的基础网络规范。开发人员可以使用ServletAPI构建Web应用程序，与请求/响应工作流进行交互。-->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -201,8 +191,7 @@
 			<artifactId>spring-boot-starter-webflux</artifactId>
 			<version>3.3.3</version>
 		</dependency>
-		<!--SpringSession
-		WEB-->
+		<!--SpringSessionWEB-->
 		<!--为管理用户会话信息提供API和实现。-->
 		<!--没有配置，项目报错，启动失败-->
 		<!--<dependency>-->
@@ -210,23 +199,14 @@
 		<!--	<artifactId>spring-session-jdbc</artifactId>-->
 		<!--</dependency>-->
 		<!--Jersey是一个RESTFUL请求服务JAVA框架，与常规的JAVA编程使用的struts框架类似，它主要用于处理业务逻辑层。-->
-		<!--与springmvc
-		的区别：-->
-		<!--1.
-		jersey同样提供DI，是由glassfish hk2实现，也就是说，如果想单独使用jersey一套，需要另外学习Bean容器；-->
-		<!--2.
-		MVC出发点即是WEB，但jersey出发点确实RESTFull，体现点在与接口的设计方面，-->
-		<!--如MVC返回复杂结构需要使用ModelAndView,而jersey仅仅需要返回一个流或者文件句柄；-->
-		<!--3.
-		jersey提供一种子资源的概念，这也是RESTFull中提倡所有url都是资源；-->
-		<!--4.
-		jersey直接提供application.wadl资源url说明；-->
-		<!--5.
-		MVC提供Session等状态管理，jersey没有，这个源自RESTFull设计无状态化；-->
-		<!--6.
-		Response方法支持更好返回结果，方便的返回Status，包括200，303，401，403；-->
-		<!--7.
-		提供超级特别方便的方式访问RESTFull;-->
+		<!--与springmvc的区别：-->
+		<!--1.jersey同样提供DI，是由glassfish hk2实现，也就是说，如果想单独使用jersey一套，需要另外学习Bean容器；-->
+		<!--2.MVC出发点即是WEB，但jersey出发点确实RESTFull，体现点在与接口的设计方面，如MVC返回复杂结构需要使用ModelAndView,而jersey仅仅需要返回一个流或者文件句柄；-->
+		<!--3.jersey提供一种子资源的概念，这也是RESTFull中提倡所有url都是资源；-->
+		<!--4.jersey直接提供application.wadl资源url说明；-->
+		<!--5.MVC提供Session等状态管理，jersey没有，这个源自RESTFull设计无状态化；-->
+		<!--6.Response方法支持更好返回结果，方便的返回Status，包括200，303，401，403；-->
+		<!--7.提供超级特别方便的方式访问RESTFull;-->
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-client</artifactId>
@@ -235,17 +215,14 @@
 		<!--=============================================================================================-->
 		<!--MESSAGING-->
 		<!--=============================================================================================-->
-		<!--使用SpringAMQP和Rabbit
-		MQ的启动程序-->
-		<!--添加以后会在控制台报错，Rabbit
-		health check failed-->
+		<!--使用SpringAMQP和RabbitMQ的启动程序-->
+		<!--添加以后会在控制台报错，Rabbit health check failed-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-amqp</artifactId>
 			<version>3.3.3</version>
 		</dependency>
-		<!--Spring
-		for RabbitMQ 消息-->
+		<!--Spring for RabbitMQ 消息-->
 		<!--为您的应用程序提供一个用于发送和接收消息的通用平台，并为您的消息提供一个安全的地方，直到收到为止。-->
 		<dependency>
 			<groupId>org.springframework.amqp</groupId>
@@ -255,16 +232,11 @@
 		</dependency>
 		<!--json的序列化依赖-->
 		<!--相当于，使用这个依赖覆盖默认的jdk序列化方式-->
-		<!--Jackson
-		是当前用的比较广泛的，用来序列化和反序列化 json 的 Java 的开源框架。-->
-		<!--Jackson
-		社区相对比较活跃，更新速度也比较快， 从 Github 中的统计来看，Jackson 是最流行的 json 解析器之一 。 -->
-		<!--Spring
-		MVC 的默认 json 解析器便是 Jackson。 Jackson 优点很多。 Jackson 所依赖的 jar 包较少 ，简单易用。-->
-		<!--与其他
-		Java 的 json 的框架 Gson 等相比， Jackson 解析大的 json 文件速度比较快；Jackson 运行时占用内存比较低，性能比较好；-->
-		<!--Jackson
-		有灵活的 API，可以很容易进行扩展和定制。-->
+		<!--Jackson是当前用的比较广泛的，用来序列化和反序列化 json 的 Java 的开源框架。-->
+		<!--Jackson社区相对比较活跃，更新速度也比较快， 从 Github 中的统计来看，Jackson 是最流行的 json 解析器之一 。 -->
+		<!--SpringMVC 的默认 json 解析器便是 Jackson。 Jackson 优点很多。 Jackson 所依赖的 jar 包较少 ，简单易用。-->
+		<!--与其他Java 的 json 的框架 Gson 等相比， Jackson 解析大的 json 文件速度比较快；Jackson 运行时占用内存比较低，性能比较好；-->
+		<!--Jackson有灵活的 API，可以很容易进行扩展和定制。-->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
@@ -281,12 +253,9 @@
 		<!--=============================================================================================-->
 		<!--日志系统-->
 		<!--=============================================================================================-->
-		<!--Apache
-		Kafka Streams的Spring 讯息交流-->
-		<!--使用Apache
-		Kafka Streams构建流处理应用程序。-->
-		<!--Spring
-		for Apache Kafka MESSAGING-->
+		<!--ApacheKafka Streams的Spring 讯息交流-->
+		<!--使用ApacheKafka Streams构建流处理应用程序。-->
+		<!--Spring for Apache Kafka MESSAGING-->
 		<!--发布、订阅、存储和处理记录流。-->
 		<dependency>
 			<groupId>org.apache.kafka</groupId>
@@ -315,8 +284,7 @@
 		<!--=============================================================================================-->
 		<!--数据库和jdbc-->
 		<!--=============================================================================================-->
-		<!--JDBC
-		API SQL-->
+		<!--JDBC API SQL-->
 		<!--数据库连接API，定义了客户端如何连接和查询数据库。-->
 		<!--没有配置，项目报错，启动失败-->
 		<!--<dependency>-->
@@ -326,18 +294,15 @@
 		<!--<version>3.3.0</version>-->
 		<!--</dependency>-->
 
-		<!--Spring
-		Data JDBC SQL-->
-		<!--使用Spring
-		Data，用普通的JDBC在SQL存储中保存数据。-->
+		<!--SpringData JDBC SQL-->
+		<!--使用SpringData，用普通的JDBC在SQL存储中保存数据。-->
 		<!--没有配置，项目报错，启动失败-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
 			<version>3.3.3</version>
 		</dependency>
-		<!--MySQL
-		JDBC driver.驱动-->
+		<!--MySQL JDBC driver.驱动-->
 		<!--mysql的驱动-->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -357,8 +322,7 @@
 			<version>6.1.0</version>
 		</dependency>
 		<!--JSP标准标签库（JSTL）是一个JSP标签集合，它封装了JSP应用的通用核心功能。-->
-		<!--JSTL支持通用的、结构化的任务，比如迭代，条件判断，XML文档操作，国际化标签，SQL标签。
-		除了这些，它还提供了一个框架来使用集成JSTL的自定义标签。-->
+		<!--JSTL支持通用的、结构化的任务，比如迭代，条件判断，XML文档操作，国际化标签，SQL标签。除了这些，它还提供了一个框架来使用集成JSTL的自定义标签。-->
 		<!--<dependency>-->
 		<!--	<groupId>jstl</groupId>-->
 		<!--	<artifactId>jstl</artifactId>-->
@@ -379,7 +343,6 @@
 		<!--	<artifactId>mybatis-plus-spring-boot3-starter</artifactId>-->
 		<!--	<version>3.5.7</version>-->
 		<!--</dependency>-->
-
 		<!--使用mybatis-plus以后，这些东西就不需要了-->
 		<!--没有配置，项目报错，启动失败-->
 		<!--<dependency>-->
@@ -391,8 +354,7 @@
 		<!--一个是mybatis包-->
 		<!--</dependency>-->
 		<!-- mybatis-plus 多数据源 -->
-		<!--目前，多数项目会有多数据源的要求，或者是主从部署的要求，所以我们还需要引入
-		mybatis-plus 关于多数据源的依赖：-->
+		<!--目前，多数项目会有多数据源的要求，或者是主从部署的要求，所以我们还需要引入mybatis-plus 关于多数据源的依赖：-->
 		<!--<dependency>-->
 		<!--	<groupId>com.baomidou</groupId>-->
 		<!--	<artifactId>dynamic-datasource-spring-boot-starter</artifactId>-->
@@ -431,16 +393,11 @@
 		<!--	<scope>test</scope>-->
 		<!--</dependency>-->
 
-		<!--Mybatis-Flex
-		是一个优雅的 Mybatis 增强框架，它非常轻量、同时拥有极高的性能与灵活性。-->
-		<!--MyBatis-Flex
-		的查询单条数据的速度，大概是 MyBatis-Plus 的 5 ~ 10+ 倍。-->
-		<!--MyBatis-Flex
-		的查询 10 条数据的速度，大概是 MyBatis-Plus 的 5~10 倍左右。-->
-		<!--Mybatis-Flex
-		的分页查询速度，大概是 Mybatis-Plus 的 5~10 倍左右。-->
-		<!--Mybatis-Flex
-		的数据更新速度，大概是 Mybatis-Plus 的 5~10+ 倍。-->
+		<!--Mybatis-Flex是一个优雅的 Mybatis 增强框架，它非常轻量、同时拥有极高的性能与灵活性。-->
+		<!--MyBatis-Flex的查询单条数据的速度，大概是 MyBatis-Plus 的 5 ~ 10+ 倍。-->
+		<!--MyBatis-Flex的查询 10 条数据的速度，大概是 MyBatis-Plus 的 5~10 倍左右。-->
+		<!--Mybatis-Flex的分页查询速度，大概是 Mybatis-Plus 的 5~10 倍左右。-->
+		<!--Mybatis-Flex的数据更新速度，大概是 Mybatis-Plus 的 5~10+ 倍。-->
 		<dependency>
 			<groupId>com.mybatis-flex</groupId>
 			<artifactId>mybatis-flex-spring-boot-starter</artifactId>
@@ -472,11 +429,9 @@
 			<version>1.2.23</version>
 		</dependency>
 
-		<!--HikariCP
-		是一个高性能的 JDBC 连接池组件，号称性能最好的后起之秀，是一个基于BoneCP做了不少的改进和优化的高性能JDBC连接池。-->
+		<!--HikariCP是一个高性能的 JDBC 连接池组件，号称性能最好的后起之秀，是一个基于BoneCP做了不少的改进和优化的高性能JDBC连接池。-->
 		<!--其作者还有产出了另外一个开源作品HikariJSON——高性能的JSON解析器。-->
-		<!--代码体积更是少的可怜，130kb。Spring
-		Boot 2都已经宣布支持了该组件，由之前的Tomcat换成HikariCP。-->
+		<!--代码体积更是少的可怜，130kb。SpringBoot 2都已经宣布支持了该组件，由之前的Tomcat换成HikariCP。-->
 		<!--其性能远高于c3p0、tomcat等连接池，以致后来BoneCP作者都放弃了维护，在Github项目主页推荐大家使用HikariCP-->
 		<dependency>
 			<groupId>com.zaxxer</groupId>
@@ -495,8 +450,7 @@
 			<version>3.3.3</version>
 		</dependency>
 		<!--用来连接，操作redis-->
-		<!--Apache
-		Commons对象池库。-->
+		<!--ApacheCommons对象池库。-->
 		<!--jedis是一个java实现的redis客户端连接工具。-->
 		<!--常用的还有redisson，jedis跟接近于原生的操作，而redisson跟适合用于分布式，提供了分布式锁，以及其他多种数据结构。-->
 		<dependency>
@@ -509,17 +463,12 @@
 		<!--=============================================================================================-->
 		<!--TEST-->
 		<!--=============================================================================================-->
-		<!--Spring
-		Test与JUnit等其他测试框架结合起来，提供了便捷高效的测试手段。-->
-		<!--而Spring
-		Boot Test 是在Spring Test之上的再次封装，增加了切片测试，增强了mock能力。-->
-		<!--整体上，Spring
-		Boot Test支持的测试种类，大致可以分为如下三类：-->
+		<!--SpringTest与JUnit等其他测试框架结合起来，提供了便捷高效的测试手段。-->
+		<!--而SpringBoot Test 是在Spring Test之上的再次封装，增加了切片测试，增强了mock能力。-->
+		<!--整体上，SpringBoot Test支持的测试种类，大致可以分为如下三类：-->
 		<!--单元测试：一般面向方法，编写一般业务代码时，测试成本较大。涉及到的注解有@Test。-->
-		<!--切片测试：一般面向难于测试的边界功能，介于单元测试和功能测试之间。涉及到的注解有@RunWith
-		@WebMvcTest等。-->
-		<!--功能测试：一般面向某个完整的业务功能，同时也可以使用切面测试中的mock能力，推荐使用。涉及到的注解有@RunWith
-		@SpringBootTest等。-->
+		<!--切片测试：一般面向难于测试的边界功能，介于单元测试和功能测试之间。涉及到的注解有@RunWith@WebMvcTest等。-->
+		<!--功能测试：一般面向某个完整的业务功能，同时也可以使用切面测试中的mock能力，推荐使用。涉及到的注解有@RunWith@SpringBootTest等。-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -527,10 +476,8 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!--Spring
-		Test支持用JUnit或TestNG对Spring组件进行单元测试和集成测试。-->
-		<!--它提供了一致的Spring
-		ApplicationContexts的加载和缓存，并提供了模拟对象，你可以用它来孤立地测试你的代码。-->
+		<!--SpringTest支持用JUnit或TestNG对Spring组件进行单元测试和集成测试。-->
+		<!--它提供了一致的SpringApplicationContexts的加载和缓存，并提供了模拟对象，你可以用它来孤立地测试你的代码。-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
@@ -560,8 +507,7 @@
 		<!--	<version>6.3.1</version>-->
 		<!--</dependency>-->
 		<!--特殊依赖，但是保留会报错，有安全问题，暂时注掉-->
-		<!--kaptcha
-		是一个很有用的验证码生成工具。有了它，你能够生成各种样式的验证码，由于它是可配置的。-->
+		<!--kaptcha是一个很有用的验证码生成工具。有了它，你能够生成各种样式的验证码，由于它是可配置的。-->
 		<!--kaptcha工作的原理是调用com.google.code.kaptcha.servlet.KaptchaServlet，生成一个图片。-->
 		<!--同一时候将生成的验证码字符串放到HttpSession中。-->
 		<!--<dependency>-->
@@ -582,8 +528,7 @@
 		<!--dubbo相关-->
 		<!--=============================================================================================-->
 		<!--dubbo一体式项目-->
-		<!--Dubbo是一款高性能、轻量级的开源Java
-		RPC框架，它提供了三大核心能力：-->
+		<!--Dubbo是一款高性能、轻量级的开源JavaRPC框架，它提供了三大核心能力：-->
 		<!--面向接口的远程方法调用，智能容错和负载均衡，以及服务自动注册和发现。-->
 		<dependency>
 			<groupId>org.apache.dubbo</groupId>
@@ -628,8 +573,7 @@
 		</dependency>
 
 		<!--=============================================================================================-->
-		<!--spring
-		cloud组件-->
+		<!--springCloud组件-->
 		<!--=============================================================================================-->
 		<!-- 网关的服务依赖 -->
 		<!--没有配置，项目报错，启动失败-->
@@ -692,14 +636,11 @@
 			<version>13.3</version>
 			<!--这里是不需要写版本的，因为已经被Spring管理起来了-->
 		</dependency>
-		<!--一方面Netflix
-		Ribbon停止更新，Spring Cloud LoadBalancer是Spring Cloud官方自己提供的客户端负载均衡器,抽象和实现，用来替代Ribbon。-->
+		<!--一方面NetflixRibbon停止更新，Spring Cloud LoadBalancer是Spring Cloud官方自己提供的客户端负载均衡器,抽象和实现，用来替代Ribbon。-->
 		<!--常见负载均衡器分为服务端负载均衡器(如网关层均衡负载)和客户端层均衡负载。-->
 		<!--网关层如硬件层面的F5或软件层面的LVS、或者nginx等。-->
-		<!--客户端层就如Spring
-		Cloud LoadBalancer，作为一个客户端去发现更新维护服务列表，自定义服务的均衡负载策略（随机、轮询、小流量的金丝雀等等）。-->
-		<!--Spring
-		Cloud提供了自己的客户端负载平衡器抽象和实现。-->
+		<!--客户端层就如SpringCloud LoadBalancer，作为一个客户端去发现更新维护服务列表，自定义服务的均衡负载策略（随机、轮询、小流量的金丝雀等等）。-->
+		<!--SpringCloud提供了自己的客户端负载平衡器抽象和实现。-->
 		<!--对于负载均衡机制，增加了ReactiveLoadBalancer接口，并提供了基于round-robin轮询和Random随机的实现。-->
 		<!--为了从响应式ServiceInstanceListSupplier中选择实例，需要使用ServiceInstanceListSupplier。-->
 		<!--目前支持ServiceInstanceListSupplier的基于服务发现的实现，该实现使用类路径中的发现客户端从Service
@@ -747,11 +688,9 @@
 		<!--swagger文档组件-->
 		<!--=============================================================================================-->
 		<!--这里需要使用swagger技术，实际上是为了生成接口文档-->
-		<!--Spring
-		Boot 3 只支持OpenAPI3规范-->
+		<!--SpringBoot 3 只支持OpenAPI3规范-->
 		<!--Knife4j提供的starter已经引用springdoc-openapi的jar，开发者需注意避免jar包冲突-->
-		<!--JDK版本必须
-		>= 17-->
+		<!--JDK版本必须>= 17-->
 		<!--详细Demo请参考knife4j-spring-boot3-demo-->
 		<!--访问Knife4j的文档地址：http://ip:port/doc.html即可查看文档-->
 		<dependency>
@@ -780,14 +719,10 @@
 		<!--=============================================================================================-->
 		<!--项目特殊依赖-->
 		<!--=============================================================================================-->
-		<!--Spring
-		Native 可以通过 GraalVM 将 Spring 应用程序编译成原生镜像，提供了一种新的方式来部署 Spring 应用。-->
-		<!--Spring
-		Native 支持 Java 和 Kotlin。-->
-		<!--这个项目的目标是寻找
-		Spring JVM 的替代方案，提供一个能将应用程序打包，并运行在轻量级容器的方案。-->
-		<!--期望能够在
-		Spring Native 中支持所有的 Spring 应用程序（几乎不用修改代码）。-->
+		<!--SpringNative 可以通过 GraalVM 将 Spring 应用程序编译成原生镜像，提供了一种新的方式来部署 Spring 应用。-->
+		<!--SpringNative 支持 Java 和 Kotlin。-->
+		<!--这个项目的目标是寻找Spring JVM 的替代方案，提供一个能将应用程序打包，并运行在轻量级容器的方案。-->
+		<!--期望能够在Spring Native 中支持所有的 Spring 应用程序（几乎不用修改代码）。-->
 		<!--添加这个依赖以后，阿里云效找不到依赖，以后建议全部注释掉-->
 		<!--<dependency>-->
 		<!--	<groupId>org.springframework.experimental</groupId>-->
@@ -800,21 +735,17 @@
 		<!--	<artifactId>selenium-java</artifactId>-->
 		<!--	<version>4.21.0</version>-->
 		<!--</dependency>-->
-		<!--FreeMarker是一款模板引擎：
-		即一种基于模板和要改变的数据，并用来生成输出文本(HTML网页，电子邮件，配置文件，源代码等)的通用工具。-->
+		<!--FreeMarker是一款模板引擎：即一种基于模板和要改变的数据，并用来生成输出文本(HTML网页，电子邮件，配置文件，源代码等)的通用工具。-->
 		<!--它不是面向最终用户的，而是一个Java类库，是一款程序员可以嵌入他们所开发产品的组件。-->
 		<!--<dependency>-->
 		<!--	<groupId>org.freemarker</groupId>-->
 		<!--	<artifactId>freemarker</artifactId>-->
 		<!--	<version>2.3.33</version>-->
 		<!--</dependency>-->
-		<!--DOM4J是
-		dom4j.org 出品的一个开源 XML 解析包。DOM4J应用于 Java 平台，采用了 Java 集合框架并完全支持 DOM，SAX 和 JAXP。-->
-		<!--DOM4J使用起来非常简单。只要你了解基本的
-		XML-DOM 模型，就能使用。-->
+		<!--DOM4J是dom4j.org 出品的一个开源 XML 解析包。DOM4J应用于 Java 平台，采用了 Java 集合框架并完全支持 DOM，SAX 和 JAXP。-->
+		<!--DOM4J使用起来非常简单。只要你了解基本的XML-DOM 模型，就能使用。-->
 		<!--Dom：把整个文档作为一个对象。Dom把XML文档转换为一个包含其内容的树，并且可以对树进行遍历，检索或修改。-->
-		<!--DOM4J
-		最大的特色是使用大量的接口。它的主要接口都在org.dom4j里面定义：-->
+		<!--DOM4J最大的特色是使用大量的接口。它的主要接口都在org.dom4j里面定义：-->
 		<!--<dependency>-->
 		<!--	<groupId>org.dom4j</groupId>-->
 		<!--	<artifactId>dom4j</artifactId>-->
@@ -841,8 +772,7 @@
 		<!--</dependency>-->
 
 		<!--POI报表-->
-		<!--Apache
-		POI 访问微软格式文件的Java API-->
+		<!--ApachePOI 访问微软格式文件的Java API-->
 		<!--<dependency>-->
 		<!--	<groupId>org.apache.poi</groupId>-->
 		<!--	<artifactId>poi</artifactId>-->
