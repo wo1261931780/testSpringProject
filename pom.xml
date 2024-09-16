@@ -138,7 +138,7 @@
 		<dependency>
 			<groupId>com.alibaba.fastjson2</groupId>
 			<artifactId>fastjson2</artifactId>
-			<version>2.0.52</version>
+			<version>2.0.52.android8</version>
 		</dependency>
 		<!--标准
 		Java 库无法为核心类的操作提供足够的方法。Apache Commons Lang 提供了这些额外的方法。-->
@@ -147,7 +147,7 @@
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>3.14.0</version>
+			<version>3.16.0</version>
 		</dependency>
 		<!--Guava是一种基于开源的Java库，Google
 		Guava源于2007年的"Google Collections Library"。-->
@@ -261,7 +261,7 @@
 			<groupId>org.apache.kafka</groupId>
 			<artifactId>kafka-clients</artifactId>
 			<!-- 3.7和spring不兼容 -->
-			<version>3.7.1</version>
+			<version>3.8.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.kafka</groupId>
