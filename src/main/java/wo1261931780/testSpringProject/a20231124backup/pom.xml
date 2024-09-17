@@ -31,7 +31,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
-			<version>3.3.2</version>
+			<version>3.3.3</version>
 		</dependency>
 		<!--spring网络WEB-->
 		<!--使用Spring
@@ -59,7 +59,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aspects</artifactId>
-			<version>6.1.11</version>
+			<version>6.1.12</version>
 		</dependency>
 		<!--一开始是在spring
 		boot context里面-->
@@ -67,7 +67,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-cache</artifactId>
-			<version>3.3.2</version>
+			<version>3.3.3</version>
 		</dependency>
 		<!--Spring
 		Boot DevTools 开发人员工具-->
@@ -93,7 +93,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
-			<version>3.3.2</version>
+			<version>3.3.3</version>
 		</dependency>
 		<!--=============================================================================================-->
 		<!--DEVELOPER_TOOLS-->
@@ -203,7 +203,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jms</artifactId>
-			<version>6.1.11</version>
+			<version>6.1.12</version>
 		</dependency>
 
 
