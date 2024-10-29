@@ -31,7 +31,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
-			<version>3.3.3</version>
+			<version>3.3.5</version>
 		</dependency>
 		<!--spring网络WEB-->
 		<!--使用SpringMVC构建Web，包括RESTful，应用程序。使用ApacheTomcat作为默认的嵌入式容器。-->
@@ -39,7 +39,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<version>3.3.4</version>
+			<version>3.3.5</version>
 			<!--<scope>test</scope>-->
 			<!--上面的scope表示作用范围-->
 			<!--在没有说明的情况下，scope默认就是compile-->
@@ -67,7 +67,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-cache</artifactId>
-			<version>3.3.3</version>
+			<version>3.3.5</version>
 		</dependency>
 		<!--SpringBoot DevTools 开发人员工具-->
 		<!--提供快速的应用重启、LiveReload和配置，以增强开发体验。-->
@@ -165,7 +165,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web-services</artifactId>
-			<version>3.3.3</version>
+			<version>3.3.5</version>
 		</dependency>
 		<!--相比来说，jetty更加轻量，而且拓展性更强-->
 		<!--tomcat是apache的，而jetty是eclipse的-->
@@ -189,7 +189,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
-			<version>3.3.4</version>
+			<version>3.3.5</version>
 		</dependency>
 		<!--SpringSessionWEB-->
 		<!--为管理用户会话信息提供API和实现。-->
@@ -220,7 +220,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-amqp</artifactId>
-			<version>3.3.3</version>
+			<version>3.3.5</version>
 		</dependency>
 		<!--Spring for RabbitMQ 消息-->
 		<!--为您的应用程序提供一个用于发送和接收消息的通用平台，并为您的消息提供一个安全的地方，直到收到为止。-->
@@ -300,7 +300,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
-			<version>3.3.3</version>
+			<version>3.3.5</version>
 		</dependency>
 		<!--MySQL JDBC driver.驱动-->
 		<!--mysql的驱动-->
@@ -447,7 +447,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
-			<version>3.3.3</version>
+			<version>3.3.5</version>
 		</dependency>
 		<!--用来连接，操作redis-->
 		<!--ApacheCommons对象池库。-->
@@ -492,7 +492,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
-			<version>3.3.3</version>
+			<version>3.3.5</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>
