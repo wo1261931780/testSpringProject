@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.3</version>
+		<version>3.4.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>wo1261931780</groupId>
@@ -31,7 +31,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
-			<version>3.3.5</version>
+			<version>3.4.5</version>
 		</dependency>
 		<!--spring网络WEB-->
 		<!--使用SpringMVC构建Web，包括RESTful，应用程序。使用ApacheTomcat作为默认的嵌入式容器。-->
@@ -39,7 +39,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<version>3.3.5</version>
+			<version>3.4.5</version>
 			<!--<scope>test</scope>-->
 			<!--上面的scope表示作用范围-->
 			<!--在没有说明的情况下，scope默认就是compile-->
@@ -53,28 +53,28 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-			<version>3.3.3</version>
+			<version>3.4.5</version>
 		</dependency>
 		<!--SpringAspects将Spring与AspectJ整合在一起。-->
 		<!--AOP切面编程的依赖-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aspects</artifactId>
-			<version>6.1.12</version>
+			<version>6.2.6</version>
 		</dependency>
 		<!--一开始是在springboot context里面-->
 		<!--现在是在cache里面-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-cache</artifactId>
-			<version>3.3.5</version>
+			<version>3.4.5</version>
 		</dependency>
 		<!--SpringBoot DevTools 开发人员工具-->
 		<!--提供快速的应用重启、LiveReload和配置，以增强开发体验。-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
-			<version>3.3.4</version>
+			<version>3.4.5</version>
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
@@ -83,7 +83,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
-			<version>3.3.4</version>
+			<version>3.4.5</version>
 			<optional>true</optional>
 			<!--添加以后，可以避免自动装配报错-->
 		</dependency>
@@ -93,7 +93,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
-			<version>3.3.3</version>
+			<version>3.4.5</version>
 		</dependency>
 
 		<!--=============================================================================================-->
@@ -104,7 +104,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.34</version>
+			<version>1.18.38</version>
 			<optional>true</optional>
 			<scope>provided</scope>
 			<!--因为只是源代码中提供了对应的功能-->
@@ -114,13 +114,13 @@
 		<dependency>
 			<groupId>org.modelmapper</groupId>
 			<artifactId>modelmapper</artifactId>
-			<version>3.2.1</version>
+			<version>3.2.3</version>
 		</dependency>
 		<!--通过	AutoConfiguration 机制使得应用可以在启动时根据引入的类和配置，自动加载配置类（Configuration），从而在这些类中初始化所需的 Spring Bean。-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-autoconfigure</artifactId>
-			<version>3.3.4</version>
+			<version>3.4.5</version>
 		</dependency>
 		<!-- hutool -->
 		<!--字符串不为空的判断工具-->
@@ -131,14 +131,14 @@
 		<dependency>
 			<groupId>cn.hutool</groupId>
 			<artifactId>hutool-all</artifactId>
-			<version>5.8.32</version>
+			<version>5.8.37</version>
 		</dependency>
 		<!--阿里巴巴的Fastjson是一个用Java编写的JSON处理器（JSON解析器+JSON生成器）。-->
 		<!--多个依赖和dubbo冲突-->
 		<dependency>
 			<groupId>com.alibaba.fastjson2</groupId>
 			<artifactId>fastjson2</artifactId>
-			<version>2.0.53.android8</version>
+			<version>2.0.57</version>
 		</dependency>
 		<!--标准
 		Java 库无法为核心类的操作提供足够的方法。Apache Commons Lang 提供了这些额外的方法。-->
@@ -155,7 +155,7 @@
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
-			<version>32.1.3-jre</version>
+			<version>33.4.8-jre</version>
 		</dependency>
 		<!--=============================================================================================-->
 		<!--WEB-->
@@ -165,12 +165,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web-services</artifactId>
-			<version>3.3.5</version>
+			<version>3.4.5</version>
 		</dependency>
 		<!--相比来说，jetty更加轻量，而且拓展性更强-->
 		<!--tomcat是apache的，而jetty是eclipse的-->
 		<!--以后可能jetty是开发的主流-->
-		<!--<dependency>-->
+		<!-- <dependency> -->
 		<!--	<groupId>org.springframework.boot</groupId>-->
 		<!--	<artifactId>spring-boot-starter-jetty</artifactId>-->
 		<!--因为starter-web中是没有jetty存在的，所以这里暂时不修改启动服务器-->
@@ -189,7 +189,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
-			<version>3.3.5</version>
+			<version>3.4.5</version>
 		</dependency>
 		<!--SpringSessionWEB-->
 		<!--为管理用户会话信息提供API和实现。-->
@@ -207,11 +207,11 @@
 		<!--5.MVC提供Session等状态管理，jersey没有，这个源自RESTFull设计无状态化；-->
 		<!--6.Response方法支持更好返回结果，方便的返回Status，包括200，303，401，403；-->
 		<!--7.提供超级特别方便的方式访问RESTFull;-->
-		<dependency>
-			<groupId>com.sun.jersey</groupId>
-			<artifactId>jersey-client</artifactId>
-			<version>1.19.4</version>
-		</dependency>
+<dependency>
+    <groupId>org.glassfish.jersey.core</groupId>
+    <artifactId>jersey-client</artifactId>
+    <version>3.1.10</version>
+</dependency>
 		<!--=============================================================================================-->
 		<!--MESSAGING-->
 		<!--=============================================================================================-->
@@ -220,14 +220,14 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-amqp</artifactId>
-			<version>3.3.5</version>
+			<version>3.4.5</version>
 		</dependency>
 		<!--Spring for RabbitMQ 消息-->
 		<!--为您的应用程序提供一个用于发送和接收消息的通用平台，并为您的消息提供一个安全的地方，直到收到为止。-->
 		<dependency>
 			<groupId>org.springframework.amqp</groupId>
 			<artifactId>spring-rabbit-test</artifactId>
-			<version>3.1.7</version>
+			<version>3.2.5</version>
 			<scope>test</scope>
 		</dependency>
 		<!--json的序列化依赖-->
@@ -240,7 +240,7 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<version>2.18.0</version>
+			<version>2.19.0</version>
 		</dependency>
 
 		<!--JMS支持包，包括用于发送/接收JMS消息的辅助类-->
@@ -261,7 +261,7 @@
 			<groupId>org.apache.kafka</groupId>
 			<artifactId>kafka-clients</artifactId>
 			<!-- 3.7和spring不兼容 -->
-			<version>3.8.0</version>
+			<version>4.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.kafka</groupId>
@@ -279,7 +279,7 @@
 		<dependency>
 			<groupId>org.scala-lang</groupId>
 			<artifactId>scala-library</artifactId>
-			<version>2.13.15</version>
+			<version>2.13.16</version>
 		</dependency>
 		<!--=============================================================================================-->
 		<!--数据库和jdbc-->
@@ -287,12 +287,12 @@
 		<!--JDBC API SQL-->
 		<!--数据库连接API，定义了客户端如何连接和查询数据库。-->
 		<!--没有配置，项目报错，启动失败-->
-		<!--<dependency>-->
-		<!--	<groupId>org.springframework.boot</groupId>-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 		<!--spring操作数据库的包-->
-		<!--<artifactId>spring-boot-starter-data-jdbc</artifactId>-->
-		<!--<version>3.3.0</version>-->
-		<!--</dependency>-->
+		<artifactId>spring-boot-starter-data-jdbc</artifactId>
+		<version>3.4.5</version>
+		</dependency>
 
 		<!--SpringData JDBC SQL-->
 		<!--使用SpringData，用普通的JDBC在SQL存储中保存数据。-->
@@ -300,7 +300,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
-			<version>3.3.5</version>
+			<version>3.4.5</version>
 		</dependency>
 		<!--MySQL JDBC driver.驱动-->
 		<!--mysql的驱动-->
@@ -323,60 +323,60 @@
 		</dependency>
 		<!--JSP标准标签库（JSTL）是一个JSP标签集合，它封装了JSP应用的通用核心功能。-->
 		<!--JSTL支持通用的、结构化的任务，比如迭代，条件判断，XML文档操作，国际化标签，SQL标签。除了这些，它还提供了一个框架来使用集成JSTL的自定义标签。-->
-		<!--<dependency>-->
-		<!--	<groupId>jstl</groupId>-->
-		<!--	<artifactId>jstl</artifactId>-->
-		<!--	<version>1.1.2</version>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.1.2</version>
+		</dependency>
 		<!--在JSP页面中使用的标记所组成的库。JSP容器推出时带有一个小型的、默认的标记库。-->
-		<!--<dependency>-->
-		<!--	<groupId>taglibs</groupId>-->
-		<!--	<artifactId>standard</artifactId>-->
-		<!--	<version>1.1.2</version>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
+		</dependency>
 		<!--MyBatis框架SQL-->
 		<!--持久性框架，支持自定义SQL，存储过程和高级映射。MyBatis使用XML描述符或注解将对象与存储程序或SQL语句结合起来。-->
 		<!--这里是mybatis按照spring的标准，开发出来的整合包-->
 		<!--没有配置，项目报错，启动失败-->
-		<!--<dependency>-->
-		<!--	<groupId>com.baomidou</groupId>-->
-		<!--	<artifactId>mybatis-plus-spring-boot3-starter</artifactId>-->
-		<!--	<version>3.5.7</version>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+			<version>3.5.12</version>
+		</dependency>
 		<!--使用mybatis-plus以后，这些东西就不需要了-->
 		<!--没有配置，项目报错，启动失败-->
-		<!--<dependency>-->
-		<!--	<groupId>com.baomidou</groupId>-->
-		<!--	<artifactId>mybatis-plus-boot3-starter</artifactId>-->
-		<!--	<version>3.5.7</version>-->
-		<!--依赖中一共两个jar包-->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-boot3-starter</artifactId>
+			<version>3.5.12</version>
+		<!-- 依赖中一共两个jar包 -->
 		<!--一个是mybatis和spring整合包-->
 		<!--一个是mybatis包-->
-		<!--</dependency>-->
+		</dependency>
 		<!-- mybatis-plus 多数据源 -->
 		<!--目前，多数项目会有多数据源的要求，或者是主从部署的要求，所以我们还需要引入mybatis-plus 关于多数据源的依赖：-->
-		<!--<dependency>-->
-		<!--	<groupId>com.baomidou</groupId>-->
-		<!--	<artifactId>dynamic-datasource-spring-boot-starter</artifactId>-->
-		<!--	<version>4.3.1</version>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+			<version>4.3.1</version>
+		</dependency>
 		<!--mybatis-plus的代码生成器-->
-		<!--<dependency>-->
-		<!--	<groupId>com.baomidou</groupId>-->
-		<!--	<artifactId>mybatis-plus-generator</artifactId>-->
-		<!--	<version>3.5.7</version>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-generator</artifactId>
+			<version>3.5.12</version>
+		</dependency>
 
 		<!--生成器对应的模板技术-->
 		<!--Web应用程序：作为为应用程序的视图，展示数据-->
 		<!--源代码生成：Velocity用于基于模板生成Java源代码-->
 		<!--自动电子邮件：网站注册，认证等的电子邮件模板-->
 		<!--网页静态化：基于velocity模板，生成静态网页-->
-		<!--<dependency>-->
-		<!--	<groupId>org.apache.velocity</groupId>-->
-		<!--	<artifactId>velocity-engine-core</artifactId>-->
-		<!--	<version>2.3</version>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity-engine-core</artifactId>
+			<version>2.4.1</version>
+		</dependency>
 		<!--mybatis-plus-generator-ui可视化工具-->
 		<!--提供交互式的WebUI用于生成兼容mybatis-plus框架的相关功能代码，-->
 		<!--包括Entity,Mapper,Mapper.xml,Service,Controller等-->
@@ -386,28 +386,28 @@
 		<!--运行该启动类，启动一个Generator
 		Server。然后访问http://localhost:8068（端口是可配置的）即可进入到管理界面。-->
 		<!--这个依赖比较尴尬，一方面更新比较慢，导致依赖总是报错，另一个方面，使用的次数不多，这里暂时保留，以防万一-->
-		<!--<dependency>-->
-		<!--	<groupId>com.github.davidfantasy</groupId>-->
-		<!--	<artifactId>mybatis-plus-generator-ui</artifactId>-->
-		<!--	<version>2.0.5</version>-->
-		<!--	<scope>test</scope>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>com.github.davidfantasy</groupId>
+			<artifactId>mybatis-plus-generator-ui</artifactId>
+			<version>2.0.5</version>
+			<scope>test</scope>
+		</dependency>
 
 		<!--Mybatis-Flex是一个优雅的 Mybatis 增强框架，它非常轻量、同时拥有极高的性能与灵活性。-->
 		<!--MyBatis-Flex的查询单条数据的速度，大概是 MyBatis-Plus 的 5 ~ 10+ 倍。-->
 		<!--MyBatis-Flex的查询 10 条数据的速度，大概是 MyBatis-Plus 的 5~10 倍左右。-->
 		<!--Mybatis-Flex的分页查询速度，大概是 Mybatis-Plus 的 5~10 倍左右。-->
 		<!--Mybatis-Flex的数据更新速度，大概是 Mybatis-Plus 的 5~10+ 倍。-->
-		<dependency>
-			<groupId>com.mybatis-flex</groupId>
-			<artifactId>mybatis-flex-spring-boot-starter</artifactId>
-			<version>1.9.7</version>
-		</dependency>
+    <dependency>
+        <groupId>com.mybatis-flex</groupId>
+        <artifactId>mybatis-flex-spring-boot3-starter</artifactId>
+        <version>1.10.9</version>
+    </dependency>
 		<!--Mybatis-flex的apt依赖-->
 		<dependency>
 			<groupId>com.mybatis-flex</groupId>
 			<artifactId>mybatis-flex-processor</artifactId>
-			<version>1.9.7</version>
+			<version>1.10.9</version>
 			<scope>provided</scope>
 		</dependency>
 		<!--=============================================================================================-->
@@ -415,18 +415,18 @@
 		<!--=============================================================================================-->
 		<!--c3p0相关包-->
 		<!--没有配置，项目报错，启动失败-->
-		<!--<dependency>-->
+		<dependency>
 		<!--c3p0是一个连接池对象-->
-		<!--<groupId>c3p0</groupId>-->
-		<!--<artifactId>c3p0</artifactId>-->
-		<!--<version>0.9.0</version>-->
-		<!--</dependency>-->
+		<groupId>c3p0</groupId>
+		<artifactId>c3p0</artifactId>
+		<version>0.9.0</version>
+		</dependency>
 
 		<!--阿里巴巴德鲁伊连接池-->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid-spring-boot-starter</artifactId>
-			<version>1.2.23</version>
+			<version>1.2.24</version>
 		</dependency>
 
 		<!--HikariCP是一个高性能的 JDBC 连接池组件，号称性能最好的后起之秀，是一个基于BoneCP做了不少的改进和优化的高性能JDBC连接池。-->
@@ -437,7 +437,7 @@
 			<groupId>com.zaxxer</groupId>
 			<artifactId>HikariCP</artifactId>
 			<!--<version>5.1.0</version>不兼容-->
-			<version>5.1.0</version>
+			<version>6.3.0</version>
 		</dependency>
 
 		<!--=============================================================================================-->
@@ -447,7 +447,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
-			<version>3.3.5</version>
+			<version>3.4.5</version>
 		</dependency>
 		<!--用来连接，操作redis-->
 		<!--ApacheCommons对象池库。-->
@@ -456,7 +456,7 @@
 		<dependency>
 			<groupId>redis.clients</groupId>
 			<artifactId>jedis</artifactId>
-			<version>5.2.0</version>
+			<version>6.0.0</version>
 		</dependency>
 
 
@@ -472,7 +472,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<version>3.3.3</version>
+			<version>3.4.5</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -481,7 +481,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
-			<version>6.1.14</version>
+			<version>6.2.6</version>
 		</dependency>
 
 		<!--=============================================================================================-->
@@ -492,35 +492,35 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
-			<version>3.3.5</version>
+			<version>3.4.5</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
-			<version>6.3.3</version>
+			<version>6.4.5</version>
 			<scope>test</scope>
 		</dependency>
 		<!--设置权限，和jsp相关？暂时注掉-->
-		<!--<dependency>-->
-		<!--	<groupId>org.springframework.security</groupId>-->
-		<!--	<artifactId>spring-security-taglibs</artifactId>-->
-		<!--	<version>6.3.1</version>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>6.3.1</version>
+		</dependency>
 		<!--特殊依赖，但是保留会报错，有安全问题，暂时注掉-->
 		<!--kaptcha是一个很有用的验证码生成工具。有了它，你能够生成各种样式的验证码，由于它是可配置的。-->
 		<!--kaptcha工作的原理是调用com.google.code.kaptcha.servlet.KaptchaServlet，生成一个图片。-->
 		<!--同一时候将生成的验证码字符串放到HttpSession中。-->
-		<!--<dependency>-->
-		<!--	<groupId>com.github.penggle</groupId>-->
-		<!--	<artifactId>kaptcha</artifactId>-->
-		<!--	<version>2.3.2</version>-->
-		<!--	<exclusions>-->
-		<!--		<exclusion>-->
-		<!--			<groupId>javax.servlet</groupId>-->
-		<!--			<artifactId>javax.servlet-api</artifactId>-->
-		<!--		</exclusion>-->
-		<!--	</exclusions>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>com.github.penggle</groupId>
+			<artifactId>kaptcha</artifactId>
+			<version>2.3.2</version>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.servlet</groupId>
+					<artifactId>javax.servlet-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
 		<!--特殊依赖，但是保留会报错，有安全问题，暂时注掉-->
 
 
@@ -533,15 +533,15 @@
 		<dependency>
 			<groupId>org.apache.dubbo</groupId>
 			<artifactId>dubbo</artifactId>
-			<version>3.3.1</version>
+			<version>3.3.4</version>
 		</dependency>
 		<!--zookeeper是一个为分布式应用提供一致性服务的软件，提供的功能包括：配置维护、域名服务、分布式同步、组服务等。-->
 		<!--没有配置，项目报错，启动失败-->
-		<!--<dependency>-->
-		<!--	<groupId>org.apache.zookeeper</groupId>-->
-		<!--	<artifactId>zookeeper</artifactId>-->
-		<!--	<version>3.9.2</version>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>org.apache.zookeeper</groupId>
+			<artifactId>zookeeper</artifactId>
+			<version>3.9.3</version>
+		</dependency>
 
 		<!--=============================================================================================-->
 		<!--文件IO-->
@@ -558,18 +558,18 @@
 		<dependency>
 			<groupId>org.quartz-scheduler</groupId>
 			<artifactId>quartz</artifactId>
-			<version>2.3.2</version>
+			<version>2.5.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.quartz-scheduler</groupId>
 			<artifactId>quartz-jobs</artifactId>
-			<version>2.3.2</version>
+			<version>2.5.0</version>
 		</dependency>
 		<!--存储服务-->
 		<dependency>
 			<groupId>com.qiniu</groupId>
 			<artifactId>qiniu-java-sdk</artifactId>
-			<version>7.16.0</version>
+			<version>7.18.0</version>
 		</dependency>
 
 		<!--=============================================================================================-->
@@ -577,32 +577,32 @@
 		<!--=============================================================================================-->
 		<!-- 网关的服务依赖 -->
 		<!--没有配置，项目报错，启动失败-->
-		<!--<dependency>-->
-		<!--	<groupId>org.springframework.cloud</groupId>-->
-		<!--	<artifactId>spring-cloud-starter-gateway</artifactId>-->
-		<!--	<version>4.1.4</version>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-gateway</artifactId>
+			<version>4.1.4</version>
+		</dependency>
 		<!-- nacos依赖 -->
 		<!--cloud版本不匹配，项目报错，启动失败-->
-		<!--<dependency>-->
-		<!--	<groupId>com.alibaba.cloud</groupId>-->
-		<!--	<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
-		<!--	<version>2021.1</version>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+			<version>2.2.11</version>
+		</dependency>
 		<!--nacos的管理依赖-->
-		<!--<dependency>-->
-		<!--	<groupId>com.alibaba.cloud</groupId>-->
-		<!--	<artifactId>spring-cloud-alibaba-dependencies</artifactId>-->
-		<!--	<version>2021.1</version>-->
-		<!--	<type>pom</type>-->
-		<!--	<scope>import</scope>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-alibaba-dependencies</artifactId>
+			<version>2021.1</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
 		<!-- nacos配置文件管理依赖，读取bootstrap的 -->
-		<!--<dependency>-->
-		<!--	<groupId>com.alibaba.cloud</groupId>-->
-		<!--	<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
-		<!--	<version>2021.1</version>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+			<version>2021.1</version>
+		</dependency>
 
 		<!--其实有了nacos，就不需要eureka了-->
 		<!--所以同时要把子项目中的eureka依赖注释掉-->
@@ -648,7 +648,7 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-loadbalancer</artifactId>
-			<version>4.1.4</version>
+			<version>4.2.1</version>
 			<!--4.0.4版本会出现依赖冲突，以国内的阿里巴巴为主-->
 		</dependency>
 
@@ -730,11 +730,11 @@
 		<!--	<version>0.12.0</version>-->
 		<!--</dependency>-->
 		<!--Selenium是一系列基于Web的自动化工具，提供一套测试函数，用于支持Web自动化测试。函数非常灵活，能够完成界面元素定位、窗口跳转、结果比较。-->
-		<!--<dependency>-->
-		<!--	<groupId>org.seleniumhq.selenium</groupId>-->
-		<!--	<artifactId>selenium-java</artifactId>-->
-		<!--	<version>4.21.0</version>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.32.0</version>
+		</dependency>
 		<!--FreeMarker是一款模板引擎：即一种基于模板和要改变的数据，并用来生成输出文本(HTML网页，电子邮件，配置文件，源代码等)的通用工具。-->
 		<!--它不是面向最终用户的，而是一个Java类库，是一款程序员可以嵌入他们所开发产品的组件。-->
 		<!--<dependency>-->
